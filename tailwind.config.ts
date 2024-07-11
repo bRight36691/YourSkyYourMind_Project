@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-geist-sans)", ...fontFamily.sans],
+        ibmPlex: ["var(--ibm-plex-sans-thai-looped-font)", "sans-serif"],
       },
     },
   },
