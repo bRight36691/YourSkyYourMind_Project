@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Page() {
   return (
-    <div className="bg-grayBg h-screen w-full overflow-hidden object-none">
-      <div className="flex h-screen items-center">
+    <div className="h-screen w-full overflow-hidden bg-grayBg object-none">
+      <div className="flex min-h-screen flex-col justify-center">
         <Image
           src="/img/useLaptop.gif"
           width={200}
@@ -13,7 +14,16 @@ export default function Page() {
           alt="gif of laptop using"
           className="fixed w-full"
         />
-
+      </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1,
+          delay: 0.5,
+        }}
+        className="flex min-h-screen flex-col justify-center"
+      >
         <div className="fixed top-52 z-20 flex w-full flex-col items-center gap-10 text-center text-black">
           <div>
             <p>นึกออกแต่</p>
@@ -28,13 +38,13 @@ export default function Page() {
             <p>เรามีความสุขไหมนะ?</p>
           </div>
         </div>
-      </div>
 
-      <Link href="/1-10">
-        <div className="fixed bottom-32 flex w-screen justify-center">
-          <button className="z-20 bg-white text-black">ถัดไป</button>
-        </div>
-      </Link>
+        <Link href="/1-10">
+          <div className="fixed bottom-32 flex w-screen justify-center">
+            <button className="z-20 bg-white text-black">ถัดไป</button>
+          </div>
+        </Link>
+      </motion.div>
     </div>
   );
 }
