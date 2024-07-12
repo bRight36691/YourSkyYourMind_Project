@@ -1,5 +1,6 @@
 import { Menu, MenuButton, MenuItems } from "@headlessui/react";
 import { DropDownList } from "./DropDownList";
+import { ChevronDown } from "../ChevronDown";
 
 type DropDownProps = {
   choices: string[];
@@ -18,15 +19,16 @@ export const DropDown = ({
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <MenuButton
-          className={`rounded-xl bg-white text-left ${
+          className={`rounded-xl border-[1.5px] border-solid bg-white text-left focus:border-textLink focus:outline-none focus:ring-0 ${
             (isLargeChoice && !selectChoice) || !isLargeChoice
               ? "w-[129px]"
               : "min-w-[129px] max-w-full"
           } min-h-12 p-2 px-3 py-2 pt-3 ${
             selectChoice ? "text-black" : "text-placeholder"
-          } shadow-sm ring-1 ring-inset ring-gray-300`}
+          } flex justify-between shadow-sm ring-1 ring-inset ring-gray-300`}
         >
           {selectChoice ? selectChoice : "เลือก"}
+          <ChevronDown />
         </MenuButton>
       </div>
       <MenuItems

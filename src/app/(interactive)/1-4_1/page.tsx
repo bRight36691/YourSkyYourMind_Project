@@ -170,7 +170,7 @@ export default function Page() {
                 id="age"
                 type="number"
                 name="age"
-                className="h-12 w-[129px] rounded-xl bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300"
+                className="h-12 w-[129px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                 onChange={onAgeChange}
               />
             </div>
@@ -205,7 +205,7 @@ export default function Page() {
                 id="gpax"
                 type="number"
                 name="gpax"
-                className="h-12 w-[195px] rounded-xl bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300"
+                className="h-12 w-[195px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                 onChange={onGpaxChange}
               />
             </div>
