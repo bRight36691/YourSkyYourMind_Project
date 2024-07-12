@@ -18,7 +18,7 @@ export default function Page() {
       </div>
 
       <Link href="/1-2">
-        <div className="fixed bottom-32 flex w-screen justify-center">
+        <div className="fixed bottom-32 z-20 flex w-screen justify-center">
           <button className="z-20 bg-white text-black">ถัดไป</button>
         </div>
       </Link>
