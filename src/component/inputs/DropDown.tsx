@@ -7,6 +7,7 @@ type DropDownProps = {
   choiceSelection: (choice: string) => void;
   selectChoice: string;
   isLargeChoice: boolean;
+  isMed?: boolean;
 };
 
 export const DropDown = ({
@@ -14,15 +15,18 @@ export const DropDown = ({
   choiceSelection,
   selectChoice,
   isLargeChoice,
+  isMed = true,
 }: DropDownProps) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <MenuButton
           className={`rounded-xl border-[1.5px] border-solid bg-white text-left focus:border-textLink focus:outline-none focus:ring-0 ${
-            (isLargeChoice && !selectChoice) || !isLargeChoice
+            (isLargeChoice && !selectChoice && isMed) || !isLargeChoice
               ? "w-[129px]"
-              : "min-w-[129px] max-w-full"
+              : isMed
+                ? "min-w-[129px] max-w-full"
+                : "w-48 min-w-[129px]"
           } min-h-12 p-2 px-3 py-2 pt-3 ${
             selectChoice ? "text-black" : "text-placeholder"
           } flex justify-between shadow-sm ring-1 ring-inset ring-gray-300`}

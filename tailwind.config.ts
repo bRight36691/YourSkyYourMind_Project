@@ -16,6 +16,7 @@ export default {
         placeholder: "#94A3B8",
         choiceText: "#1E293B",
         grayBg: "#E6E6E6",
+        grayRadio: "#CBD5E1",
       },
     },
   },

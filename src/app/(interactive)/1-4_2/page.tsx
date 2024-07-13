@@ -75,6 +75,7 @@ export default function Page() {
               choiceSelection={onOccupationChange}
               selectChoice={occupation}
               isLargeChoice={true}
+              isMed={false}
             />
           </div>
         </div>

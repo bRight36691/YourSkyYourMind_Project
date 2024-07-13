@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
 import { MovingSky } from "~/component/bg/MovingSky";
+import { RadioButton } from "~/component/inputs/RadioButton";
 
 export default function Page() {
   const [isMedStudent, setIsMedStudent] = useState<string>("");
@@ -29,22 +30,18 @@ export default function Page() {
               <p>คุณเป็นนิสิตนักศึกษาแพทย์</p>
               <p>และนักเรียนแพทย์ทหาร ใช่หรือไม่ ?</p>
             </div>
-            <div className="flex w-20 justify-start gap-2">
-              <input
-                type="radio"
+            <div className="flex w-20 items-start justify-start gap-2">
+              <RadioButton
                 name="isMedStudent"
                 value="medStudent"
-                id="medStudent"
                 onChange={onIsMedStudentChange}
               />
               <label htmlFor="medStudent">ใช่</label>
             </div>
-            <div className="flex w-20 justify-start gap-2">
-              <input
-                type="radio"
+            <div className="flex w-20 items-start justify-start gap-2">
+              <RadioButton
                 name="isMedStudent"
                 value="nonMedStudent"
-                id="nonMedStudent"
                 onChange={onIsMedStudentChange}
               />
               <label htmlFor="nonMedStudent">ไม่ใช่</label>

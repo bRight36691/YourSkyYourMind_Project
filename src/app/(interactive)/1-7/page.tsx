@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Page() {
   return (
-    <Link href="/1-8">
+    <Link href="/1-9">
       <div className="h-screen w-full overflow-hidden bg-white object-none">
         <Image
           src="/img/eyeOpen.gif"
