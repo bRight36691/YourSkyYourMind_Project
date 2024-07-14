@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cn } from "../lib/utils";
-import {IBM_Plex_Sans_Thai_Looped } from "next/font/google";
+import { IBM_Plex_Sans_Thai_Looped } from "next/font/google";
 import "../styles/globals.css";
 
 const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({

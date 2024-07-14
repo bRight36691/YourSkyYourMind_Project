@@ -20,7 +20,7 @@ const InteractiveBackground = () => {
             : undefined,
         );
         break;
-        case "1-10" :
+        case "1-12" :
         backgroundMapConfig[page].image.forEach((image, index) => {
           setTimeout(() => {
             setBgImgSrc(image);
