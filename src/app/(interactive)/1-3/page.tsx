@@ -10,6 +10,7 @@ export default function Page() {
 
   const onIsMedStudentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsMedStudent(e.target.value);
+    localStorage.setItem("isMedStudent", e.target.value);
   };
 
   return (
@@ -30,7 +31,7 @@ export default function Page() {
               <p>คุณเป็นนิสิตนักศึกษาแพทย์</p>
               <p>และนักเรียนแพทย์ทหาร ใช่หรือไม่ ?</p>
             </div>
-            <div className="flex w-20 items-start justify-start gap-2">
+            <div className="flex w-[76px] items-start justify-start gap-2">
               <RadioButton
                 name="isMedStudent"
                 value="medStudent"
@@ -38,7 +39,7 @@ export default function Page() {
               />
               <label htmlFor="medStudent">ใช่</label>
             </div>
-            <div className="flex w-20 items-start justify-start gap-2">
+            <div className="flex w-[76px] items-start justify-start gap-2">
               <RadioButton
                 name="isMedStudent"
                 value="nonMedStudent"

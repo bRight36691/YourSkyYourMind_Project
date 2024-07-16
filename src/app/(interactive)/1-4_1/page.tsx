@@ -107,14 +107,15 @@ export default function Page() {
   const onNextButtonClick = (): void => {
     const generalInformation = {
       age,
-      sex,
-      mentalDisorder,
+      sex: sexes().findIndex((e) => e === sex),
+      mentalDisorder: mentalDisorders().findIndex((e) => e === mentalDisorder),
     };
     const educationInformation = {
       gpax,
-      gpaxSatisfaction,
-      university,
-      year,
+      gpaxSatisfaction:
+        gpaxSatisfactions().findIndex((e) => e === gpaxSatisfaction) + 1,
+      university: universities().findIndex((e) => e === university) + 1,
+      year: years().findIndex((e) => e === year) + 1,
     };
     localStorage.setItem(
       "generalInformation",
@@ -124,6 +125,7 @@ export default function Page() {
       "educationInformation",
       JSON.stringify(educationInformation),
     );
+    localStorage.setItem("age", age);
   };
 
   return (
@@ -142,7 +144,7 @@ export default function Page() {
           <p className="text-xs font-bold">
             สำหรับนิสิตนักศึกษาแพทย์และนักเรียนแพทย์ทหาร
           </p>
-          <div className="mt-4 flex flex-col gap-0.5 text-center text-[9px]">
+          <div className="mt-3 flex flex-col gap-0.5 text-center text-[9px]">
             <p>
               เนื้อหาในเว็บนี้เป็นผลงานเพื่อประกอบงานวิจัยความชุกและปัจจัยที่เกี่ยวข้อง
             </p>
@@ -157,7 +159,7 @@ export default function Page() {
             <p>ผ่านการให้ผู้เล่นมีส่วนร่วมด้วยทางทีมผู้วิจัย</p>
             <p>ขอให้อ่านข้อตกลงและยินยอมที่จะเข้าร่วมแบบทดสอบนี้</p>
           </div>
-          <div className="mt-3 text-[13px] text-textLink underline">
+          <div className="mt-2 text-[13px] text-textLink underline">
             ข้อตกลงการเข้าร่วมตอบแบบสอบถาม
           </div>
           <div className="mt-4 grid w-[85%] grid-cols-2 gap-3">

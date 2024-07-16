@@ -11,6 +11,7 @@ export default function Page() {
   const [cbissQ4, setCbissQ4] = useState<string>("");
   const [cbissQ5, setCbissQ5] = useState<string>("");
   const [cbissQ6, setCbissQ6] = useState<string>("");
+  const isMedStudent = localStorage.getItem("isMedStudent");
 
   const onCbissQ1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCbissQ1(e.target.value);
@@ -54,7 +55,7 @@ export default function Page() {
         className="flex min-h-screen flex-col"
       >
         <div className="flex w-full justify-center">
-          <div className="fixed top-16 z-20 flex w-[90%] flex-col items-center gap-7 rounded-[20px] bg-white/80 py-5 text-center text-black">
+          <div className="fixed top-20 z-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
             <QuestionRadio
               question="คุณรู้สึกเหนื่อยบ่อยแค่ไหน"
               onChange={onCbissQ1Change}
@@ -71,7 +72,7 @@ export default function Page() {
               values={["0", "25", "50", "75", "100"]}
             />
             <QuestionRadio
-              question="คุณคิดว่า ”ทนไม่ไหวอีก” แล้วบ่อยแค่ไหน"
+              question="คุณคิดว่า “ทนไม่ไหวอีก” แล้วบ่อยแค่ไหน"
               onChange={onCbissQ4Change}
               values={["0", "25", "50", "75", "100"]}
             />
@@ -88,13 +89,25 @@ export default function Page() {
           </div>
         </div>
 
-        {cbissQ1 && cbissQ2 && cbissQ3 && cbissQ4 && cbissQ5 && cbissQ6 && (
-          <Link href="/2-2">
-            <div className="fixed bottom-20 flex w-screen justify-center">
-              <button className="z-20 bg-white text-black">ถัดไป</button>
-            </div>
-          </Link>
-        )}
+        {cbissQ1 &&
+          cbissQ2 &&
+          cbissQ3 &&
+          cbissQ4 &&
+          cbissQ5 &&
+          cbissQ6 &&
+          (isMedStudent === "medStudent" ? (
+            <Link href="/2-4">
+              <div className="fixed bottom-16 flex w-screen justify-center">
+                <button className="z-20 bg-white text-black">ถัดไป</button>
+              </div>
+            </Link>
+          ) : (
+            <Link href="/2-16">
+              <div className="fixed bottom-16 flex w-screen justify-center">
+                <button className="z-20 bg-white text-black">ถัดไป</button>
+              </div>
+            </Link>
+          ))}
       </motion.div>
     </div>
   );

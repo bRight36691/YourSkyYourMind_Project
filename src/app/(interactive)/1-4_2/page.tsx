@@ -38,6 +38,7 @@ export default function Page() {
       "generalInformation",
       JSON.stringify(generalInformation),
     );
+    localStorage.setItem("age", age);
   };
 
   return (
@@ -52,7 +53,7 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <div className="fixed top-72 z-10 flex w-full flex-col items-center gap-6 text-black">
+        <div className="fixed top-60 z-10 flex w-full flex-col items-center gap-6 text-black">
           <div className="flex flex-col items-center gap-1">
             <p className="text-sm text-grayBlue">
               อายุ <span className="text-redError">*</span>
@@ -62,7 +63,7 @@ export default function Page() {
               id="age"
               type="number"
               name="age"
-              className="h-12 w-[129px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
+              className="h-12 w-[192px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
               onChange={onAgeChange}
             />
           </div>
