@@ -1,19 +1,27 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Page() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.push("/1-9");
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, [router]);
   return (
-    <Link href="/1-9">
-      <div className="h-screen w-full overflow-hidden bg-white object-none">
-        <Image
-          src="/img/eyeOpen.gif"
-          width={200}
-          height={200}
-          alt="eye open"
-          className="fixed h-screen w-[300%]"
-        />
-      </div>
-    </Link>
+    <div className="h-screen w-full overflow-hidden bg-white object-none">
+      <Image
+        src="/img/eyeOpen.gif"
+        width={200}
+        height={200}
+        alt="eye open"
+        className="fixed h-screen w-[300%]"
+      />
+    </div>
   );
 }
