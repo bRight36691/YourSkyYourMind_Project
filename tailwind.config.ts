@@ -17,6 +17,7 @@ export default {
         choiceText: "#1E293B",
         grayBg: "#E6E6E6",
         grayRadio: "#CBD5E1",
+        scene2: "#757985",
       },
     },
   },

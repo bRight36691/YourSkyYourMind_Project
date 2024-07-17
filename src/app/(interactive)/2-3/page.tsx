@@ -44,7 +44,7 @@ export default function Page() {
   };
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-grayBlue object-none">
+    <div className="bg-scene2 h-screen w-full overflow-hidden object-none">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
