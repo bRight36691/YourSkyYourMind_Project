@@ -83,7 +83,7 @@ export default function Page() {
 
         {age && occupation && (
           <Link href="/1-5">
-            <div className="fixed bottom-32 flex w-screen justify-center">
+            <div className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
               <button
                 className="z-20 bg-white text-black"
                 onClick={onNextButtonClick}

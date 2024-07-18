@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
   return (
@@ -31,7 +32,7 @@ export default function Page() {
 
         <Link href="/2-10">
           <div className="fixed bottom-16 flex w-screen justify-center">
-            <button className="z-20 bg-white text-black">ถัดไป</button>
+            <NextButton />
           </div>
         </Link>
       </motion.div>

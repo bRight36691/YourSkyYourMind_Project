@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { MovingSky } from "~/component/bg/MovingSky";
 import { RadioButton } from "~/component/inputs/RadioButton";
+import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
   const [isMedStudent, setIsMedStudent] = useState<string>("");
@@ -53,7 +54,7 @@ export default function Page() {
         {isMedStudent === "medStudent" && (
           <Link href="/1-4_1">
             <div className="fixed bottom-32 flex w-screen justify-center">
-              <button className="z-20 bg-white text-black">ถัดไป</button>
+              <NextButton />
             </div>
           </Link>
         )}
@@ -61,7 +62,7 @@ export default function Page() {
         {isMedStudent === "nonMedStudent" && (
           <Link href="/1-4_2">
             <div className="fixed bottom-32 flex w-screen justify-center">
-              <button className="z-20 bg-white text-black">ถัดไป</button>
+              <NextButton />
             </div>
           </Link>
         )}

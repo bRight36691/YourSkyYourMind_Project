@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MovingSky } from "~/component/bg/MovingSky";
+import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
   return (
@@ -40,7 +41,7 @@ export default function Page() {
 
         <Link href="/1-3">
           <div className="fixed bottom-32 flex w-screen justify-center">
-            <button className="z-20 bg-white text-black">ถัดไป</button>
+            <NextButton />
           </div>
         </Link>
       </motion.div>
