@@ -10,7 +10,8 @@ export default function Page() {
             animate={{opacity:1}}
             transition={{duration:2}}
             className="grid h-screen w-screen justify-items-center ">
-            <div className="text-center text-[24px] pt-[55%]">
+            <div className="fixed -z-[10] ml-[13%] mt-[40%] bg-white h-[45%] w-[75%] opacity-100 rounded-full  blur-2xl"></div>
+            <div className="text-center text-[20px] pt-[63%]">
                 <h1>ผ่านอะไรมาเยอะเลยแฮะ</h1>
                 <h1 className="pt-[15%]">มีทั้งเรื่องที่ยินดี</h1>
                 <h1 className="pt-[15%]">และน่าเหนื่อยใจ</h1>

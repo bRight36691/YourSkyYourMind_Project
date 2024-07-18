@@ -49,7 +49,7 @@ export default function Page() {
 
 
 
-            <Link className="fixed bottom-[10%] left-[38%]" href='/1-22'>
+            <Link className="fixed bottom-[10%] left-[38%]" href='/2-1'>
                 <button className=" bg-white text-black text-lg h-8 w-28 rounded-2xl shadow-sm">ถัดไป</button>
             </Link>
            

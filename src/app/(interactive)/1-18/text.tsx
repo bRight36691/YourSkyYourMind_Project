@@ -89,7 +89,7 @@ export default function Text({state,setState}:prop) {
                 initial={{opacity:0}}
                 animate={{opacity:1}}
                 transition={{duration:2}}
-               className="fixed ml-[14%] mt-[55%] text-center"
+               className="fixed ml-[14%] mt-[45%] text-center"
                
             >
                 <div className="fixed h-[10%] w-[70%] ml-[5%] mt-[15%] bg-white opacity-100 rounded-full  blur-2xl "></div>
