@@ -5,33 +5,58 @@ import { motion } from 'framer-motion';
 import Link from "next/link";
 
 export default function Page() {
-    
-    const [importantPerson,setImportantPerson] = useState<string>('');
+    const [backgroundName,setBackgroundName] = useState<string>(""); 
 
-    useEffect(()=> {
-        const prevImportantPerson = localStorage.getItem('importantPerson');
-        if(prevImportantPerson !== null ){
-            setImportantPerson(prevImportantPerson)
-        }
+    useEffect(() => {
+        const userChoice = localStorage.getItem("selectedPlace");
+    if(userChoice === "ใต้ร่มไม้ ที่คุ้นเคย"){
+        setBackgroundName("/img/ใต้ร่มไม้ ที่คุ้นเคย.GIF")
+    } else if (userChoice === "พระจันทร์และดาว ยามค่ำคืน"){
+        setBackgroundName("/img/พระจันทร์และดาว ยามค่ำคืน.GIF")
+    } else if (userChoice === "วิวภูเขา กว้างขวางท้าทาย"){
+        setBackgroundName("/img/วิวภูเขา กว้างขวางท้าทาย.GIF")
+    } else if (userChoice === "ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น"){
+        setBackgroundName("/img/ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น.GIF")
+    } else if (userChoice === "ในเมืองใหญ่ กับผู้คนที่รู้จัก"){
+        setBackgroundName("/img/ในเมืองใหญ่ กับผู้คนที่รู้จัก.GIF")
+    }
     })
+
     return (
-        
-        <motion.div 
+        <motion.div
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:2}}
-            className="grid justify-items-center  text-black min-h-screen min-w-full bg-[#fbfbfb] ">
-            <div className="grid justify-items-center h-[10%] mt-[50%] ">
-                <h1>คุณหัวเราะเบา ๆ</h1>
-                <h1 className="mt-[8%]">ไม่คิดว่าจะเจอกัน</h1>
-                <h1 className="mt-[2%]">ในวันที่อ่อนล้าแบบนี้</h1>
-                <h1 className="mt-[8%]"><span className="text-red-500">{importantPerson}</span> เริ่มถามคำถามด้วยความห่วงใย</h1>
-            </div>
-            <Link className="z-50 pt-[30%]" href='/1-21'>
-                <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl">ถัดไป</button>
-            </Link>
-            <img src="/img/1-20.GIF" className="fixed"></img>
+            transition={{duration:1}}
+            // className="grid justify-items-center"
+        >
 
+            <img src={backgroundName} className="min-h-screen fixed" />
+            
+            <motion.div 
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{duration:2}}
+               className="fixed ml-[14%] mt-[55%] text-center"
+               
+            >
+                <div className="fixed h-[15%] w-[70%] ml-[5%] mt-[15%] bg-white opacity-100 rounded-full  blur-xl "></div>
+               <div className="fixed text-black ml-[12%] mt-[25%] text-[16px]">
+                    <h1 >ฉันเหนื่อยขนาดไหนกันแน่นะ...</h1>
+               </div>
+
+               
+            </motion.div>
+
+
+
+            <Link className="fixed bottom-[10%] left-[38%]" href='/2-1'>
+                <button className=" bg-white text-black text-lg h-8 w-28 rounded-2xl shadow-sm">ถัดไป</button>
+            </Link>
+           
+            
+            
+            
         </motion.div>
     );
+    
 }

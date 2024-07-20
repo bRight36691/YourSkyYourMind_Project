@@ -21,10 +21,10 @@ export const backgroundMapConfig = {
     image: ["/img/1-12-1.webp","/img/1-12-2.webp","/img/1-12-3.webp"
     ,"/img/1-12-4.webp", "/img/1-12-5.webp","/img/1-12-6.webp","/img/1-12-7.webp"],
     stopMotionDuration: 800,
-    imagePreload: [],
+    imagePreload: ["/img/1-13.webp"],
   },
   "1-13" : {
-    image: "",
+    image: "/img/1-13.webp",
     imagePreload: ["/img/1-14.webp"],
   },
   "1-14" : {
@@ -37,10 +37,10 @@ export const backgroundMapConfig = {
   },
   "1-16" : {
     image: "/img/1-16.webp",
-    imagePreload: ["/img/1-17.webp"],
+    imagePreload: [],
   },
   "1-17" : {
-    image: "/img/1-17.webp",
+    image: "",
     imagePreload: [],
   },
   "1-18" : {

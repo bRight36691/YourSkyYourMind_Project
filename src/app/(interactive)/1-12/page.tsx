@@ -9,7 +9,7 @@ export default function page() {
 
     useEffect(()=> {
         const timer = setTimeout(()=> {
-            router.push('/1-14');
+            router.push('/1-13');
         },6000)
 
         return () => clearTimeout(timer)

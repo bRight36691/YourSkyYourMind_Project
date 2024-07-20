@@ -1,13 +1,13 @@
 
 import Link from "next/link";
 
-type Prop = {name:string,handleClick:()=>void};
+type Prop = {selectedPlace:string,handleSelected:()=>void};
 
-export default function Next({name,handleClick}:Prop){
-    if(name !== ""){
+export default function Next({selectedPlace,handleSelected}:Prop){
+    if(selectedPlace !== ""){
        return (
-        <Link className="pt-[65%]" href='/1-16'>
-            <button onClick={handleClick} className=" bg-white text-lg text-black h-8 w-28 rounded-2xl shadow-sm" >ถัดไป</button>
+        <Link className="pt-[80%]" href='/1-16'>
+            <button onClick={handleSelected} className=" bg-white text-lg text-black h-8 w-28 rounded-2xl shadow-sm" >ถัดไป</button>
         </Link>
      ) ;
     } else{

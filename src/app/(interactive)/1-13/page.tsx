@@ -1,17 +1,28 @@
-"use client";
-import Link from "next/link";
-import { motion } from "framer-motion";
+'use client';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
 
 export default function Page() {
 
-    return(
-        
-        <Link href='/1-14'>
-           <div  className="bg-black h-screen w-full">
+    const router = useRouter();
 
-           </div>
-        </Link>
-        
-        
+    useEffect(()=> {
+        const timer = setTimeout(()=> {
+            router.push("/1-14");
+        },500)
+
+        return () => clearTimeout(timer)
+    },[router])
+
+    return(
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 2 } }}
+            exit={{opacity:0 , transition: { duration: 2 }}}
+            
+        >
+        </motion.div>
     );
 }

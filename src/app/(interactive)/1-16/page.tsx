@@ -2,14 +2,36 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { useState } from 'react';
-import  Next   from './next';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Page() {
-    const [ selectedPlace , setSelectedPlace ] = useState<string>('');
-    const handleSelected = () => {
-        localStorage.setItem("selectedPlace",selectedPlace)
+    const [selectedPlace,setSelectedPlace] = useState<string>("");
+    const router = useRouter();
+
+    useEffect(() => {
+        const userChoice = localStorage.getItem("selectedPlace");
+    if(userChoice === "ใต้ร่มไม้ ที่คุ้นเคย"){
+        setSelectedPlace("ใต้ร่มไม้ ที่คุ้นเคย");
+    } else if (userChoice === "พระจันทร์และดาว ยามค่ำคืน"){
+        setSelectedPlace("พระจันทร์และดาว ยามค่ำคืน");
+    } else if (userChoice === "วิวภูเขา กว้างขวางท้าทาย"){
+        setSelectedPlace("วิวภูเขา กว้างขวางท้าทาย");
+    } else if (userChoice === "ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น"){
+        setSelectedPlace("ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น");
+    } else if (userChoice === "ในเมืองใหญ่ กับผู้คนที่รู้จัก"){
+        setSelectedPlace("ในเมืองใหญ่ กับผู้คนที่รู้จัก");
     }
+    },[])
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            router.push('/1-17');
+
+        },2000)
+
+        return () => clearTimeout(timer);
+    },[router])
     
 
     return(
@@ -23,21 +45,17 @@ export default function Page() {
             <h1 className='text-black '>ถ้าไม่ต้องมองโต๊ะทำงาน</h1>
             <h1 className='text-black '>วิวแบบไหนที่ทำให้คุณสบายใจ ?</h1>
             <select className="select select-bordered w-full max-w-xs 
-            w-72 h-12 rounded-xl mt-[6%] justify-self-center bg-white text-center text-black"
-                onChange={(e)=>setSelectedPlace(e.target.value)}
+            w-72 h-12 rounded-xl mt-[6%] justify-self-center text-center text-black 
+            disabled:bg-white disabled:text-black disabled:border-none"
+                disabled 
                 
-                defaultValue="เลือก"
             >
-                <option disabled >เลือก</option>
-                <option value="ใต้ร่มไม้ ที่คุ้นเคย">ใต้ร่มไม้ ที่คุ้นเคย</option>
-                <option value="พระจันทร์และดาว ยามค่ำคืน">พระจันทร์และดาว ยามค่ำคืน</option>
-                <option value="วิวภูเขา กว้างขวางท้าทาย">วิวภูเขา กว้างขวางท้าทาย</option>
-                <option value="ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น">ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น</option>
-                <option value="ในเมืองใหญ่ กับผู้คนที่รู้จัก">ในเมืองใหญ่ กับผู้คนที่รู้จัก</option>
+                <option className='bg-white'>{selectedPlace}</option>
+                
             </select>
             
 
-            <Next selectedPlace={selectedPlace} handleSelected={handleSelected}></Next>
+           
             
             
         
