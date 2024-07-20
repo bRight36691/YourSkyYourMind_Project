@@ -27,18 +27,18 @@ export default function Page() {
     },[answer1,answer2])
 
     return(
+        <div  className=" grid justify-items-center h-screen text-black">
         <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:2}}
-            className=" grid justify-items-center h-screen text-black">
-        <div className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
+            transition={{duration:2,delay:0.5}}
+            className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
             <div className="grid justify-items-center gap-y-7 pt-[7%] pb-[5%]">
             <ChoicePane2 question="ที่นี่มีระบบการช่วยเหลือที่ดีสำหรับนักศึกษาที่มีปัญหาเครียด" setAnswer={setAnswer1}></ChoicePane2>
             <ChoicePane2 question="รูปแบบการดำเนินชีวิตทั่วไปของฉันเป็นไปด้วยดี" setAnswer={setAnswer2}></ChoicePane2>
 
             </div>
-        </div>
+        </motion.div>
         
         {canNext && (
             <Link className="fixed z-50 bottom-3 left-[36%]" href='/2-16'>
@@ -46,7 +46,7 @@ export default function Page() {
             </Link>
         )
         }
-        </motion.div>
+        </div>
         
     );
 }

@@ -8,7 +8,7 @@ export default function Page() {
         <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:2}}
+            transition={{duration:2,delay:0.5}}
             className="grid h-screen w-screen justify-items-center bg-[#fbfbfb]">
             <div className="text-center text-[20px] pt-[30%]">
                 <h1>สภาพแวดล้อม</h1>

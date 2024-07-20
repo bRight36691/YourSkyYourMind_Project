@@ -32,12 +32,12 @@ export default function Page() {
     },[answer1,answer2,answer3,answer4,answer5])
 
     return(
+        <div className=" grid justify-items-center h-screen text-black">
         <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:2}}
-            className=" grid justify-items-center h-screen text-black">
-        <div className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
+            transition={{duration:2,delay:0.5}}
+            className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
             <div className="grid justify-items-center gap-y-5 pt-[7%] pb-[5%]">
             <ChoicePane2 question="ฉันรู้สึกว่าฉันได้รับการเตรียมตัวอย่างดีสำหรับวิชาชีพ" setAnswer={setAnswer1}></ChoicePane2>
             <ChoicePane2 question="ทักษะการแก้ไขปัญหาของฉันได้รับการพัฒนา" setAnswer={setAnswer2}></ChoicePane2>
@@ -45,7 +45,7 @@ export default function Page() {
             <ChoicePane2 question="ฉันมีสมาธิในการเรียนอย่างดี" setAnswer={setAnswer4}></ChoicePane2>
             <ChoicePane2 question="บรรยากาศการเรียนที่นี่กระตุ้นให้ฉันได้เรียนรู้" setAnswer={setAnswer5}></ChoicePane2>
             </div>
-        </div>
+        </motion.div>
         
         {canNext && (
             <Link className="fixed z-50 bottom-3 left-[36%]" href='/2-15'>
@@ -53,7 +53,7 @@ export default function Page() {
             </Link>
         )
         }
-        </motion.div>
+        </div>
         
     );
 }

@@ -24,17 +24,17 @@ export default function Page() {
     },[answer1,answer2])
 
     return(
+        <div className=" grid justify-items-center h-screen text-black">
         <motion.div 
-            initial={{opacity:0}}
-            animate={{opacity:1}}
-            transition={{duration:2}}
-            className=" grid justify-items-center h-screen text-black">
-        <div className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
+             initial={{opacity:0}}
+             animate={{opacity:1}}
+             transition={{duration:2,delay:0.5}}
+             className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
             <div className="grid justify-items-center gap-y-10 pt-[7%] pb-[5%]">
                 <ChoicePane question="คุณเบื่อที่จะทำงานกับอาจารย์หรือไม่" setAnswer={setAnswer1}></ChoicePane>
                 <ChoicePane question="บางครั้งคุณก็สงสัยว่าคุณจะสามารถทำงานกับอาจารย์ต่อไปไหวหรือไม่" setAnswer={setAnswer2}></ChoicePane>
             </div>
-        </div>
+        </motion.div>
         
         {
                 canNext && 
@@ -42,7 +42,7 @@ export default function Page() {
                     <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" onClick={submit}>ถัดไป</button>
                 </Link>
             }
-        </motion.div>
+        </div>
         
     );
 }
