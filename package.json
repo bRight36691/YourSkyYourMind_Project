@@ -10,6 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@headlessui/react": "^2.1.2",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@types/react-howler": "^5.2.3",
     "clsx": "^2.1.1",
