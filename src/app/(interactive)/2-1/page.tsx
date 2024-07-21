@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Page() {
-  const [backgroundName, setBackgroundName] = useState<string>("");
+  const [backgroundName, setBackgroundName] = useState<string>("/img/2-.webp");
   const router = useRouter();
 
   useEffect(() => {
