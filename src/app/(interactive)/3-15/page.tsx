@@ -11,7 +11,7 @@ export default function Page() {
         animate={{ opacity: 1 }}
         transition={{
           duration: 1,
-          delay: 2,
+          delay: 0.5,
         }}
         className="fixed z-20 flex min-h-screen flex-col"
       >

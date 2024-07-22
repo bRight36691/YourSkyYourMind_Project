@@ -108,6 +108,42 @@ export const backgroundMapConfig = {
     image: "/img/3-3.GIF",
     imagePreload: [],
   },
+  "3-6": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-7": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-8": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-9": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-10": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-11": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-12": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-13": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
+  "3-14": {
+    image: "/img/3-3.GIF",
+    imagePreload: [],
+  },
   "3-15": {
     image: "/img/3-3.GIF",
     imagePreload: [],

@@ -7,7 +7,6 @@ export default {
     extend: {
       fontFamily: {
         ibmPlex: ["var(--ibm-plex-sans-thai-looped-font)", "sans-serif"],
-
       },
       colors: {
         whiteBox: "#F8F8F7",
@@ -19,7 +18,7 @@ export default {
         grayBg: "#E6E6E6",
         grayRadio: "#CBD5E1",
         scene2: "#757985",
-
+        grayRI9: "#ADB1BA",
       },
     },
   },
