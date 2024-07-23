@@ -7,6 +7,14 @@ export const backgroundMapConfig = {
     image: "/img/scene1_sky.webp",
     imagePreload: [],
   },
+  "1-6": {
+    image: "",
+    imagePreload: ["/img/eyeOpen.gif"],
+  },
+  "1-7": {
+    image: "",
+    imagePreload: ["/img/useLaptop.gif"],
+  },
   "1-10": {
     image: "",
     imagePreload: [],
@@ -66,7 +74,15 @@ export const backgroundMapConfig = {
   },
   "1-20": {
     image: "",
-    imagePreload: [],
+    imagePreload: ["/img/2-.webp"],
+  },
+  "2-5": {
+    image: "",
+    imagePreload: ["/img/friends.gif"],
+  },
+  "2-8": {
+    image: "",
+    imagePreload: ["/img/teacher.gif"],
   },
   "2-10": {
     image: "/img/2-.webp",
