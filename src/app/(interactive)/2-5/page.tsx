@@ -20,7 +20,7 @@ export default function Page() {
   };
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-scene2 object-none">
+    <div className="h-screen w-full overflow-y-scroll bg-scene2">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -30,8 +30,8 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <div className="flex w-full justify-center">
-          <div className="fixed top-20 z-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
+        <div className="flex w-full flex-col items-center">
+          <div className="z-20 mt-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
             <QuestionRadio
               question="การเรียนทำให้คุณรู้สึกอึดอัดคับข้องใจหรือไม่"
               onChange={onCbissQ12Change}
@@ -43,15 +43,15 @@ export default function Page() {
               values={["0", "25", "50", "75", "100"]}
             />
           </div>
-        </div>
 
-        {cbissQ12 && cbissQ13 && (
-          <Link href="/2-6">
-            <div className="fixed bottom-16 flex w-screen justify-center">
-              <NextButton />
-            </div>
-          </Link>
-        )}
+          {cbissQ12 && cbissQ13 && (
+            <Link href="/2-6">
+              <div className="mt-4 flex w-screen justify-center">
+                <NextButton />
+              </div>
+            </Link>
+          )}
+        </div>
       </motion.div>
     </div>
   );
