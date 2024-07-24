@@ -1,58 +1,58 @@
 "use client";
+
+import ChoicePane1 from "~/component/choicePane1";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { QuestionRadio } from "~/component/inputs/QuestionRadio";
-import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
-  const [cbissQ12, setCbissQ12] = useState<string>("");
-  const [cbissQ13, setCbissQ13] = useState<string>("");
+  const [answer1, setAnswer1] = useState<string>("");
+  const [answer2, setAnswer2] = useState<string>("");
+  const [canNext, setCanNext] = useState<boolean>(false);
 
-  const onCbissQ12Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ12(e.target.value);
-    localStorage.setItem("cbissQ12", e.target.value);
+  const submit = () => {
+    localStorage.setItem("cbissQ12", answer1);
+    localStorage.setItem("cbissQ13", answer2);
   };
 
-  const onCbissQ13Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ13(e.target.value);
-    localStorage.setItem("cbissQ13", e.target.value);
-  };
+  useEffect(() => {
+    if (answer1 !== "" && answer2 !== "") {
+      setCanNext(true);
+    } else {
+      setCanNext(false);
+    }
+  }, [answer1, answer2]);
 
   return (
-    <div className="h-screen w-full overflow-y-scroll bg-scene2">
+    <div className="grid h-screen justify-items-center bg-scene2 text-black">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-        }}
-        className="flex min-h-screen flex-col"
+        transition={{ duration: 2, delay: 0.5 }}
+        className="mb-[10%] mt-[6%] h-[80%] w-[95%] rounded-3xl bg-white"
       >
-        <div className="flex w-full flex-col items-center">
-          <div className="z-20 mt-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
-            <QuestionRadio
-              question="การเรียนทำให้คุณรู้สึกอึดอัดคับข้องใจหรือไม่"
-              onChange={onCbissQ12Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกหมดไฟเพราะการเรียนรู้ของคุณหรือไม่"
-              onChange={onCbissQ13Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-          </div>
-
-          {cbissQ12 && cbissQ13 && (
-            <Link href="/2-6">
-              <div className="mt-4 flex w-screen justify-center">
-                <NextButton />
-              </div>
-            </Link>
-          )}
+        <div className="grid justify-items-center gap-y-10 pb-[5%] pt-[7%]">
+          <ChoicePane1
+            question="การเรียนทำให้คุณรู้สึกอึดอัดคับข้องใจหรือไม่"
+            setAnswer={setAnswer1}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกหมดไฟเพราะการเรียนรู้ของคุณหรือไม่"
+            setAnswer={setAnswer2}
+          ></ChoicePane1>
         </div>
       </motion.div>
+
+      {canNext && (
+        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-6">
+          <button
+            className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
+            onClick={submit}
+          >
+            ถัดไป
+          </button>
+        </Link>
+      )}
     </div>
   );
 }

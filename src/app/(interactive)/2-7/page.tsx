@@ -1,80 +1,70 @@
 "use client";
+
+import ChoicePane1 from "~/component/choicePane1";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { QuestionRadio } from "~/component/inputs/QuestionRadio";
-import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
-  const [cbissQ14, setCbissQ14] = useState<string>("");
-  const [cbissQ15, setCbissQ15] = useState<string>("");
-  const [cbissQ16, setCbissQ16] = useState<string>("");
-  const [cbissQ17, setCbissQ17] = useState<string>("");
+  const [answer1, setAnswer1] = useState<string>("");
+  const [answer2, setAnswer2] = useState<string>("");
+  const [answer3, setAnswer3] = useState<string>("");
+  const [answer4, setAnswer4] = useState<string>("");
+  const [canNext, setCanNext] = useState<boolean>(false);
 
-  const onCbissQ14Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ14(e.target.value);
-    localStorage.setItem("cbissQ14", e.target.value);
+  const submit = () => {
+    localStorage.setItem("cbissQ14", answer1);
+    localStorage.setItem("cbissQ15", answer2);
+    localStorage.setItem("cbissQ16", answer3);
+    localStorage.setItem("cbissQ17", answer4);
   };
 
-  const onCbissQ15Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ15(e.target.value);
-    localStorage.setItem("cbissQ15", e.target.value);
-  };
-
-  const onCbissQ16Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ16(e.target.value);
-    localStorage.setItem("cbissQ16", e.target.value);
-  };
-
-  const onCbissQ17Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ17(e.target.value);
-    localStorage.setItem("cbissQ17", e.target.value);
-  };
+  useEffect(() => {
+    if (answer1 !== "" && answer2 !== "" && answer3 !== "" && answer4 !== "") {
+      setCanNext(true);
+    } else {
+      setCanNext(false);
+    }
+  }, [answer1, answer2, answer3, answer4]);
 
   return (
-    <div className="h-screen w-full overflow-y-scroll bg-scene2">
+    <div className="grid h-screen justify-items-center bg-scene2 text-black">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-        }}
-        className="flex min-h-screen flex-col"
+        transition={{ duration: 2, delay: 0.5 }}
+        className="mb-[10%] mt-[6%] h-[80%] w-[95%] rounded-3xl bg-white"
       >
-        <div className="flex w-full flex-col items-center">
-          <div className="z-20 mt-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
-            <QuestionRadio
-              question="คุณรู้สึกว่าทำงานกับเพื่อนร่วมชั้นเรียน / เพื่อนที่ทำงานได้ยากหรือไม่"
-              onChange={onCbissQ14Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="การทำงานกับเพื่อนร่วมงานทำให้คุณหมดพลังหรือไม่"
-              onChange={onCbissQ15Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกอึดอัดคับข้องใจเมื่อต้องทำงานกับเพื่อนร่วมชั้นเรียน / เพื่อนที่ทำงานหรือไม่"
-              onChange={onCbissQ16Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกว่าคุณต้องเป็นฝ่ายให้มากกว่ารับเมื่อทำงานกับเพื่อนร่วมชั้นเรียน / เพื่อนที่ทำงานหรือไม่"
-              onChange={onCbissQ17Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-          </div>
-
-          {cbissQ14 && cbissQ15 && cbissQ16 && cbissQ17 && (
-            <Link href="/2-8">
-              <div className="mt-4 flex w-screen justify-center">
-                <NextButton />
-              </div>
-            </Link>
-          )}
+        <div className="grid justify-items-center gap-y-10 pb-[5%] pt-[7%]">
+          <ChoicePane1
+            question="คุณรู้สึกว่าทำงานกับเพื่อนร่วมชั้นเรียน / เพื่อนที่ทำงานได้ยากหรือไม่"
+            setAnswer={setAnswer1}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="การทำงานกับเพื่อนร่วมงานทำให้คุณหมดพลังหรือไม่"
+            setAnswer={setAnswer2}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกอึดอัดคับข้องใจเมื่อต้องทำงานกับเพื่อนร่วมชั้นเรียน / เพื่อนที่ทำงานหรือไม่"
+            setAnswer={setAnswer3}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกว่าคุณต้องเป็นฝ่ายให้มากกว่ารับเมื่อทำงานกับเพื่อนร่วมชั้นเรียน / เพื่อนที่ทำงานหรือไม่"
+            setAnswer={setAnswer4}
+          ></ChoicePane1>
         </div>
       </motion.div>
+
+      {canNext && (
+        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-8">
+          <button
+            className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
+            onClick={submit}
+          >
+            ถัดไป
+          </button>
+        </Link>
+      )}
     </div>
   );
 }
