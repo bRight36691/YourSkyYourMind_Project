@@ -35,12 +35,12 @@ export default function Text({ state, setState }: prop) {
             alt="yourskyyourmind logo"
             width={1080}
             height={1920}
-            className="h-auto w-screen overflow-hidden"
+            className="h-auto w-screen overflow-hidden pointer-events-none"
           />
         </div>
-        <div className="mb-16 flex w-screen justify-center">
+        <div className="z-20 fixed bottom-[15%] flex w-screen justify-center">
           <button
-            className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
+            className="h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
             onClick={() => setState(2)}
           >
             ถัดไป
@@ -82,7 +82,7 @@ export default function Text({ state, setState }: prop) {
           </div>
         </div>
 
-        <div className="mt-[756px] flex w-screen justify-center">
+        <div className="fixed bottom-[15%] flex w-screen justify-center">
           <button
             className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
             onClick={() => setState(3)}
@@ -131,7 +131,7 @@ export default function Text({ state, setState }: prop) {
 
         {isMedStudent === "medStudent" && (
           <Link href="/1-4_1">
-            <div className="fixed bottom-32 flex w-screen justify-center">
+            <div className="fixed bottom-[15%] flex w-screen justify-center">
               <NextButton />
             </div>
           </Link>
@@ -139,7 +139,7 @@ export default function Text({ state, setState }: prop) {
 
         {isMedStudent === "nonMedStudent" && (
           <Link href="/1-4_2">
-            <div className="fixed bottom-32 flex w-screen justify-center">
+            <div className="fixed bottom-[15%] flex w-screen justify-center">
               <NextButton />
             </div>
           </Link>

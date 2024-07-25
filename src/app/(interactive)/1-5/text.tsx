@@ -24,7 +24,7 @@ export default function Text({ state, setState }: prop) {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-32 z-20 flex w-screen justify-center">
+        <div className="fixed bottom-[15%] z-20 flex w-screen justify-center">
           <button
             className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
             onClick={() => setState(2)}
@@ -54,7 +54,7 @@ export default function Text({ state, setState }: prop) {
           </div>
         </div>
         <Link href="/1-7">
-          <div className="fixed bottom-32 z-20 flex w-screen justify-center">
+          <div className="fixed bottom-[15%] z-20 flex w-screen justify-center">
             <NextButton />
           </div>
         </Link>
