@@ -22,7 +22,7 @@ export default function Page() {
           <p className="mt-1">โดยแทบจะไม่ต้องคิดเลยล่ะ</p>
         </div>
 
-        <Link href="/4-1">
+        <Link href="/3-16">
           <div className="fixed bottom-24 flex w-screen justify-center">
             <NextButton />
           </div>
