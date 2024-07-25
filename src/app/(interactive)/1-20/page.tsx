@@ -28,7 +28,7 @@ export default function Page() {
         if(isButtonClicked === true) {
             const timer = setTimeout(() => {
                 router.push("/2-2");
-              }, 2000);
+              }, 1000);
             return () => clearTimeout(timer)
         };
       }, [isButtonClicked]);
