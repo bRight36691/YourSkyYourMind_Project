@@ -9,13 +9,18 @@ export default function Page() {
     const [backgroundName,setBackgroundName] = useState<string>(""); 
     const controls = useAnimationControls();
     const [isButtonClicked, setButtonClicked] = useState<boolean>(false);
+    const [isBgChanged, setBgChanged] = useState<boolean>(false);
+
     const wrapperVariants = {
         hidden: {
-          opacity: 0,
+            opacity: 0,
         },
         visible: {
-          opacity: 1,
-          transition: { duration: 3 },
+            opacity: 1,
+            transition: { duration: 2 },
+        },
+        exit: {
+            opacity: 1
         }
       };
 
@@ -25,13 +30,22 @@ export default function Page() {
     }
 
     useEffect(() => {
-        if(isButtonClicked === true) {
+        if(isButtonClicked) {
             const timer = setTimeout(() => {
-                router.push("/2-2");
-              }, 1000);
+                setBgChanged(true);
+              }, 2000);
             return () => clearTimeout(timer)
         };
       }, [isButtonClicked]);
+
+      useEffect(() => {
+        if(isBgChanged) {
+            const timer = setTimeout(() => {
+                router.push("/2-2");
+              }, 250);
+              return () => clearTimeout(timer)
+        };
+      }, [isBgChanged]);
 
     useEffect(() => {
         const userChoice = localStorage.getItem("selectedPlace");
@@ -50,6 +64,12 @@ export default function Page() {
 
     return (
         <div className="overflow-hidden object-none">
+            {isBgChanged &&
+                <div className="pointer-events-none">
+                    <div className="fixed min-h-screen w-full bg-white z-20"/>
+                </div>
+            }
+
             <motion.div
                 initial={{opacity:0}}
                 animate={{opacity:1}}
@@ -66,19 +86,24 @@ export default function Page() {
                 className="fixed ml-[14%] mt-[55%] text-center"
                 
                 >
-                    <div className="fixed h-[15%] w-[70%] ml-[5%] mt-[15%] bg-white opacity-100 rounded-full  blur-xl "></div>
-                <div className="fixed text-black ml-[12%] mt-[25%] text-[16px]">
-                        <h1 >ฉันเหนื่อยขนาดไหนกันแน่นะ...</h1>
-                </div>
+                {!isButtonClicked &&
+                    <>
+                        <div className="fixed h-[15%] w-[70%] ml-[5%] mt-[15%] bg-white opacity-100 rounded-full  blur-xl "></div>
+                        <div className="fixed text-black ml-[12%] mt-[25%] text-[16px]">
+                            <h1 >ฉันเหนื่อยขนาดไหนกันแน่นะ...</h1>
+                        </div>
+                    </>
+                }
 
                 
                 </motion.div>
 
 
-
-                <div className="fixed bottom-[10%] left-[38%]">
-                    <button className=" bg-white text-black text-lg h-8 w-28 rounded-2xl shadow-sm" onClick={onNextButton}>ถัดไป</button>
-                </div>
+                {!isButtonClicked &&
+                    <div className="fixed bottom-[10%] left-[38%]">
+                        <button className=" bg-white text-black text-lg h-8 w-28 rounded-2xl shadow-sm" onClick={onNextButton}>ถัดไป</button>
+                    </div>
+                }
             
                 
                 
@@ -88,6 +113,7 @@ export default function Page() {
                 variants={wrapperVariants}
                 initial="hidden"
                 animate={controls}
+                exit="exit"
                 className="pointer-events-none"
             >
                 <div className="min-h-screen w-full bg-white"/>
