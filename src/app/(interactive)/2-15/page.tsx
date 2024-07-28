@@ -10,13 +10,13 @@ export default function Page() {
     const [answer2,setAnswer2] = useState<string>('');
     const [canNext,setCanNext] = useState<boolean>(false);
     
-    const submit = () => {
+   useEffect (() => {
 
         localStorage.setItem('dreem12Q11',answer1)
         localStorage.setItem('dreem12Q12',answer2)
     
         
-    }
+    },[answer1,answer2])
 
     useEffect(()=>{
         if(answer1 !== '' && answer2 !== '' ){
@@ -42,7 +42,7 @@ export default function Page() {
         
         {canNext && (
             <Link className="fixed z-50 bottom-3 left-[36%]" href='/2-16'>
-                <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" onClick={submit}>ถัดไป</button>
+                <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
             </Link>
         )
         }

@@ -16,7 +16,7 @@ export default function Page() {
                 <h1 className="pt-[15%]">มีทั้งเรื่องที่ยินดี</h1>
                 <h1 className="pt-[15%]">และน่าเหนื่อยใจ</h1>
             </div>
-            <Link className="fixed z-50 bottom-8 left-[36%]" href='/2-17'>
+            <Link className="fixed z-50 bottom-8 left-[36%]" href='/3-1'>
                 <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
             </Link>
         </motion.div>
