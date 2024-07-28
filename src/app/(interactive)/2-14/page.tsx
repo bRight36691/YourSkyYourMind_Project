@@ -32,7 +32,7 @@ export default function Page() {
     },[answer1,answer2,answer3,answer4,answer5])
 
     return(
-        <div className=" grid justify-items-center h-screen text-black">
+        <div className=" grid justify-items-center h-screen text-black bg-scene2">
         <motion.div 
             initial={{opacity:0}}
             animate={{opacity:1}}

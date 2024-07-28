@@ -15,6 +15,18 @@ export default function Page() {
   const [canNext, setCanNext] = useState<boolean>(false);
   const isMedStudent = localStorage.getItem("isMedStudent");
 
+  const calculateBrunoutScore = (): string => {
+    return Math.round(
+      (Number(answer1) +
+        Number(answer2) +
+        Number(answer3) +
+        Number(answer4) +
+        Number(answer5) +
+        Number(answer6)) /
+        6,
+    ).toFixed(0);
+  };
+
   const submit = () => {
     localStorage.setItem("cbissQ1", answer1);
     localStorage.setItem("cbissQ2", answer2);
@@ -22,6 +34,7 @@ export default function Page() {
     localStorage.setItem("cbissQ4", answer4);
     localStorage.setItem("cbissQ5", answer5);
     localStorage.setItem("cbissQ6", answer6);
+    localStorage.setItem("burnoutScore", calculateBrunoutScore());
   };
 
   useEffect(() => {
@@ -40,12 +53,12 @@ export default function Page() {
   }, [answer1, answer2, answer3, answer4, answer5, answer6]);
 
   return (
-    <div className="grid h-screen justify-items-center bg-scene2 text-black overflow-y-scroll">
+    <div className="grid h-screen justify-items-center overflow-y-scroll bg-scene2 text-black">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.5 }}
-        className="mb-[10%] mt-[6%] min-h-[83%] h-max w-[95%] rounded-3xl bg-white"
+        className="mb-[10%] mt-[6%] h-max min-h-[83%] w-[95%] rounded-3xl bg-white"
       >
         <div className="grid justify-items-center gap-y-10 pb-[5%] pt-[7%]">
           <ChoicePane1

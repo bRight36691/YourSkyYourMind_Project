@@ -28,7 +28,7 @@ export default function Page() {
               <p className="z-20 text-2xl">Tap to review Your sky :)</p>
               <Image
                 src="/img/phone-4-19.webp"
-                alt="SKY"
+                alt="phone"
                 width={3000}
                 height={2000}
                 className="z-20 h-auto w-1/2"

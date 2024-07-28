@@ -19,7 +19,7 @@ export default function ChoicePane({ question, setAnswer }: prop) {
             type="radio"
             name={question}
             className="radio h-6 w-6 border-2 checked:bg-blue-800"
-            value="0"
+            value="100"
             onChange={handleClick}
           />
           <h1>ไม่เคย</h1>
@@ -30,7 +30,7 @@ export default function ChoicePane({ question, setAnswer }: prop) {
             type="radio"
             name={question}
             className="radio h-6 w-6 border-2 checked:bg-blue-800"
-            value="25"
+            value="75"
             onChange={handleClick}
           />
           <h1>นานๆครั้ง</h1>
@@ -52,7 +52,7 @@ export default function ChoicePane({ question, setAnswer }: prop) {
             type="radio"
             name={question}
             className="radio h-6 w-6 border-2 checked:bg-blue-800"
-            value="75"
+            value="25"
             onChange={handleClick}
           />
           <h1>บ่อยครั้ง</h1>
@@ -63,7 +63,7 @@ export default function ChoicePane({ question, setAnswer }: prop) {
             type="radio"
             name={question}
             className="radio h-6 w-6 border-2 checked:bg-blue-800"
-            value="100"
+            value="0"
             onChange={handleClick}
           />
           <h1>เสมอ</h1>

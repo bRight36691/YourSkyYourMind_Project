@@ -19,12 +19,19 @@ export default {
         grayRadio: "#CBD5E1",
         scene2: "#757985",
         grayRI9: "#ADB1BA",
+        resultLine: "#4B4B4B",
+        pinkResult: "#FD7192",
+        blueResult: "#1983D4",
+        noBurnout: "#63C670",
+        mediumBurnout: "#C5C663",
+        highBurnout: "#DE6D30",
+        severeBurnout: "#DE3030",
       },
     },
   },
   plugins: [require("daisyui")],
 
-  daisyui : {
+  daisyui: {
     styled: true,
-  }
+  },
 } satisfies Config;

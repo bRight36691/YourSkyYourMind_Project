@@ -7,13 +7,38 @@ export const backgroundMapConfig = {
     image: "/img/scene1_sky.webp",
     imagePreload: [],
   },
-  "1-6": {
+  "1-1": {
     image: "",
-    imagePreload: ["/img/eyeOpen.gif"],
+    imagePreload: ["/img/scene1_sky.gif"],
+  },
+  "1-5": {
+    image: "",
+    imagePreload: [
+      "/img/1-12-7.webp",
+      "/img/1-12-6.webp",
+      "/img/1-12-5.webp",
+      "/img/1-12-4.webp",
+      "/img/1-12-3.webp",
+      "/img/1-12-2.webp",
+      "/img/1-12-1.webp",
+    ],
   },
   "1-7": {
-    image: "",
+    image: [
+      "/img/1-12-7.webp",
+      "/img/1-12-6.webp",
+      "/img/1-12-5.webp",
+      "/img/1-12-4.webp",
+      "/img/1-12-3.webp",
+      "/img/1-12-2.webp",
+      "/img/1-12-1.webp",
+    ],
+    stopMotionDuration: 800,
     imagePreload: ["/img/useLaptop.gif"],
+  },
+  "1-9": {
+    image: "",
+    imagePreload: ["/img/1-10.GIF"],
   },
   "1-10": {
     image: "",
@@ -74,7 +99,7 @@ export const backgroundMapConfig = {
   },
   "1-20": {
     image: "",
-    imagePreload: ["/img/2-.webp"],
+    imagePreload: [],
   },
   "2-5": {
     image: "",
@@ -85,32 +110,53 @@ export const backgroundMapConfig = {
     imagePreload: ["/img/teacher.gif"],
   },
   "2-10": {
-    image: "/img/2-.webp",
+    image: "",
     imagePreload: [],
   },
   "2-11": {
-    image: "/img/2-.webp",
-    imagePreload: [],
+    image: "",
+    imagePreload: ["/img/2-12.GIF"],
   },
   "2-12": {
     image: "",
-    imagePreload: ["/img/2-.webp"],
+    imagePreload: [],
   },
   "2-13": {
-    image: "/img/2-.webp",
+    image: "",
     imagePreload: [],
   },
   "2-14": {
-    image: "/img/2-.webp",
+    image: "",
     imagePreload: [],
   },
   "2-15": {
-    image: "/img/2-.webp",
+    image: "",
     imagePreload: [],
   },
   "2-16": {
-    image: "/img/2-.webp",
-    imagePreload: [],
+    image: "",
+    imagePreload: [
+      "/img/1-12-7.webp",
+      "/img/1-12-6.webp",
+      "/img/1-12-5.webp",
+      "/img/1-12-4.webp",
+      "/img/1-12-3.webp",
+      "/img/1-12-2.webp",
+      "/img/1-12-1.webp",
+    ],
+  },
+  "3-1": {
+    image: [
+      "/img/1-12-7.webp",
+      "/img/1-12-6.webp",
+      "/img/1-12-5.webp",
+      "/img/1-12-4.webp",
+      "/img/1-12-3.webp",
+      "/img/1-12-2.webp",
+      "/img/1-12-1.webp",
+    ],
+    stopMotionDuration: 800,
+    imagePreload: ["/img/3-3.GIF"],
   },
   "3-3": {
     image: "/img/3-3.GIF",
@@ -162,53 +208,66 @@ export const backgroundMapConfig = {
   },
   "3-15": {
     image: "/img/3-3.GIF",
+    imagePreload: ["/img/วิวเย็น.GIF"],
+  },
+  "3-16": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-16" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-17": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-17" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-18": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-18" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-19": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-19" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-20": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-20" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-21": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-21" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-22": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-22" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-23": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-23" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-24": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-24" : {
-    image : "/img/วิวเย็น.GIF",
+  "3-25": {
+    image: "/img/วิวเย็น.GIF",
+    imagePreload: ["/img/3-26.webp"],
+  },
+  "3-26": {
+    image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
-  "3-25" : {
-    image : "/img/วิวเย็น.GIF",
-    imagePreload: [],
+  "4-17": {
+    image: "",
+    imagePreload: ["/img/4-18.webp"],
   },
-  "3-26" : {
-    image : "/img/วิวเย็น.GIF",
-    imagePreload: [],
+  "4-18": {
+    image: "",
+    imagePreload: ["/img/phone-4-19.webp"],
   },
-  
-  
-
+  "4-19": {
+    image: "",
+    imagePreload: ["/img/ysym_logo.webp"],
+  },
+  "4-22": {
+    image: "",
+    imagePreload: ["/img/scene1_sky.webp"],
+  },
 } as const;
