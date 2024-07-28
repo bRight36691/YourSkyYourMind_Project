@@ -7,6 +7,7 @@ export default {
     extend: {
       fontFamily: {
         ibmPlex: ["var(--ibm-plex-sans-thai-looped-font)", "sans-serif"],
+        caveatBrush: ["var(--caveat-brush-font)", "cursive"],
       },
       colors: {
         whiteBox: "#F8F8F7",
@@ -26,6 +27,10 @@ export default {
         mediumBurnout: "#C5C663",
         highBurnout: "#DE6D30",
         severeBurnout: "#DE3030",
+        blueSkyColor: "#0090FF",
+      },
+      backgroundImage: {
+        result: "url('/img/resultBg.webp')",
       },
     },
   },
