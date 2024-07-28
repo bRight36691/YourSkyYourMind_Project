@@ -9,7 +9,7 @@ export default function Page() {
         <motion.div
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:2,delay:0.5}}
+            transition={{duration:1,delay:0.5}}
             className='grid place-items-center items-center'
         >
             <div className='absolute top-[13%] left-[8%] h-[55%] w-[85%] bg-white -z-[50] opacity-[70%] rounded-[80%] blur-[20px]'></div>

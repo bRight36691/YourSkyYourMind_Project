@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="th" data-theme="light">
       <body className={cn(
-          "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex",
+          "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex ",
           ibmPlexSansThaiLooped.variable,
 
         )}>{children}</body>

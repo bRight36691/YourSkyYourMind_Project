@@ -4,7 +4,7 @@ import ChoicePane1 from "~/component/choicePane1";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ChoicePane3 from "~/component/choicePane3";
+import ChoicePane4 from "~/component/choicePane4";
 
 export default function Page() {
   const [answer1, setAnswer1] = useState<string>("");
@@ -57,10 +57,10 @@ export default function Page() {
             question="คุณรู้สึกว่าทุกชั่วโมงในการทำงานเป็นเรื่องน่าเหน็ดเหนื่อยหรือไม่"
             setAnswer={setAnswer3}
           ></ChoicePane1>
-          <ChoicePane3
+          <ChoicePane4
             question="คุณมีพลังเหลือพอสำหรับครอบครัวและเพื่อนๆ ในช่วงเวลาพักผ่อนหรือไม่"
             setAnswer={setAnswer4}
-          ></ChoicePane3>
+          ></ChoicePane4>
           <ChoicePane1
             question="การเรียนทำให้คุณรู้สึกเหนื่อยใจหรือไม่"
             setAnswer={setAnswer5}

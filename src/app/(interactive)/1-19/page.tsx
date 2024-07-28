@@ -25,7 +25,7 @@ export default function Page() {
                 <h1>คุณหัวเราะเบา ๆ</h1>
                 <h1 className="mt-[8%]">ไม่คิดว่าจะเจอกัน</h1>
                 <h1 className="mt-[2%]">ในวันที่อ่อนล้าแบบนี้</h1>
-                <h1 className="mt-[8%]"><span className="text-red-500">{importantPerson}</span> เริ่มถามคำถามด้วยความห่วงใย</h1>
+                <h1 className="mt-[8%]">{importantPerson} เริ่มถามคำถามด้วยความห่วงใย</h1>
             </div>
             <Link className="z-50 pt-[30%]" href='/1-20'>
                 <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl">ถัดไป</button>
