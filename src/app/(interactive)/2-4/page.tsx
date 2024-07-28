@@ -1,91 +1,83 @@
 "use client";
+
+import ChoicePane1 from "~/component/choicePane1";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { QuestionRadio } from "~/component/inputs/QuestionRadio";
-import { NextButton } from "~/component/NextButton";
+import ChoicePane3 from "~/component/choicePane3";
 
 export default function Page() {
-  const [cbissQ7, setCbissQ7] = useState<string>("");
-  const [cbissQ8, setCbissQ8] = useState<string>("");
-  const [cbissQ9, setCbissQ9] = useState<string>("");
-  const [cbissQ10, setCbissQ10] = useState<string>("");
-  const [cbissQ11, setCbissQ11] = useState<string>("");
+  const [answer1, setAnswer1] = useState<string>("");
+  const [answer2, setAnswer2] = useState<string>("");
+  const [answer3, setAnswer3] = useState<string>("");
+  const [answer4, setAnswer4] = useState<string>("");
+  const [answer5, setAnswer5] = useState<string>("");
+  const [canNext, setCanNext] = useState<boolean>(false);
 
-  const onCbissQ7Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ7(e.target.value);
-    localStorage.setItem("cbissQ7", e.target.value);
+  const submit = () => {
+    localStorage.setItem("cbissQ7", answer1);
+    localStorage.setItem("cbissQ8", answer2);
+    localStorage.setItem("cbissQ9", answer3);
+    localStorage.setItem("cbissQ10", answer4);
+    localStorage.setItem("cbissQ11", answer5);
   };
 
-  const onCbissQ8Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ8(e.target.value);
-    localStorage.setItem("cbissQ8", e.target.value);
-  };
-
-  const onCbissQ9Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ9(e.target.value);
-    localStorage.setItem("cbissQ9", e.target.value);
-  };
-
-  const onCbissQ10Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ10(e.target.value);
-    localStorage.setItem("cbissQ10", e.target.value);
-  };
-
-  const onCbissQ11Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ11(e.target.value);
-    localStorage.setItem("cbissQ11", e.target.value);
-  };
+  useEffect(() => {
+    if (
+      answer1 !== "" &&
+      answer2 !== "" &&
+      answer3 !== "" &&
+      answer4 !== "" &&
+      answer5 !== ""
+    ) {
+      setCanNext(true);
+    } else {
+      setCanNext(false);
+    }
+  }, [answer1, answer2, answer3, answer4, answer5]);
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-scene2 object-none">
+    <div className="grid h-screen justify-items-center bg-scene2 text-black overflow-y-scroll">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-        }}
-        className="flex min-h-screen flex-col"
+        transition={{ duration: 2, delay: 0.5 }}
+        className="mb-[10%] mt-[6%] min-h-[80%] h-max w-[95%] rounded-3xl bg-white"
       >
-        <div className="flex w-full justify-center">
-          <div className="fixed top-20 z-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
-            <QuestionRadio
-              question="คุณรู้สึกหมดเรี่ยวแรงในวันทำงานใช่หรือไม่"
-              onChange={onCbissQ7Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกเหนื่อยในตอนเช้าเมื่อคิดถึงงานที่ต้องทำในวันใหม่หรือไม่"
-              onChange={onCbissQ8Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกว่าทุกชั่วโมงในการทำงานเป็นเรื่องน่าเหน็ดเหนื่อยหรือไม่"
-              onChange={onCbissQ9Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณมีพลังเหลือพอสำหรับครอบครัวและเพื่อนๆ ในช่วงเวลาพักผ่อนหรือไม่"
-              onChange={onCbissQ10Change}
-              values={["100", "75", "50", "25", "0"]}
-            />
-            <QuestionRadio
-              question="การเรียนทำให้คุณรู้สึกเหนื่อยใจหรือไม่"
-              onChange={onCbissQ11Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-          </div>
+        <div className="grid justify-items-center gap-y-10 pb-[5%] pt-[7%]">
+          <ChoicePane1
+            question="คุณรู้สึกหมดเรี่ยวแรงในวันทำงานใช่หรือไม่"
+            setAnswer={setAnswer1}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกเหนื่อยในตอนเช้าเมื่อคิดถึงงานที่ต้องทำในวันใหม่หรือไม่"
+            setAnswer={setAnswer2}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกว่าทุกชั่วโมงในการทำงานเป็นเรื่องน่าเหน็ดเหนื่อยหรือไม่"
+            setAnswer={setAnswer3}
+          ></ChoicePane1>
+          <ChoicePane3
+            question="คุณมีพลังเหลือพอสำหรับครอบครัวและเพื่อนๆ ในช่วงเวลาพักผ่อนหรือไม่"
+            setAnswer={setAnswer4}
+          ></ChoicePane3>
+          <ChoicePane1
+            question="การเรียนทำให้คุณรู้สึกเหนื่อยใจหรือไม่"
+            setAnswer={setAnswer5}
+          ></ChoicePane1>
         </div>
-
-        {cbissQ7 && cbissQ8 && cbissQ9 && cbissQ10 && cbissQ11 && (
-          <Link href="/2-5">
-            <div className="fixed bottom-16 flex w-screen justify-center">
-              <NextButton />
-            </div>
-          </Link>
-        )}
       </motion.div>
+
+      {canNext && (
+        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-5">
+          <button
+            className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
+            onClick={submit}
+          >
+            ถัดไป
+          </button>
+        </Link>
+      )}
     </div>
   );
 }

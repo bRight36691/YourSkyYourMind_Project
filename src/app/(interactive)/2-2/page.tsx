@@ -9,7 +9,7 @@ export default function Page() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push("/2-3");
-    }, 250);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [router]);
@@ -20,7 +20,7 @@ export default function Page() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 0.25,
+          duration: 1,
           delay: 0,
         }}
         className="flex min-h-screen flex-col justify-center overflow-hidden"
