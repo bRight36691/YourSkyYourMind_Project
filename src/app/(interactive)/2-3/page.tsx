@@ -13,7 +13,7 @@ export default function Page() {
   const [answer5, setAnswer5] = useState<string>("");
   const [answer6, setAnswer6] = useState<string>("");
   const [canNext, setCanNext] = useState<boolean>(false);
-  const isMedStudent = localStorage.getItem("isMedStudent");
+  const [isMedStudent, setIsMedStudent] = useState<string>();
 
   const calculateBrunoutScore = (): string => {
     return Math.round(
@@ -36,6 +36,10 @@ export default function Page() {
     localStorage.setItem("cbissQ6", answer6);
     localStorage.setItem("burnoutScore", calculateBrunoutScore());
   };
+
+  useEffect(() => {
+    setIsMedStudent(localStorage.getItem("isMedStudent") ?? "");
+  }, []);
 
   useEffect(() => {
     if (
