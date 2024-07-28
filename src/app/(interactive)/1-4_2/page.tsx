@@ -30,15 +30,8 @@ export default function Page() {
   };
 
   const onNextButtonClick = (): void => {
-    const generalInformation = {
-      age,
-      occupation,
-    };
-    localStorage.setItem(
-      "generalInformation",
-      JSON.stringify(generalInformation),
-    );
     localStorage.setItem("age", age);
+    localStorage.setItem("occupation", occupation);
   };
 
   return (
