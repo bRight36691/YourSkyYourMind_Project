@@ -13,7 +13,7 @@ export default function ChoicePane({question,setAnswer}:prop) {
             <h1 className="text-[17px] text-wrap text-center font-light">{question}</h1>
             <div className="grid grid-cols-5 text-[12px] gap-x-6 pt-[3%]">
                 <label className="grid grid-cols-1 justify-items-center gap-y-2">
-                    <input type="radio" name={question} className="radio checked:bg-blue-800 h-6 w-6 border-2" 
+                    <input type="radio" name={question} className="radio checked:bg-blue-800  h-6 w-6 border-2" 
                         value="0" onChange={handleClick}/>
                     <h1>ไม่เคย</h1>
                 </label>

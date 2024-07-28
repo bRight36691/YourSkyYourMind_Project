@@ -12,12 +12,12 @@ export default function Page() {
     const [answer4,setAnswer4] = useState<string>('');
     const [canNext,setCanNext] = useState<boolean>(false);
     
-    const submit = () => {
+    useEffect(() => {
         localStorage.setItem('cbissQ20',answer1)
         localStorage.setItem('cbissQ21',answer2)
         localStorage.setItem('cbissQ22',answer3)
         localStorage.setItem('cbissQ23',answer4)
-    }
+    },[answer1,answer2,answer3,answer4])
 
     useEffect(()=>{
         if(answer1 !== '' && answer2 !== '' && answer3 !== '' && answer4 !== ''){
@@ -44,7 +44,7 @@ export default function Page() {
         
         {canNext && (
             <Link className="fixed z-50 bottom-2 left-[36%]" href='/2-11'>
-                <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" onClick={submit}>ถัดไป</button>
+                <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
             </Link>
         )
         }

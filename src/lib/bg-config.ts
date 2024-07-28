@@ -164,4 +164,51 @@ export const backgroundMapConfig = {
     image: "/img/3-3.GIF",
     imagePreload: [],
   },
+  "3-16" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-17" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-18" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-19" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-20" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-21" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-22" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-23" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-24" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-25" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "3-26" : {
+    image : "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  
+  
+
 } as const;
