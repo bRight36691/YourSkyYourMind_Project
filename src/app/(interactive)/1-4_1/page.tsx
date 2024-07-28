@@ -129,7 +129,7 @@ export default function Page() {
   };
 
   return (
-    <div className="overflow-hidden object-none">
+    <div className="overflow-y-scroll">
       <MovingSky />
       <motion.div
         initial={{ opacity: 0 }}
@@ -140,7 +140,7 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <div className="fixed top-16 z-10 flex w-screen flex-col items-center text-black">
+        <div className="z-10 mt-12 flex w-screen flex-col items-center text-black">
           <p className="text-xs font-bold">
             สำหรับนิสิตนักศึกษาแพทย์และนักเรียนแพทย์ทหาร
           </p>
@@ -247,26 +247,26 @@ export default function Page() {
               />
             </div>
           </div>
-        </div>
 
-        {age &&
-          sex &&
-          mentalDisorder &&
-          gpax &&
-          gpaxSatisfaction &&
-          university &&
-          year && (
-            <Link href="/1-5">
-              <div className="fixed bottom-16 flex w-screen justify-center">
-                <button
-                  className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
-                  onClick={onNextButtonClick}
-                >
-                  ถัดไป
-                </button>
-              </div>
-            </Link>
-          )}
+          {age &&
+            sex &&
+            mentalDisorder &&
+            gpax &&
+            gpaxSatisfaction &&
+            university &&
+            year && (
+              <Link href="/1-5">
+                <div className="mt-4 flex w-screen justify-center">
+                  <button
+                    className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
+                    onClick={onNextButtonClick}
+                  >
+                    ถัดไป
+                  </button>
+                </div>
+              </Link>
+            )}
+        </div>
       </motion.div>
     </div>
   );

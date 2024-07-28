@@ -1,115 +1,100 @@
 "use client";
+
+import ChoicePane1 from "~/component/choicePane1";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { QuestionRadio } from "~/component/inputs/QuestionRadio";
-import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
-  const [cbissQ1, setCbissQ1] = useState<string>("");
-  const [cbissQ2, setCbissQ2] = useState<string>("");
-  const [cbissQ3, setCbissQ3] = useState<string>("");
-  const [cbissQ4, setCbissQ4] = useState<string>("");
-  const [cbissQ5, setCbissQ5] = useState<string>("");
-  const [cbissQ6, setCbissQ6] = useState<string>("");
+  const [answer1, setAnswer1] = useState<string>("");
+  const [answer2, setAnswer2] = useState<string>("");
+  const [answer3, setAnswer3] = useState<string>("");
+  const [answer4, setAnswer4] = useState<string>("");
+  const [answer5, setAnswer5] = useState<string>("");
+  const [answer6, setAnswer6] = useState<string>("");
+  const [canNext, setCanNext] = useState<boolean>(false);
   const isMedStudent = localStorage.getItem("isMedStudent");
 
-  const onCbissQ1Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ1(e.target.value);
-    localStorage.setItem("cbissQ1", e.target.value);
+  const submit = () => {
+    localStorage.setItem("cbissQ1", answer1);
+    localStorage.setItem("cbissQ2", answer2);
+    localStorage.setItem("cbissQ3", answer3);
+    localStorage.setItem("cbissQ4", answer4);
+    localStorage.setItem("cbissQ5", answer5);
+    localStorage.setItem("cbissQ6", answer6);
   };
 
-  const onCbissQ2Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ2(e.target.value);
-    localStorage.setItem("cbissQ2", e.target.value);
-  };
-
-  const onCbissQ3Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ3(e.target.value);
-    localStorage.setItem("cbissQ3", e.target.value);
-  };
-
-  const onCbissQ4Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ4(e.target.value);
-    localStorage.setItem("cbissQ4", e.target.value);
-  };
-
-  const onCbissQ5Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ5(e.target.value);
-    localStorage.setItem("cbissQ5", e.target.value);
-  };
-
-  const onCbissQ6Change = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setCbissQ6(e.target.value);
-    localStorage.setItem("cbissQ6", e.target.value);
-  };
+  useEffect(() => {
+    if (
+      answer1 !== "" &&
+      answer2 !== "" &&
+      answer3 !== "" &&
+      answer4 !== "" &&
+      answer5 !== "" &&
+      answer6 !== ""
+    ) {
+      setCanNext(true);
+    } else {
+      setCanNext(false);
+    }
+  }, [answer1, answer2, answer3, answer4, answer5, answer6]);
 
   return (
-    <div className="h-screen w-full overflow-hidden bg-scene2 object-none">
+    <div className="grid h-screen justify-items-center bg-scene2 text-black overflow-y-scroll">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-        }}
-        className="flex min-h-screen flex-col"
+        transition={{ duration: 2, delay: 0.5 }}
+        className="mb-[10%] mt-[6%] min-h-[83%] h-max w-[95%] rounded-3xl bg-white"
       >
-        <div className="flex w-full justify-center">
-          <div className="fixed top-20 z-20 flex h-[635px] w-[95%] flex-col items-center gap-[30px] rounded-[20px] bg-white/80 px-1 py-4 text-center text-black">
-            <QuestionRadio
-              question="คุณรู้สึกเหนื่อยบ่อยแค่ไหน"
-              onChange={onCbissQ1Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกว่าร่างกายเหน็ดเหนื่อยอ่อนล้าบ่อยแค่ไหน"
-              onChange={onCbissQ2Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกว่าเหนื่อยใจบ่อยแค่ไหน"
-              onChange={onCbissQ3Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณคิดว่า “ทนไม่ไหวอีก” แล้วบ่อยแค่ไหน"
-              onChange={onCbissQ4Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกเหนื่อยล้าหมดแรงบ่อยแค่ไหน"
-              onChange={onCbissQ5Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-            <QuestionRadio
-              question="คุณรู้สึกอ่อนแอและเจ็บป่วยได้ง่ายบ่อยแค่ไหน"
-              onChange={onCbissQ6Change}
-              values={["0", "25", "50", "75", "100"]}
-            />
-          </div>
+        <div className="grid justify-items-center gap-y-10 pb-[5%] pt-[7%]">
+          <ChoicePane1
+            question="คุณรู้สึกเหนื่อยบ่อยแค่ไหน"
+            setAnswer={setAnswer1}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกว่าร่างกายเหน็ดเหนื่อยอ่อนล้าบ่อยแค่ไหน"
+            setAnswer={setAnswer2}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกว่าเหนื่อยใจบ่อยแค่ไหน"
+            setAnswer={setAnswer3}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณคิดว่า “ทนไม่ไหวอีก” แล้วบ่อยแค่ไหน"
+            setAnswer={setAnswer4}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกเหนื่อยล้าหมดแรงบ่อยแค่ไหน"
+            setAnswer={setAnswer5}
+          ></ChoicePane1>
+          <ChoicePane1
+            question="คุณรู้สึกอ่อนแอและเจ็บป่วยได้ง่ายบ่อยแค่ไหน"
+            setAnswer={setAnswer6}
+          ></ChoicePane1>
         </div>
-
-        {cbissQ1 &&
-          cbissQ2 &&
-          cbissQ3 &&
-          cbissQ4 &&
-          cbissQ5 &&
-          cbissQ6 &&
-          (isMedStudent === "medStudent" ? (
-            <Link href="/2-4">
-              <div className="fixed bottom-16 flex w-screen justify-center">
-                <NextButton />
-              </div>
-            </Link>
-          ) : (
-            <Link href="/2-16">
-              <div className="fixed bottom-16 flex w-screen justify-center">
-                <NextButton />
-              </div>
-            </Link>
-          ))}
       </motion.div>
+
+      {canNext && isMedStudent === "medStudent" && (
+        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-4">
+          <button
+            className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
+            onClick={submit}
+          >
+            ถัดไป
+          </button>
+        </Link>
+      )}
+      {canNext && isMedStudent !== "medStudent" && (
+        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-16">
+          <button
+            className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
+            onClick={submit}
+          >
+            ถัดไป
+          </button>
+        </Link>
+      )}
     </div>
   );
 }
