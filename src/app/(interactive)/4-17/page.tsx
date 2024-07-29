@@ -20,7 +20,7 @@ export default function Page() {
                 <h1 className='pt-[150%]'>เพราะตัวคุณเอง</h1>
                 <h1>ก็คือ <span className='font-medium'>&quot;คนสำคัญ&quot;</span> คนหนึ่งเหมือนกัน</h1>
             </div>
-            <Link className="fixed z-50 bottom-16 left-[36%]" href='/4-15'>
+            <Link className="fixed z-50 bottom-16 left-[36%]" href='/4-18'>
                 <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
             </Link>
             <img 
