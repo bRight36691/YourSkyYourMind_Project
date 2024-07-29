@@ -20,16 +20,16 @@ const InteractiveBackground = () => {
             : undefined,
         );
         break;
-        case "1-12" :
+      case "1-7":
+      case "1-12":
+      case "3-1":
         backgroundMapConfig[page].image.forEach((image, index) => {
           setTimeout(() => {
             setBgImgSrc(image);
           }, index * backgroundMapConfig[page].stopMotionDuration);
         });
         break;
-      
     }
-    
   }, [page, router]);
 
   const imagePreloadSrc = useMemo(() => {

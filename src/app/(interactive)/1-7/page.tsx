@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Page() {
   const router = useRouter();
@@ -9,19 +9,16 @@ export default function Page() {
   useEffect(() => {
     const timer = setTimeout(() => {
       router.push("/1-9");
-    }, 2500);
+    }, 6000);
 
     return () => clearTimeout(timer);
   }, [router]);
+
   return (
-    <div className="h-screen w-full overflow-hidden bg-white object-none">
-      <Image
-        src="/img/eyeOpen.gif"
-        width={200}
-        height={200}
-        alt="eye open"
-        className="fixed h-screen w-[300%]"
-      />
-    </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1, transition: { duration: 2 } }}
+      exit={{ opacity: 0 }}
+    ></motion.div>
   );
 }

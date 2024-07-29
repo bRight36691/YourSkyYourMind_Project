@@ -11,7 +11,7 @@ export const QuestionRadio = ({
   onChange,
   values,
 }: QuestionRadioProps) => {
-  const choices = ["ไม่เคย", "นานๆ ครั้ง", "บางครั้ง", "บ่อยครั้ง", "เสมอ"];
+  const choices = ["ไม่เคย", "นาน ๆ ครั้ง", "บางครั้ง", "บ่อยครั้ง", "เสมอ"];
   return (
     <div className="flex w-full flex-col items-center gap-2 text-center">
       <p>{question}</p>

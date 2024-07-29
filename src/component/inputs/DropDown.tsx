@@ -26,6 +26,7 @@ export const DropDown = ({
       } flex justify-between shadow-sm ring-1 ring-inset ring-gray-300`}
       onChange={(e) => choiceSelection(e.target.value)}
       defaultValue="เลือก"
+      name={choices[0]}
     >
       <option disabled>เลือก</option>
       {choices.map((choice: string, index: number): JSX.Element => {

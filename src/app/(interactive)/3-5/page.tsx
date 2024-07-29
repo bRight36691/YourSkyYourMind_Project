@@ -2,9 +2,14 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { NextButton } from "~/component/NextButton";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const age = localStorage.getItem("age");
+  const [age, setAge] = useState<string>();
+  useEffect(() => {
+    const getName = localStorage.getItem("age");
+    setAge(getName ?? "");
+  }, []);
 
   return (
     <div className="h-screen w-full overflow-hidden object-none">
