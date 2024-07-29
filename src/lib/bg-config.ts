@@ -264,7 +264,7 @@ export const backgroundMapConfig = {
   },
   "4-19": {
     image: "",
-    imagePreload: ["/img/ysym_logo.webp"],
+    imagePreload: ["/img/resultBg.webp"],
   },
   "4-22": {
     image: "",
