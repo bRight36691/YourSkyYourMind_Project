@@ -80,9 +80,11 @@ export default function Page() {
           </div>
           <div className="bg-resultLine my-2 h-[1px] w-full" />
           <div className="text-xs font-medium leading-relaxed">
-            <p className="text-pinkResult">
-              ค่าเฉลี่ยของผู้เล่นทั้งหมด : {avgBurnoutScore}
-            </p>
+            {avgBurnoutScore !== "0" && (
+              <p className="text-pinkResult">
+                ค่าเฉลี่ยของผู้เล่นทั้งหมด : {avgBurnoutScore}
+              </p>
+            )}
             <p className="text-blueResult">
               คะแนน Burnout ของคุณ : {burnoutScore}
             </p>

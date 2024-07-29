@@ -7,7 +7,7 @@ import { toJpeg } from "html-to-image";
 import UAParser from "ua-parser-js";
 import { DownloadIcon } from "~/component/DownloadIcon";
 import { ShareIcon } from "~/component/ShareIcon";
-import { ResultIGTemplate } from "~/component/ResultIGTemplate";
+import { IgLogo } from "~/component/IgLogo";
 
 export default function Page() {
   const [idx, setIdx] = useState<number>(0);
@@ -195,7 +195,7 @@ export default function Page() {
       >
         <div
           id="exported"
-          className="bg-result absolute flex h-screen w-full flex-col items-center overflow-hidden bg-cover bg-top bg-no-repeat"
+          className="bg-result absolute flex w-full flex-col items-center overflow-hidden bg-cover bg-top bg-no-repeat"
         >
           <div className="mt-[180px] flex flex-col items-center gap-4 text-center text-black">
             <div>
@@ -225,8 +225,16 @@ export default function Page() {
                 {quotes[idx]}
               </p>
             </div>
+            <div className="z-20 mb-6 mr-4 mt-1 flex w-full items-center justify-end gap-1">
+              <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
+                <IgLogo />
+              </div>
+              <div className="text-left text-[10px] leading-[12px]">
+                <p>@Yourskyyourmind</p>
+                <p>#Yourskyyourmind</p>
+              </div>
+            </div>
           </div>
-          <ResultIGTemplate />
         </div>
         <div className="fixed bottom-[10%] z-20 flex w-full justify-center gap-2">
           {userAgentData === "iPhone" ? (
