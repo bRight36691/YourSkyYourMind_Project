@@ -254,6 +254,30 @@ export const backgroundMapConfig = {
     image: "/img/วิวเย็น.GIF",
     imagePreload: [],
   },
+  "4-1": {
+    image: "/img/วิวเย็น.GIF",
+    imagePreload: [],
+  },
+  "4-4": {
+    image: "",
+    imagePreload: ["/img/night.GIF"],
+  },
+  "4-6": {
+    image: "/img/night.GIF",
+    imagePreload: [],
+  },
+  "4-7": {
+    image: "/img/night.GIF",
+    imagePreload: [],
+  },
+  "4-8": {
+    image: "/img/night.GIF",
+    imagePreload: [],
+  },
+  "4-9": {
+    image: "/img/night.GIF",
+    imagePreload: [],
+  },
   "4-17": {
     image: "",
     imagePreload: ["/img/4-18.webp"],

@@ -32,6 +32,7 @@ export default {
       },
       backgroundImage: {
         result: "url('/img/resultBg.webp')",
+        night: "url('/img/night.GIF')",
       },
     },
   },
