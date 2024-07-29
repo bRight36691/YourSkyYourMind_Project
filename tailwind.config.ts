@@ -28,6 +28,7 @@ export default {
         highBurnout: "#DE6D30",
         severeBurnout: "#DE3030",
         blueSkyColor: "#0090FF",
+        blueDass21: "#E7F5FF",
       },
       backgroundImage: {
         result: "url('/img/resultBg.webp')",

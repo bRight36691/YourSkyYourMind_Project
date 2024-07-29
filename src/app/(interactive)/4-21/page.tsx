@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ResultTemplate } from "~/component/ResultTemplate";
+import { ResultIGTemplate } from "~/component/ResultIGTemplate";
 import { FormServices } from "~/service/FormServices";
 
 export default function Page() {
@@ -51,7 +51,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="overflow-y-scroll object-none">
+    <div className="bg-result overflow-y-scroll bg-cover bg-top bg-no-repeat object-none">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -61,8 +61,7 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <ResultTemplate />
-        <div className="mb-20 mt-4 flex flex-col items-center gap-6 text-center text-black">
+        <div className="mb-20 mt-[190px] flex flex-col items-center gap-6 text-center text-black">
           <p>ผลคะแนนวัดระดับความ Burnout ของคุณ</p>
           <div
             className={`mt-2 flex w-4/5 flex-col items-center rounded-[20px] border-2 ${burnoutBorderColors[burnoutLevel]} noBurnout py-5 text-xl leading-loose`}
@@ -90,6 +89,7 @@ export default function Page() {
             <p>ติดต่อ ig : @yourskyyourmind</p>
             <p>หรือ สายด่วนสุขภาพจิต 1323</p>
           </div>
+          <ResultIGTemplate />
         </div>
         <div className="fixed bottom-[5%] z-20 flex w-screen justify-center">
           {isMedStudent === "medStudent" && (
