@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { cn } from "../lib/utils";
 import { IBM_Plex_Sans_Thai_Looped } from "next/font/google";
+import Sounds from "~/component/sounds";
+import SoundToggle from "~/component/sound-toggle";
 import "../styles/globals.css";
 
 const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
@@ -12,6 +14,7 @@ const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
 export const metadata: Metadata = {
   title: "Your Sky Your Mind",
   description: "Your Sky Your Mind project",
+  icons: [{ rel: "icon", url: "/img/ysym_logo.webp" }],
 };
 
 export default function RootLayout({
@@ -25,7 +28,13 @@ export default function RootLayout({
           "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex ",
           ibmPlexSansThaiLooped.variable,
 
-        )}>{children}</body>
+        )}>
+        <Sounds />
+        <div className="absolute right-5 top-5 z-50 flex w-full items-center justify-end">
+          <SoundToggle />
+        </div>
+        {children}
+      </body>
     </html>
   );
 }
