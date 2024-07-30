@@ -9,7 +9,7 @@ export default function Page() {
         <motion.div
             initial={{opacity:0}}
             animate={{opacity:1}}
-            transition={{duration:2}}
+            transition={{duration:1,delay:0.5}}
             className='grid place-items-center items-center'
         >
             <div className='absolute top-[18%] left-[7%] h-[45%] w-[90%] bg-white -z-[50] opacity-[70%] rounded-[80%] blur-[20px]'></div>
@@ -21,7 +21,7 @@ export default function Page() {
                 <motion.div
                     initial={{opacity:0}}
                     animate={{opacity:1}}
-                    transition={{duration:2,delay:4}}
+                    transition={{duration:2,delay:3}}
                 >
                     <h1 className='text-[28px] pt-[10%]'>&quot; โลกมันก็เป็นแบบนี้แหละ &quot;</h1>
                 </motion.div>
@@ -30,7 +30,7 @@ export default function Page() {
             <motion.div
                     initial={{opacity:0}}
                     animate={{opacity:1}}
-                    transition={{duration:2,delay:4}}
+                    transition={{duration:2,delay:3}}
                 >
 
                 <Link className="fixed z-50 bottom-10 left-[36%]" href='/3-20'>

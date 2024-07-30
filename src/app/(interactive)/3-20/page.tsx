@@ -7,6 +7,7 @@ import { FormMappers } from "~/service/FormMappers";
 import { FormServices } from "~/service/FormServices";
 
 export default function Page() {
+
   const [isMedStudent, setIsMedStudent] = useState<string>();
   useEffect(() => {
     setIsMedStudent(localStorage.getItem("isMedStudent") ?? "");

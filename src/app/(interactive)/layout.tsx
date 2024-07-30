@@ -6,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative min-h-screen overscroll-none">
+    <div className="relative min-h-screen overscroll-none overflow-hidden">
       <InteractiveBackground />
       {children}
     </div>

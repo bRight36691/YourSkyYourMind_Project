@@ -35,7 +35,7 @@ export default function ChoicePane({ question, setAnswer }: prop) {
           />
           <h1>นานๆครั้ง</h1>
         </label>
-
+        
         <label className="grid grid-cols-1 justify-items-center gap-y-2">
           <input
             type="radio"
