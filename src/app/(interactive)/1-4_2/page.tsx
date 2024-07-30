@@ -17,7 +17,7 @@ export default function Page() {
       "นิสิตนักศึกษา",
       "วัยทำงาน",
       "ว่างงาน/เกษียณ",
-      "อื่นๆ",
+      "อื่น ๆ",
     ];
   };
 
@@ -30,15 +30,8 @@ export default function Page() {
   };
 
   const onNextButtonClick = (): void => {
-    const generalInformation = {
-      age,
-      occupation,
-    };
-    localStorage.setItem(
-      "generalInformation",
-      JSON.stringify(generalInformation),
-    );
     localStorage.setItem("age", age);
+    localStorage.setItem("occupation", occupation);
   };
 
   return (

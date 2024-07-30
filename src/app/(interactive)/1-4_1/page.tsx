@@ -105,27 +105,25 @@ export default function Page() {
   };
 
   const onNextButtonClick = (): void => {
-    const generalInformation = {
-      age,
-      sex: sexes().findIndex((e) => e === sex),
-      mentalDisorder: mentalDisorders().findIndex((e) => e === mentalDisorder),
-    };
-    const educationInformation = {
-      gpax,
-      gpaxSatisfaction:
-        gpaxSatisfactions().findIndex((e) => e === gpaxSatisfaction) + 1,
-      university: universities().findIndex((e) => e === university) + 1,
-      year: years().findIndex((e) => e === year) + 1,
-    };
-    localStorage.setItem(
-      "generalInformation",
-      JSON.stringify(generalInformation),
-    );
-    localStorage.setItem(
-      "educationInformation",
-      JSON.stringify(educationInformation),
-    );
     localStorage.setItem("age", age);
+    localStorage.setItem("sex", String(sexes().findIndex((e) => e === sex)));
+    localStorage.setItem(
+      "mentalDisorder",
+      String(mentalDisorders().findIndex((e) => e === mentalDisorder)),
+    );
+    localStorage.setItem("gpax", gpax);
+    localStorage.setItem(
+      "gpaxSatisfaction",
+      String(gpaxSatisfactions().findIndex((e) => e === gpaxSatisfaction) + 1),
+    );
+    localStorage.setItem(
+      "university",
+      String(universities().findIndex((e) => e === university) + 1),
+    );
+    localStorage.setItem(
+      "year",
+      String(years().findIndex((e) => e === year) + 1),
+    );
   };
 
   return (

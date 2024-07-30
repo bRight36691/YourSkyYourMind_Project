@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-    const [importantPerson,setImportantPerson] = useState<string>('')
-    useEffect(()=> {
-        const getName = localStorage.getItem('importantPerson');
-        setImportantPerson((getName!==null) ? getName : '');
+  const [importantPerson, setImportantPerson] = useState<string>("");
+  useEffect(() => {
+    const getName = localStorage.getItem("importantPerson");
+    setImportantPerson(getName ?? "");
+  }, []);
 
-    },[])
-
+  
     return(
         <motion.div
             initial={{opacity:0}}
@@ -33,3 +33,4 @@ export default function Page() {
         </motion.div>
     );
 }
+

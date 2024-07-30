@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { cn } from "../lib/utils";
-import { IBM_Plex_Sans_Thai_Looped } from "next/font/google";
+import { IBM_Plex_Sans_Thai_Looped, Caveat_Brush } from "next/font/google";
 import Sounds from "~/component/sounds";
 import SoundToggle from "~/component/sound-toggle";
 import "../styles/globals.css";
@@ -11,6 +11,12 @@ const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
   variable: "--ibm-plex-sans-thai-looped-font",
 });
 
+const caveatBrush = Caveat_Brush({
+  weight: ["400"],
+  subsets: ["latin"],
+  variable: "--caveat-brush-font",
+});
+
 export const metadata: Metadata = {
   title: "Your Sky Your Mind",
   description: "Your Sky Your Mind project",
@@ -19,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}:{
+}: {
   children: React.ReactNode;
 }) {
   return (
@@ -27,7 +33,6 @@ export default function RootLayout({
       <body className={cn(
           "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex ",
           ibmPlexSansThaiLooped.variable,
-
         )}>
         <Sounds />
         <div className="absolute right-5 top-5 z-50 flex w-full items-center justify-end">
