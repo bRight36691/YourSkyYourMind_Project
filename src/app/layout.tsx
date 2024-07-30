@@ -30,10 +30,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="th" data-theme="light">
-      <body className={cn(
-          "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex ",
+      <body
+        className={cn(
+          "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex",
           ibmPlexSansThaiLooped.variable,
-        )}>
+          caveatBrush.variable,
+        )}
+      >
         <Sounds />
         <div className="absolute right-5 top-5 z-50 flex w-full items-center justify-end">
           <SoundToggle />
