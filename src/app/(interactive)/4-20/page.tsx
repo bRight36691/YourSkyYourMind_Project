@@ -147,7 +147,8 @@ export default function Page() {
 
   const downloadImage = async () => {
     const exportedWords = document.getElementById("exported");
-    if (!exportedWords) return;
+    const exportedImage = document.getElementById("skyImage");
+    if (!exportedWords || !exportedImage) return;
 
     const dataUrl = await convertImage(exportedWords);
 
@@ -159,7 +160,8 @@ export default function Page() {
 
   const shareImage = async () => {
     const exportedWords = document.getElementById("exported");
-    if (!exportedWords) return;
+    const exportedImage = document.getElementById("skyImage");
+    if (!exportedWords || !exportedImage) return;
 
     const dataUrl = await convertImage(exportedWords);
 
@@ -195,37 +197,38 @@ export default function Page() {
       >
         <div
           id="exported"
-          className="bg-result absolute flex w-full flex-col items-center overflow-hidden bg-cover bg-top bg-no-repeat"
+          className="absolute flex w-screen flex-col items-center overflow-hidden bg-result bg-cover bg-top bg-no-repeat"
         >
-          <div className="mt-[180px] flex flex-col items-center gap-4 text-center text-black">
+          <div className="mt-[180px] flex w-screen flex-col items-center gap-4 text-center text-black">
             <div>
               <p>
                 ท้องฟ้าในใจของ <span className="font-medium">{name}</span>
               </p>
               <p>
                 เป็นสี{" "}
-                <span className="text-blueSkyColor font-medium">
+                <span className="font-medium text-blueSkyColor">
                   “{skyColors[idx]}”
                 </span>
               </p>
             </div>
             <p className="w-[85%] text-xs leading-relaxed">{desc[idx]}</p>
-            <div className="font-caveatBrush relative flex h-[319px] w-[90%] items-center justify-center overflow-hidden rounded-[20px] object-cover text-white drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+            <div className="relative flex h-[319px] w-[354px] items-center justify-center overflow-hidden rounded-[20px] object-cover font-caveatBrush text-white drop-shadow-sm">
               <Image
                 src={skyPics[idx] ?? "/img/tree1.webp"}
                 alt="YourSky"
                 width={3000}
                 height={2000}
                 className="absolute"
+                id="skyImage"
               />
-              <p className="absolute left-4 top-4 z-20 drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+              <p className="absolute left-4 top-4 z-20 w-[90%] break-all text-left drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                 {name}&rsquo;s Sky
               </p>
               <p className="z-20 w-[95%] text-[22px] drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                 {quotes[idx]}
               </p>
             </div>
-            <div className="z-20 mb-6 mr-4 mt-1 flex w-full items-center justify-end gap-1">
+            <div className="z-20 mb-6 mr-4 mt-1 flex w-screen items-center justify-end gap-1">
               <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
                 <IgLogo />
               </div>
@@ -236,7 +239,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="fixed bottom-[10%] z-20 flex w-full justify-center gap-2">
+        <div className="fixed bottom-[10%] z-20 flex w-screen justify-center gap-2">
           {userAgentData === "iPhone" ? (
             <div onClick={shareImage}>
               <ShareIcon />
