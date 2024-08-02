@@ -8,7 +8,7 @@ export default function Page() {
     const [encouragement,setEncouragement] = useState<string>('');
     useEffect(()=> {
         const getName = localStorage.getItem('importantPerson');
-        setImportantPerson((getName!==null) ? getName : '');
+        setImportantPerson(getName ?? '');
 
     },[])
     

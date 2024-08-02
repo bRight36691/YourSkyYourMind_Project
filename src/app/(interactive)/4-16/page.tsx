@@ -11,8 +11,8 @@ export default function Page() {
     useEffect(()=>{
         const getEncouragement = localStorage.getItem('encouragement');
         const getImportantPerson = localStorage.getItem('importantPerson');
-        setEncouragement(getEncouragement!== null ? getEncouragement : '');
-        setImportantPerson(getImportantPerson!== null ? getImportantPerson : '');
+        setEncouragement(getEncouragement ?? '');
+        setImportantPerson(getImportantPerson ?? '');
     },[])
     const separators = /[ \n]+/; 
     const messages = encouragement.split(separators);
