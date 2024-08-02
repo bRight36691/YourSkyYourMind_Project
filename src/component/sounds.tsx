@@ -44,9 +44,9 @@ const Sounds = () => {
     let nextBackgroundVolume: number | undefined;
     if (page in soundPageMap) {
       nextSoundEffect =
-        soundPageMap[page as keyof typeof soundPageMap]?.soundEffect;
+        soundPageMap[page]?.soundEffect;
       nextBackgroundVolume =
-        soundPageMap[page as keyof typeof soundPageMap]?.backgroundVolume;
+        soundPageMap[page]?.backgroundVolume;
     }
     if (nextSoundEffect !== soundEffect) {
       if (soundEffectRef.current?.howler.playing()) {
