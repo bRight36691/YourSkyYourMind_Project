@@ -6,16 +6,19 @@ interface BurnoutScoreResponse {
 }
 
 // Type guard to validate the response
-const isBurnoutScoreResponse = (response: any): response is BurnoutScoreResponse => {
-  return response && typeof response.data === 'string';
+const isBurnoutScoreResponse = (response: unknown): response is BurnoutScoreResponse => {
+  return (
+    typeof response === 'object' &&
+    response !== null &&
+    'data' in response &&
+    typeof (response as any).data === 'string'
+  );
 };
 
 export const FormServices = {
   getAvgBurnoutScore: async (): Promise<string> => {
     try {
-      const res = await fetch(
-        `${env.NEXT_PUBLIC_BACKEND_URL}/api/v1/form/burnout`,
-      );
+      const res = await fetch(`${env.NEXT_PUBLIC_BACKEND_URL}/api/v1/form/burnout`);
       const data: unknown = await res.json();
 
       // Validate and ensure data conforms to the expected type
