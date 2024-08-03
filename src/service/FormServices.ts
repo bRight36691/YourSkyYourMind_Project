@@ -11,7 +11,7 @@ const isBurnoutScoreResponse = (response: unknown): response is BurnoutScoreResp
     typeof response === 'object' &&
     response !== null &&
     'data' in response &&
-    typeof (response as any).data === 'string'
+    typeof (response as BurnoutScoreResponse).data === 'string'
   );
 };
 
