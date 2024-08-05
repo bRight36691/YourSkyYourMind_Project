@@ -228,15 +228,17 @@ export default function Page() {
                 {quotes[idx]}
               </p>
             </div>
-            <div className="z-20 mb-6 mr-4 mt-1 flex w-screen items-center justify-end gap-1">
-              <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
-                <IgLogo />
+            <a href="https://www.instagram.com/yourskyyourmind_th">
+              <div className="z-20 mb-6 mr-4 mt-1 flex w-screen items-center justify-end gap-1">
+                <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
+                  <IgLogo />
+                </div>
+                <div className="text-left text-[10px] leading-[12px]">
+                  <p>@yourskyyourmind_th</p>
+                  <p>#Yourskyyourmind</p>
+                </div>
               </div>
-              <div className="text-left text-[10px] leading-[12px]">
-                <p>@Yourskyyourmind</p>
-                <p>#Yourskyyourmind</p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
         <div className="fixed bottom-[10%] z-20 flex w-screen justify-center gap-2">
