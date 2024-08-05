@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { toJpeg } from "html-to-image";
-import UAParser from "ua-parser-js";
 import { DownloadIcon } from "~/component/DownloadIcon";
 import { ShareIcon } from "~/component/ShareIcon";
 import { IgLogo } from "~/component/IgLogo";
@@ -17,7 +16,6 @@ export default function Page() {
     3,
   );
   const [name, setName] = useState<string>();
-  const [userAgentData, setUserAgentData] = useState<string>();
 
   const skyColors = [
     "แสงแรกแห่งวัน",
@@ -114,8 +112,6 @@ export default function Page() {
   useEffect(() => {
     setName(localStorage.getItem("username") ?? "");
     setBurnoutScore(localStorage.getItem("burnoutScore") ?? "0");
-    const parser = new UAParser(navigator.userAgent);
-    setUserAgentData(parser.getDevice().model);
   }, []);
 
   useEffect(() => {
@@ -245,20 +241,12 @@ export default function Page() {
           </div>
         </div>
         <div className="fixed bottom-[10%] z-20 flex w-screen justify-center gap-2">
-          {userAgentData === "iPhone" ? (
-            <div onClick={shareImage}>
-              <ShareIcon />
-            </div>
-          ) : (
-            <>
-              <div onClick={downloadImage}>
-                <DownloadIcon />
-              </div>
-              <div onClick={shareImage}>
-                <ShareIcon />
-              </div>
-            </>
-          )}
+          <div onClick={downloadImage}>
+            <DownloadIcon />
+          </div>
+          <div onClick={shareImage}>
+            <ShareIcon />
+          </div>
         </div>
         <div className="fixed bottom-[3%] z-20 flex w-screen justify-center">
           <Link href="/4-21">
