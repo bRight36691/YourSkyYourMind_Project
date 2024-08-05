@@ -30,7 +30,7 @@ export default function Page() {
         <h1>ในช่วง 2 สัปดาห์ที่ผ่านมา</h1>
       </div>
       <div className="w-screen">
-        <div className="absolute -z-[50] ml-[5%] mt-[7%] min-h-[55%] min-w-[90%] rounded-[20px] bg-white opacity-[50%]"></div>
+        <div className="absolute -z-[50] ml-[5%] mt-[7%] min-h-[70%] min-w-[90%] rounded-[20px] bg-white opacity-[50%]"></div>
         <div className="mt-[5%] grid justify-items-center gap-y-3 pb-[5%] pt-[7%] opacity-[100%]">
           <ChoicePane3
             question="ฉันรู้สึกยากที่จะสงบจิตใจลง"

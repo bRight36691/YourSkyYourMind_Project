@@ -29,7 +29,7 @@ export default function Page() {
                 <h1>ในช่วง 2 สัปดาห์ที่ผ่านมา</h1>
             </div>
             <div className="w-screen">
-                <div className="absolute bg-white opacity-[50%] min-h-[55%] min-w-[90%] 
+                <div className="absolute bg-white opacity-[50%] min-h-[70%] min-w-[90%] 
                 rounded-[20px] mt-[7%] ml-[5%] -z-[50]"></div>
                     <div className="grid justify-items-center gap-y-3 pt-[7%] pb-[5%] opacity-[100%] mt-[5%]">
                         <ChoicePane3 question="ฉันรู้สึกจิตใจเหงาหงอยเศร้าซึม" setAnswer={setAnswer1}></ChoicePane3>
