@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import ChoicePane3 from "~/component/choicePane3";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { RadioButton } from "~/component/inputs/RadioButton";
 
 export default function Page() {
   const [answer1, setAnswer1] = useState<string>("");
@@ -23,7 +22,7 @@ export default function Page() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 2, delay: 2 }}
-      className="grid justify-items-center"
+      className="grid justify-items-center overflow-y-scroll"
     >
       <div className="item-center tex mt-[15%] grid justify-items-center rounded-xl bg-white p-[5%]">
         <h1>ข้อความที่ตรงกับความรู้สึกของท่านมากสุด</h1>
@@ -48,6 +47,7 @@ export default function Page() {
             question="ฉันมีอาการหายใจผิดปกติ"
             setAnswer={setAnswer4}
           ></ChoicePane3>
+
         </div>
       </div>
       {answer1 && answer2 && answer3 && answer4 && (

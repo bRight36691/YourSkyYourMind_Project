@@ -1,15 +1,14 @@
-'use client';
-import { useState , useEffect } from "react";
+"use client";
+import { useState, useEffect } from "react";
 import ChoicePane3 from "~/component/choicePane3";
-import { motion } from 'framer-motion'
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { RadioButton } from "~/component/inputs/RadioButton";
 
 export default function Page() {
-    const [answer1,setAnswer1] = useState<string>('')
-    const [answer2,setAnswer2] = useState<string>('')
-    const [answer3,setAnswer3] = useState<string>('')
-    const [answer4,setAnswer4] = useState<string>('')
+  const [answer1, setAnswer1] = useState<string>("");
+  const [answer2, setAnswer2] = useState<string>("");
+  const [answer3, setAnswer3] = useState<string>("");
+  const [answer4, setAnswer4] = useState<string>("");
 
     useEffect(()=> {
         localStorage.setItem('dass21Q5',answer1)
@@ -44,8 +43,7 @@ export default function Page() {
                 </Link>
             }
                 
-            
 
-        </motion.div>
-    );
+    </motion.div>
+  );
 }

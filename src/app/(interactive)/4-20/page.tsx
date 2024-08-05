@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { toJpeg } from "html-to-image";
-import UAParser from "ua-parser-js";
 import { DownloadIcon } from "~/component/DownloadIcon";
 import { ShareIcon } from "~/component/ShareIcon";
 import { IgLogo } from "~/component/IgLogo";
@@ -17,7 +16,6 @@ export default function Page() {
     3,
   );
   const [name, setName] = useState<string>();
-  const [userAgentData, setUserAgentData] = useState<string>();
 
   const skyColors = [
     "แสงแรกแห่งวัน",
@@ -114,8 +112,6 @@ export default function Page() {
   useEffect(() => {
     setName(localStorage.getItem("username") ?? "");
     setBurnoutScore(localStorage.getItem("burnoutScore") ?? "0");
-    const parser = new UAParser(navigator.userAgent);
-    setUserAgentData(parser.getDevice().model);
   }, []);
 
   useEffect(() => {
@@ -228,32 +224,29 @@ export default function Page() {
                 {quotes[idx]}
               </p>
             </div>
-            <div className="z-20 mb-6 mr-4 mt-1 flex w-screen items-center justify-end gap-1">
-              <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
-                <IgLogo />
-              </div>
-              <div className="text-left text-[10px] leading-[12px]">
-                <p>@Yourskyyourmind</p>
-                <p>#Yourskyyourmind</p>
-              </div>
+            <div className="z-20 mb-6 mr-4 mt-1 flex w-screen items-center justify-end">
+              <a
+                className="flex items-center gap-1"
+                href="https://www.instagram.com/yourskyyourmind_th"
+              >
+                <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
+                  <IgLogo />
+                </div>
+                <div className="text-left text-[10px] leading-[12px]">
+                  <p>@yourskyyourmind_th</p>
+                  <p>#Yourskyyourmind</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>
         <div className="fixed bottom-[10%] z-20 flex w-screen justify-center gap-2">
-          {userAgentData === "iPhone" ? (
-            <div onClick={shareImage}>
-              <ShareIcon />
-            </div>
-          ) : (
-            <>
-              <div onClick={downloadImage}>
-                <DownloadIcon />
-              </div>
-              <div onClick={shareImage}>
-                <ShareIcon />
-              </div>
-            </>
-          )}
+          <div onClick={downloadImage}>
+            <DownloadIcon />
+          </div>
+          <div onClick={shareImage}>
+            <ShareIcon />
+          </div>
         </div>
         <div className="fixed bottom-[3%] z-20 flex w-screen justify-center">
           <Link href="/4-21">
