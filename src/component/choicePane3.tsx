@@ -19,7 +19,7 @@ export default function ChoicePane({ question, setAnswer }: prop) {
   console.log(arr);
 
   return (
-    <div className="grid h-[80%] w-full justify-items-center">
+    <div className="grid h-[80%] w-[90%] justify-items-center">
       {arr.map((q) => {
         return (
           <h1
