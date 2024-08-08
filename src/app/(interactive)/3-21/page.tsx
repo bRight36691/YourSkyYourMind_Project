@@ -29,25 +29,25 @@ export default function Page() {
         <h1>ในช่วง 2 สัปดาห์ที่ผ่านมา</h1>
       </div>
       <div className="w-screen">
-        <div className="ml-[5%] mt-[7%] h-max min-h-[55%] w-[90%] rounded-[20px] bg-[rgba(255,255,255,0.5)]">
-          <div className="mt-[5%] grid justify-items-center gap-y-3 pb-[5%] pt-[7%] opacity-[100%]">
-            <ChoicePane3
-              question="ฉันรู้สึกยากที่จะสงบจิตใจลง"
-              setAnswer={setAnswer1}
-            ></ChoicePane3>
-            <ChoicePane3
-              question="ฉันรู้สึกปากแห้งคอแห้ง"
-              setAnswer={setAnswer2}
-            ></ChoicePane3>
-            <ChoicePane3
-              question="ฉันแทบไม่รู้สึกอะไรดี ๆ เลย"
-              setAnswer={setAnswer3}
-            ></ChoicePane3>
-            <ChoicePane3
-              question="ฉันมีอาการหายใจผิดปกติ"
-              setAnswer={setAnswer4}
-            ></ChoicePane3>
-          </div>
+        <div className="absolute -z-[50] ml-[5%] mt-[7%] min-h-[70%] min-w-[90%] rounded-[20px] bg-white opacity-[50%]"></div>
+        <div className="mt-[5%] grid justify-items-center gap-y-3 pb-[5%] pt-[7%] opacity-[100%]">
+          <ChoicePane3
+            question="ฉันรู้สึกยากที่จะสงบจิตใจลง"
+            setAnswer={setAnswer1}
+          ></ChoicePane3>
+          <ChoicePane3
+            question="ฉันรู้สึกปากแห้งคอแห้ง"
+            setAnswer={setAnswer2}
+          ></ChoicePane3>
+          <ChoicePane3
+            question="ฉันแทบไม่รู้สึกอะไรดี ๆ เลย"
+            setAnswer={setAnswer3}
+          ></ChoicePane3>
+          <ChoicePane3
+            question="ฉันมีอาการหายใจผิดปกติ"
+            setAnswer={setAnswer4}
+          ></ChoicePane3>
+
         </div>
       </div>
       {answer1 && answer2 && answer3 && answer4 && (
