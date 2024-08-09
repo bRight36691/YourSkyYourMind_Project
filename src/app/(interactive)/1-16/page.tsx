@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -28,7 +27,7 @@ export default function Page() {
         const timer = setTimeout(() => {
             router.push('/1-17');
 
-        },2000)
+        },3500)
 
         return () => clearTimeout(timer);
     },[router])
@@ -39,7 +38,7 @@ export default function Page() {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 , transition:{duration:2}}}
-            className='grid justify-items-center pt-[50%] text-[16px]'
+            className='grid justify-items-center pt-[65%] text-[16px]'
             
         >
             <h1 className='text-black '>ถ้าไม่ต้องมองโต๊ะทำงาน</h1>

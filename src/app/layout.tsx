@@ -4,6 +4,7 @@ import { IBM_Plex_Sans_Thai_Looped, Caveat_Brush } from "next/font/google";
 import Sounds from "~/component/sounds";
 import SoundToggle from "~/component/sound-toggle";
 import "../styles/globals.css";
+import { Container } from "postcss";
 
 const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
   weight: ["400", "500", "600", "700"],

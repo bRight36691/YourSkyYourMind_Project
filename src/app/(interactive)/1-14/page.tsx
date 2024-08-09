@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { useState } from 'react';
 import  Next   from './next';
 
@@ -17,7 +16,7 @@ export default function Page() {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 , transition:{duration:2}}}
-            className='grid justify-items-center pt-[52%] text-[16px]'
+            className='grid justify-items-center pt-[65%] text-[16px]'
             
         >
             <h1 className='text-black '>อยากให้เราเรียกคุณว่าอะไร</h1>

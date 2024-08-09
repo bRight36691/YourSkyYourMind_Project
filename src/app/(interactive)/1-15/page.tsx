@@ -1,7 +1,6 @@
 'use client';
 
 import { motion , AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 import { useState } from 'react';
 import  Next   from './next';
 
@@ -19,7 +18,7 @@ export default function Page() {
                 animate={{ opacity: 1 }}
                 exit={{opacity:0}}
                 transition={{duration:2}}
-                className='grid justify-items-center pt-[50%] text-[16px]'
+                className='grid justify-items-center pt-[65%] text-[16px]'
                 
             >
                 <h1 className='text-black '>ถ้าไม่ต้องมองโต๊ะทำงาน</h1>

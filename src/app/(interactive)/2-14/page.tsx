@@ -35,6 +35,7 @@ export default function Page() {
     }
   }, [answer1, answer2, answer3, answer4, answer5]);
 
+<<<<<<< Updated upstream
   return (
     <div className="grid h-screen justify-items-center overflow-y-scroll bg-scene2 text-black">
       <motion.div
@@ -64,6 +65,30 @@ export default function Page() {
             question="บรรยากาศการเรียนที่นี่กระตุ้นให้ฉันได้เรียนรู้"
             setAnswer={setAnswer5}
           ></ChoicePane2>
+=======
+    return(
+        <div className=" grid justify-items-center h-screen text-black bg-scene2">
+        <motion.div 
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{duration:2,delay:0.5}}
+            className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
+            <div className="grid justify-items-center gap-y-5 pt-[7%] pb-[5%]">
+            <ChoicePane2 question="ฉันรู้สึกว่าฉันได้รับการเตรียมตัวอย่างดีสำหรับวิชาชีพแพทย์" setAnswer={setAnswer1}></ChoicePane2>
+            <ChoicePane2 question="ทักษะการแก้ไขปัญหาของฉันได้รับการพัฒนาอย่างมาก" setAnswer={setAnswer2}></ChoicePane2>
+            <ChoicePane2 question="สิ่งที่ฉันต้องเรียนส่วนมากเกี่ยวข้องกับวิชาชีพแพทย์" setAnswer={setAnswer3}></ChoicePane2>
+            <ChoicePane2 question="ฉันมีสมาธิในการเรียนอย่างดี" setAnswer={setAnswer4}></ChoicePane2>
+            <ChoicePane2 question="บรรยากาศการเรียนที่นี่กระตุ้นให้ฉันได้เรียนรู้" setAnswer={setAnswer5}></ChoicePane2>
+            </div>
+        </motion.div>
+        
+        {canNext && (
+            <Link className="fixed z-50 bottom-3 left-[36%]" href='/2-15'>
+                <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
+            </Link>
+        )
+        }
+>>>>>>> Stashed changes
         </div>
       </motion.div>
 
