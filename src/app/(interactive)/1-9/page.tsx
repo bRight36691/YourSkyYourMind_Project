@@ -6,7 +6,7 @@ import { NextButton } from "~/component/NextButton";
 
 export default function Page() {
   return (
-    <div className="h-screen w-full overflow-hidden bg-grayBg object-none">
+    <div className="h-screen w-full overflow-hidden bg-white object-none">
       <div className="flex min-h-screen flex-col justify-center">
         <motion.div
           initial={{ opacity: 0 }}
