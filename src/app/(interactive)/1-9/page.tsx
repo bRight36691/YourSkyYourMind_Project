@@ -22,7 +22,7 @@ export default function Page() {
             width={200}
             height={200}
             alt="gif of laptop using"
-            className="fixed w-full"
+            className="absolute w-full"
           />
         </motion.div>
       </div>
@@ -35,7 +35,7 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col justify-center"
       >
-        <div className="fixed top-52 z-20 flex w-full flex-col items-center gap-10 text-center text-black">
+        <div className="absolute top-36 z-20 flex w-full flex-col items-center gap-10 text-center text-black">
           <div>
             <p>นึกออกแต่</p>
             <p>ตอนที่ก้มหน้าทำงาน</p>
@@ -51,7 +51,7 @@ export default function Page() {
         </div>
 
         <Link href="/1-11">
-          <div className="fixed bottom-[15%] flex w-screen justify-center">
+          <div className="absolute bottom-[10%] flex w-full justify-center">
             <NextButton />
           </div>
         </Link>
