@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ResultIGTemplate } from "~/component/ResultIGTemplate";
+import { ResultIGTemplate2 } from "~/component/ResultIGTemplate2";
 
 export default function Page() {
   const [depressionScore, setDepressionScore] = useState<number>(0);
@@ -165,7 +165,7 @@ export default function Page() {
             )}
           </div>
           <p className="mt-6 text-xl">ติดต่อ ig : @yourskyyourmind</p>
-          <ResultIGTemplate />
+          <ResultIGTemplate2 />
         </div>
         <div className="absolute bottom-[5%] z-20 flex w-full justify-center">
           <Link href="/4-23">
