@@ -54,8 +54,10 @@ export default function Page() {
             <input
               placeholder="พิมพ์เพื่อตอบ"
               id="age"
-              type="number"
+              type="text"
               name="age"
+              pattern="[0-9]*"
+              maxLength={2}
               className="h-12 w-[192px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
               onChange={onAgeChange}
             />

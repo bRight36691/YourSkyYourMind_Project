@@ -13,6 +13,8 @@ export default function Page() {
   const [gpaxSatisfaction, setGpaxSatisfaction] = useState<string>("");
   const [university, setUniversity] = useState<string>("");
   const [year, setYear] = useState<string>("");
+  const [isAgeError, setIsAgeError] = useState<boolean>(false);
+  const [isGpaxError, setIsGpaxError] = useState<boolean>(false);
 
   const sexes = () => {
     return ["ชาย", "หญิง"];
@@ -26,7 +28,7 @@ export default function Page() {
     return [
       "ไม่พึงพอใจอย่างมาก",
       "ไม่พึงพอใจ",
-      "เฉย",
+      "เฉย ๆ",
       "พึงพอใจ",
       "พึงพอใจอย่างมาก",
     ];
@@ -77,7 +79,14 @@ export default function Page() {
   };
 
   const onAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAge(e.target.value);
+    const re = /[23][0-9]|1[6-9]|40/gm;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setAge(e.target.value);
+      setIsAgeError(false);
+    } else {
+      setAge("");
+      setIsAgeError(true);
+    }
   };
 
   const onSexChange = (sex: string): void => {
@@ -89,7 +98,14 @@ export default function Page() {
   };
 
   const onGpaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setGpax(e.target.value);
+    const re = /[0-3][.][0-9][0-9]|4[.]00/gm;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setGpax(e.target.value);
+      setIsGpaxError(false);
+    } else {
+      setGpax("");
+      setIsGpaxError(true);
+    }
   };
 
   const onGpaxSatisfactionChange = (gpaxSatisfactions: string): void => {
@@ -168,11 +184,16 @@ export default function Page() {
               <input
                 placeholder="พิมพ์เพื่อตอบ"
                 id="age"
-                type="number"
+                type="text"
+                maxLength={2}
                 name="age"
+                pattern="[0-9]*"
                 className="h-12 w-[129px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                 onChange={onAgeChange}
               />
+              {isAgeError && (
+                <div className="pointer-events-none absolute mt-6 h-12 w-[129px] rounded-xl border-[1.5px] border-solid shadow-sm ring-1 ring-inset ring-redError"></div>
+              )}
             </div>
             <div className="flex flex-col gap-1">
               <p className="text-sm text-grayBlue">
@@ -203,11 +224,16 @@ export default function Page() {
               <input
                 placeholder="พิมพ์เพื่อตอบ (เช่น 3.xx)"
                 id="gpax"
-                type="number"
+                type="text"
+                maxLength={4}
                 name="gpax"
+                inputMode="decimal"
                 className="h-12 w-[195px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                 onChange={onGpaxChange}
               />
+              {isGpaxError && (
+                <div className="pointer-events-none absolute mt-6 h-12 w-[195px] rounded-xl border-[1.5px] border-solid shadow-sm ring-1 ring-inset ring-redError"></div>
+              )}
             </div>
             <div className="col-span-2 grid gap-1">
               <p className="text-sm text-grayBlue">
