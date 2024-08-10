@@ -12,6 +12,7 @@ export default function PaccountNo() {
 
   const bankes = () => {
     return [
+      "พร้อมเพย์",
       "ธนาคารกรุงเทพ",
       "ธนาคารกสิกรไทย",
       "ธนาคารกรุงไทย",
@@ -90,10 +91,14 @@ export default function PaccountNo() {
                   id="accountNo"
                   type="text"
                   name="accountNo"
-                  maxLength={25}
+                  maxLength={15}
+                  pattern="[0-9]*"
                   className="h-12 w-[195px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                   onChange={onAccountNoChange}
                 />
+                {accountNo.length < 10 && accountNo.length > 0 && (
+                  <div className="pointer-events-none absolute mt-6 h-12 w-[195px] rounded-xl border-[1.5px] border-solid shadow-sm ring-1 ring-inset ring-redError"></div>
+                )}
               </div>
               <div className="flex flex-col items-start gap-1">
                 <p className="text-sm text-grayBlue">
@@ -110,7 +115,7 @@ export default function PaccountNo() {
             </div>
           </div>
         </div>
-        {accountNo && bank && (
+        {accountNo.length > 9 && bank && (
           <Link href="/1-1">
             <div className="absolute bottom-[10%] flex w-full justify-center">
               <button
