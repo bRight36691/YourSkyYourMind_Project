@@ -8,7 +8,6 @@ import { motion } from "framer-motion";
 export default function Page() {
   const [age, setAge] = useState<string>("");
   const [sex, setSex] = useState<string>("");
-  const [mentalDisorder, setMentalDisorder] = useState<string>("");
   const [gpax, setGpax] = useState<string>("");
   const [gpaxSatisfaction, setGpaxSatisfaction] = useState<string>("");
   const [university, setUniversity] = useState<string>("");
@@ -18,10 +17,6 @@ export default function Page() {
 
   const sexes = () => {
     return ["ชาย", "หญิง"];
-  };
-
-  const mentalDisorders = () => {
-    return ["ซึมเศร้า", "ภาวะวิตกกังวล", "ไม่มี"];
   };
 
   const gpaxSatisfactions = () => {
@@ -93,10 +88,6 @@ export default function Page() {
     setSex(sex);
   };
 
-  const onMentalDisorderChange = (mentalDisorder: string): void => {
-    setMentalDisorder(mentalDisorder);
-  };
-
   const onGpaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const re = /[0-3][.][0-9][0-9]|4[.]00/gm;
     if (e.target.value === "" || re.test(e.target.value)) {
@@ -123,10 +114,6 @@ export default function Page() {
   const onNextButtonClick = (): void => {
     localStorage.setItem("age", age);
     localStorage.setItem("sex", String(sexes().findIndex((e) => e === sex)));
-    localStorage.setItem(
-      "mentalDisorder",
-      String(mentalDisorders().findIndex((e) => e === mentalDisorder)),
-    );
     localStorage.setItem("gpax", gpax);
     localStorage.setItem(
       "gpaxSatisfaction",
@@ -208,17 +195,6 @@ export default function Page() {
             </div>
             <div className="col-span-2 grid gap-1">
               <p className="text-sm text-grayBlue">
-                โรคประจำตัวทางจิตเวช <span className="text-redError">*</span>
-              </p>
-              <DropDown
-                choices={mentalDisorders()}
-                choiceSelection={onMentalDisorderChange}
-                selectChoice={mentalDisorder}
-                isLargeChoice={true}
-              />
-            </div>
-            <div className="col-span-2 grid gap-1">
-              <p className="text-sm text-grayBlue">
                 เกรดเฉลี่ยสะสม <span className="text-redError">*</span>
               </p>
               <input
@@ -272,24 +248,18 @@ export default function Page() {
             </div>
           </div>
 
-          {age &&
-            sex &&
-            mentalDisorder &&
-            gpax &&
-            gpaxSatisfaction &&
-            university &&
-            year && (
-              <Link href="/1-5">
-                <div className="mt-4 flex w-full justify-center">
-                  <button
-                    className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
-                    onClick={onNextButtonClick}
-                  >
-                    ถัดไป
-                  </button>
-                </div>
-              </Link>
-            )}
+          {age && sex && gpax && gpaxSatisfaction && university && year && (
+            <Link href="/1-4_11">
+              <div className="mb-4 mt-12 flex w-full justify-center">
+                <button
+                  className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
+                  onClick={onNextButtonClick}
+                >
+                  ถัดไป
+                </button>
+              </div>
+            </Link>
+          )}
         </div>
       </motion.div>
     </div>
