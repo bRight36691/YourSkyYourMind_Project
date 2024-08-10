@@ -160,9 +160,11 @@ export default function Page() {
             <p>ผ่านการให้ผู้เล่นมีส่วนร่วมด้วยทางทีมผู้วิจัย</p>
             <p>ขอให้อ่านข้อตกลงและยินยอมที่จะเข้าร่วมแบบทดสอบนี้</p>
           </div>
-          <div className="mt-2 text-[13px] text-textLink underline">
-            ข้อตกลงการเข้าร่วมตอบแบบสอบถาม
-          </div>
+          <Link href="/1-4_12">
+            <div className="mt-2 text-[13px] text-textLink underline">
+              ข้อตกลงการเข้าร่วมตอบแบบสอบถาม
+            </div>
+          </Link>
           <div className="mt-4 grid w-[85%] grid-cols-2 gap-3">
             <div className="flex flex-col gap-1">
               <p className="text-sm text-grayBlue">
