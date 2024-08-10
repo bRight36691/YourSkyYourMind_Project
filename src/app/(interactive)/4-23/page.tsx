@@ -65,7 +65,7 @@ export default function PaccountNo() {
       >
         <div className="z-10 mt-24 flex w-full flex-col items-center text-black">
           <p className="text-xs font-bold">
-            สำหรับนิสิตนักศึกษาแพทย์และนักเรียนแพทย์ทหาร
+            สำหรับนิสิตนักศึกษาแพทย์หรือนักเรียนแพทย์ทหาร
           </p>
           <div className="mt-3 flex flex-col gap-0.5 text-left text-[9px]">
             <p>1. ไม่มีการระบุตัวตนของผู้เข้าร่วมงานวิจัย</p>

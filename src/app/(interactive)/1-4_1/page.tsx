@@ -140,7 +140,7 @@ export default function Page() {
       >
         <div className="z-10 mt-12 flex w-full flex-col items-center text-black">
           <p className="text-xs font-bold">
-            สำหรับนิสิตนักศึกษาแพทย์และนักเรียนแพทย์ทหาร
+            สำหรับนิสิตนักศึกษาแพทย์หรือนักเรียนแพทย์ทหาร
           </p>
           <div className="mt-3 flex flex-col gap-0.5 text-center text-[9px]">
             <p>

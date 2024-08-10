@@ -15,7 +15,7 @@ export default function Page() {
         <div className="absolute top-52 z-10 flex w-full flex-col items-center justify-center gap-6 text-center text-black">
           <div className="absolute h-[246px] w-[426px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
           <div className="z-20 flex flex-col gap-2">
-            <h1>เค้าว่ากันว่า</h1>
+            <h1>เขาว่ากันว่า</h1>
             <h1>ถ้าขอพรอะไรกับดวงดาว...</h1>
             <h1>พรข้อนั้นจะเป็นจริง</h1>
           </div>

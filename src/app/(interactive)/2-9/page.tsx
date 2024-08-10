@@ -12,7 +12,7 @@ export default function Page() {
     >
       <div className="pt-[45%] text-center text-[20px]">
         <h1>อาจารย์ ผู้ที่สอนฉัน</h1>
-        <h1 className="pt-[15%]">เค้าโอเคกับเรามั้ยนะ...?</h1>
+        <h1 className="pt-[15%]">เขาโอเคกับเราไหมนะ...?</h1>
       </div>
       <img src="/img/teacher.GIF" className="absolute"></img>
       <Link className="absolute bottom-8 left-[36%] z-50" href="/2-10">
