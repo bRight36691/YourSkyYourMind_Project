@@ -16,9 +16,9 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <div className="fixed top-24 z-10 flex w-screen flex-col items-center text-center text-black">
-          <div className="fixed h-[540px] w-[458px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
-          <div className="fixed z-20 mt-40 flex flex-col gap-2">
+        <div className="absolute top-24 z-10 flex w-full flex-col items-center text-center text-black">
+          <div className="absolute h-[540px] w-[458px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
+          <div className="absolute z-20 mt-40 flex flex-col gap-2">
             <p>ชีวิตมีการเปลี่ยนแปลงตลอด</p>
             <p>เหมือนกันกับท้องฟ้า</p>
             <p>แต่ในทุก ๆ ช่วงเวลา</p>
@@ -28,7 +28,7 @@ export default function Page() {
             <p>ให้เวลากับหัวใจของคุณ..</p>
           </div>
         </div>
-        <div className="fixed bottom-[10%] z-20 flex w-screen justify-center">
+        <div className="absolute bottom-[10%] z-20 flex w-full justify-center">
           <Link href="/4-19">
             <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
               ถัดไป

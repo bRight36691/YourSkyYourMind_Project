@@ -193,9 +193,9 @@ export default function Page() {
       >
         <div
           id="exported"
-          className="absolute flex w-screen flex-col items-center overflow-hidden bg-result bg-cover bg-top bg-no-repeat"
+          className="absolute flex w-full flex-col items-center overflow-hidden bg-result bg-cover bg-top bg-no-repeat"
         >
-          <div className="mt-[180px] flex w-screen flex-col items-center gap-4 text-center text-black">
+          <div className="mt-[180px] flex w-full flex-col items-center gap-4 text-center text-black">
             <div>
               <p>
                 ท้องฟ้าในใจของ <span className="font-medium">{name}</span>
@@ -224,23 +224,23 @@ export default function Page() {
                 {quotes[idx]}
               </p>
             </div>
-            <div className="z-20 mb-6 mr-4 mt-1 flex w-screen items-center justify-end">
+            <div className="z-20 mb-6 mr-4 mt-1 flex w-full items-center justify-end">
               <a
                 className="flex items-center gap-1"
-                href="https://www.instagram.com/yourskyyourmind_th"
+                href="https://www.instagram.com/yourskyyourmind"
               >
                 <div className="relative flex h-6 w-6 items-center justify-center rounded-full bg-[linear-gradient(45deg,#FAAD4F_0%,#DD2A7B_35%,#9537B0_62%,#515BD4_100%)]">
                   <IgLogo />
                 </div>
                 <div className="text-left text-[10px] leading-[12px]">
-                  <p>@yourskyyourmind_th</p>
+                  <p>@yourskyyourmind</p>
                   <p>#Yourskyyourmind</p>
                 </div>
               </a>
             </div>
           </div>
         </div>
-        <div className="fixed bottom-[10%] z-20 flex w-screen justify-center gap-2">
+        <div className="absolute bottom-[10%] z-20 flex w-full justify-center gap-2">
           <div onClick={downloadImage}>
             <DownloadIcon />
           </div>
@@ -248,7 +248,7 @@ export default function Page() {
             <ShareIcon />
           </div>
         </div>
-        <div className="fixed bottom-[3%] z-20 flex w-screen justify-center">
+        <div className="absolute bottom-[3%] z-20 flex w-full justify-center">
           <Link href="/4-21">
             <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
               ถัดไป

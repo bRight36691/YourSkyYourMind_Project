@@ -18,13 +18,13 @@ export default function Page() {
           }}
           className="flex min-h-screen flex-col"
         >
-          <div className="fixed top-40 z-10 flex w-screen flex-col text-center text-black">
+          <div className="absolute top-40 z-10 flex w-full flex-col text-center text-black">
             <div className="flex items-center justify-center">
-              <div className="fixed h-[128px] w-[426px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
+              <div className="absolute h-[128px] w-[426px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
               <p className="z-20 text-xl">ท้องฟ้าประจำหัวใจ... ของคุณ</p>
             </div>
             <div className="mt-44 flex flex-col items-center justify-center">
-              <div className="fixed h-[527px] w-[455px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
+              <div className="absolute h-[527px] w-[455px] rounded-full bg-[radial-gradient(closest-side,rgba(255,255,255,0.80)_0%,rgba(255,255,255,0.78)_36%,rgba(255,255,255,0.67)_60%,rgba(255,255,255,0.49)_77%,rgba(255,255,255,0)_100%)]" />
               <p className="z-20 text-2xl">Tap to review Your sky :)</p>
               <Image
                 src="/img/phone-4-19.webp"

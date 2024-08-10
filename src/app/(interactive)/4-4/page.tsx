@@ -12,14 +12,14 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-scene2">
+    <div className="absolute min-h-screen w-full bg-white">
       <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
-        className="grid h-screen w-screen justify-items-center"
+        className="grid h-screen w-full justify-items-center"
       >
-        <div className="fixed z-20 h-screen w-full bg-white" />
+        <div className="absolute h-screen w-full bg-scene2" />
       </motion.div>
       <Text state={state} setState={setState} name={name}></Text>
     </div>
