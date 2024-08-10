@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Page() {
     const [selectedPlace,setSelectedPlace] = useState<string>("");
@@ -52,6 +53,15 @@ export default function Page() {
                 <option className='bg-white'>{selectedPlace}</option>
                 
             </select>
+
+            <Image 
+                    src='/img/useLaptop_white.GIF'
+                    alt='White Laptop'
+                    width={1000}
+                    height={1000}
+                    className='absolute top-[10%]' 
+
+                />
             
 
            

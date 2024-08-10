@@ -35,37 +35,7 @@ export default function Page() {
     }
   }, [answer1, answer2, answer3, answer4, answer5]);
 
-<<<<<<< Updated upstream
-  return (
-    <div className="grid h-screen justify-items-center overflow-y-scroll bg-scene2 text-black">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2, delay: 0.5 }}
-        className="mb-[10%] mt-[6%] h-max min-h-[80%] w-[95%] gap-y-5 rounded-3xl bg-white"
-      >
-        <div className="grid justify-items-center gap-y-5 pb-[5%] pt-[7%]">
-          <ChoicePane2
-            question="ฉันรู้สึกว่าฉันได้รับการเตรียมตัวอย่างดีสำหรับวิชาชีพ"
-            setAnswer={setAnswer1}
-          ></ChoicePane2>
-          <ChoicePane2
-            question="ทักษะการแก้ไขปัญหาของฉันได้รับการพัฒนา"
-            setAnswer={setAnswer2}
-          ></ChoicePane2>
-          <ChoicePane2
-            question="สิ่งที่ฉันต้องเรียนส่วนมากเกี่ยวข้องกับวิชาชีพ"
-            setAnswer={setAnswer3}
-          ></ChoicePane2>
-          <ChoicePane2
-            question="ฉันมีสมาธิในการเรียนอย่างดี"
-            setAnswer={setAnswer4}
-          ></ChoicePane2>
-          <ChoicePane2
-            question="บรรยากาศการเรียนที่นี่กระตุ้นให้ฉันได้เรียนรู้"
-            setAnswer={setAnswer5}
-          ></ChoicePane2>
-=======
+
     return(
         <div className=" grid justify-items-center h-screen text-black bg-scene2">
         <motion.div 
@@ -88,17 +58,8 @@ export default function Page() {
             </Link>
         )
         }
->>>>>>> Stashed changes
         </div>
-      </motion.div>
 
-      {canNext && (
-        <Link className="fixed bottom-3 left-[36%] z-50" href="/2-15">
-          <button className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl">
-            ถัดไป
-          </button>
-        </Link>
-      )}
-    </div>
+      
   );
 }

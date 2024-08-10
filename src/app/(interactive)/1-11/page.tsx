@@ -11,7 +11,7 @@ export default function Page() {
         <div className="bg-[#F5F5F5] h-screen">
             <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1, transition: { duration: 2 } }}
+            animate={{ opacity: 1, transition: { duration: 2 , delay:1} }}
             exit={{ opacity: 0 }}
             >
                 <div className="grid pt-[60%] text-[30px]  justify-items-center text-black" >
