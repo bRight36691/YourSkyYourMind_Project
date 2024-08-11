@@ -46,7 +46,7 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <div className="fixed top-60 z-10 flex w-full flex-col items-center gap-6 text-black">
+        <div className="absolute top-60 z-10 flex w-full flex-col items-center gap-6 text-black">
           <div className="flex flex-col items-center gap-1">
             <p className="text-sm text-grayBlue">
               อายุ <span className="text-redError">*</span>
@@ -54,8 +54,10 @@ export default function Page() {
             <input
               placeholder="พิมพ์เพื่อตอบ"
               id="age"
-              type="number"
+              type="text"
               name="age"
+              pattern="[0-9]*"
+              maxLength={2}
               className="h-12 w-[192px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
               onChange={onAgeChange}
             />
@@ -76,7 +78,7 @@ export default function Page() {
 
         {age && occupation && (
           <Link href="/1-5">
-            <div className="fixed bottom-[15%] flex w-screen justify-center">
+            <div className="absolute bottom-[15%] flex w-full justify-center">
               <button
                 className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
                 onClick={onNextButtonClick}

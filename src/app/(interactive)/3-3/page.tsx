@@ -13,9 +13,9 @@ export default function Page() {
           duration: 1,
           delay: 0.5,
         }}
-        className="fixed flex min-h-screen flex-col"
+        className="absolute flex min-h-screen flex-col"
       >
-        <div className="fixed h-screen w-full bg-white" />
+        <div className="absolute h-screen w-full bg-white" />
       </motion.div>
       <motion.div
         initial={{ opacity: 0 }}
@@ -24,15 +24,15 @@ export default function Page() {
           duration: 1,
           delay: 2,
         }}
-        className="fixed z-20 flex min-h-screen flex-col"
+        className="absolute z-20 flex min-h-screen w-full flex-col"
       >
-        <div className="fixed flex w-full flex-col justify-center text-center text-[20px] text-black">
+        <div className="absolute flex w-full flex-col justify-center text-center text-[20px] text-black">
           <p className="mt-[224px]">คุณมองขึ้นไปบนท้องฟ้า</p>
           <p className="mt-10">“อ้ะ ! ตกเย็นแล้วสิ”</p>
         </div>
 
         <Link href="/3-4">
-          <div className="fixed bottom-24 flex w-screen justify-center">
+          <div className="absolute bottom-24 flex w-full justify-center">
             <NextButton />
           </div>
         </Link>

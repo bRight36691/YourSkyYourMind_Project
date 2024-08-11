@@ -8,25 +8,22 @@ import { motion } from "framer-motion";
 export default function Page() {
   const [age, setAge] = useState<string>("");
   const [sex, setSex] = useState<string>("");
-  const [mentalDisorder, setMentalDisorder] = useState<string>("");
   const [gpax, setGpax] = useState<string>("");
   const [gpaxSatisfaction, setGpaxSatisfaction] = useState<string>("");
   const [university, setUniversity] = useState<string>("");
   const [year, setYear] = useState<string>("");
+  const [isAgeError, setIsAgeError] = useState<boolean>(false);
+  const [isGpaxError, setIsGpaxError] = useState<boolean>(false);
 
   const sexes = () => {
     return ["ชาย", "หญิง"];
-  };
-
-  const mentalDisorders = () => {
-    return ["ซึมเศร้า", "ภาวะวิตกกังวล", "ไม่มี"];
   };
 
   const gpaxSatisfactions = () => {
     return [
       "ไม่พึงพอใจอย่างมาก",
       "ไม่พึงพอใจ",
-      "เฉย",
+      "เฉย ๆ",
       "พึงพอใจ",
       "พึงพอใจอย่างมาก",
     ];
@@ -77,19 +74,29 @@ export default function Page() {
   };
 
   const onAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setAge(e.target.value);
+    const re = /[23][0-9]|1[6-9]|40/gm;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setAge(e.target.value);
+      setIsAgeError(false);
+    } else {
+      setAge("");
+      setIsAgeError(true);
+    }
   };
 
   const onSexChange = (sex: string): void => {
     setSex(sex);
   };
 
-  const onMentalDisorderChange = (mentalDisorder: string): void => {
-    setMentalDisorder(mentalDisorder);
-  };
-
   const onGpaxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setGpax(e.target.value);
+    const re = /[0-3][.][0-9][0-9]|4[.]00/gm;
+    if (e.target.value === "" || re.test(e.target.value)) {
+      setGpax(e.target.value);
+      setIsGpaxError(false);
+    } else {
+      setGpax("");
+      setIsGpaxError(true);
+    }
   };
 
   const onGpaxSatisfactionChange = (gpaxSatisfactions: string): void => {
@@ -107,10 +114,6 @@ export default function Page() {
   const onNextButtonClick = (): void => {
     localStorage.setItem("age", age);
     localStorage.setItem("sex", String(sexes().findIndex((e) => e === sex)));
-    localStorage.setItem(
-      "mentalDisorder",
-      String(mentalDisorders().findIndex((e) => e === mentalDisorder)),
-    );
     localStorage.setItem("gpax", gpax);
     localStorage.setItem(
       "gpaxSatisfaction",
@@ -138,9 +141,9 @@ export default function Page() {
         }}
         className="flex min-h-screen flex-col"
       >
-        <div className="z-10 mt-12 flex w-screen flex-col items-center text-black">
+        <div className="z-10 mt-12 flex w-full flex-col items-center text-black">
           <p className="text-xs font-bold">
-            สำหรับนิสิตนักศึกษาแพทย์และนักเรียนแพทย์ทหาร
+            สำหรับนิสิตนักศึกษาแพทย์หรือนักเรียนแพทย์ทหาร
           </p>
           <div className="mt-3 flex flex-col gap-0.5 text-center text-[9px]">
             <p>
@@ -157,9 +160,11 @@ export default function Page() {
             <p>ผ่านการให้ผู้เล่นมีส่วนร่วมด้วยทางทีมผู้วิจัย</p>
             <p>ขอให้อ่านข้อตกลงและยินยอมที่จะเข้าร่วมแบบทดสอบนี้</p>
           </div>
-          <div className="mt-2 text-[13px] text-textLink underline">
-            ข้อตกลงการเข้าร่วมตอบแบบสอบถาม
-          </div>
+          <Link href="/1-4_12">
+            <div className="mt-2 text-[13px] text-textLink underline">
+              ข้อตกลงการเข้าร่วมตอบแบบสอบถาม
+            </div>
+          </Link>
           <div className="mt-4 grid w-[85%] grid-cols-2 gap-3">
             <div className="flex flex-col gap-1">
               <p className="text-sm text-grayBlue">
@@ -168,11 +173,16 @@ export default function Page() {
               <input
                 placeholder="พิมพ์เพื่อตอบ"
                 id="age"
-                type="number"
+                type="text"
+                maxLength={2}
                 name="age"
+                pattern="[0-9]*"
                 className="h-12 w-[129px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                 onChange={onAgeChange}
               />
+              {isAgeError && (
+                <div className="pointer-events-none absolute mt-6 h-12 w-[129px] rounded-xl border-[1.5px] border-solid shadow-sm ring-1 ring-inset ring-redError"></div>
+              )}
             </div>
             <div className="flex flex-col gap-1">
               <p className="text-sm text-grayBlue">
@@ -187,27 +197,21 @@ export default function Page() {
             </div>
             <div className="col-span-2 grid gap-1">
               <p className="text-sm text-grayBlue">
-                โรคประจำตัวทางจิตเวช <span className="text-redError">*</span>
-              </p>
-              <DropDown
-                choices={mentalDisorders()}
-                choiceSelection={onMentalDisorderChange}
-                selectChoice={mentalDisorder}
-                isLargeChoice={true}
-              />
-            </div>
-            <div className="col-span-2 grid gap-1">
-              <p className="text-sm text-grayBlue">
                 เกรดเฉลี่ยสะสม <span className="text-redError">*</span>
               </p>
               <input
                 placeholder="พิมพ์เพื่อตอบ (เช่น 3.xx)"
                 id="gpax"
-                type="number"
+                type="text"
+                maxLength={4}
                 name="gpax"
+                inputMode="decimal"
                 className="h-12 w-[195px] rounded-xl border-[1.5px] border-solid bg-white p-3 pt-4 shadow-sm ring-1 ring-inset ring-gray-300 focus:border-textLink focus:outline-none focus:ring-0"
                 onChange={onGpaxChange}
               />
+              {isGpaxError && (
+                <div className="pointer-events-none absolute mt-6 h-12 w-[195px] rounded-xl border-[1.5px] border-solid shadow-sm ring-1 ring-inset ring-redError"></div>
+              )}
             </div>
             <div className="col-span-2 grid gap-1">
               <p className="text-sm text-grayBlue">
@@ -246,24 +250,18 @@ export default function Page() {
             </div>
           </div>
 
-          {age &&
-            sex &&
-            mentalDisorder &&
-            gpax &&
-            gpaxSatisfaction &&
-            university &&
-            year && (
-              <Link href="/1-5">
-                <div className="mt-4 flex w-screen justify-center">
-                  <button
-                    className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
-                    onClick={onNextButtonClick}
-                  >
-                    ถัดไป
-                  </button>
-                </div>
-              </Link>
-            )}
+          {age && sex && gpax && gpaxSatisfaction && university && year && (
+            <Link href="/1-4_11">
+              <div className="mb-4 mt-12 flex w-full justify-center">
+                <button
+                  className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
+                  onClick={onNextButtonClick}
+                >
+                  ถัดไป
+                </button>
+              </div>
+            </Link>
+          )}
         </div>
       </motion.div>
     </div>

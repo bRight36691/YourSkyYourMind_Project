@@ -62,7 +62,7 @@ export default function Page() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.5 }}
-        className="mb-[10%] mt-[6%] h-max min-h-[83%] w-[95%] rounded-3xl bg-white"
+        className="mb-[20%] mt-[6%] h-max min-h-[83%] w-[95%] rounded-3xl bg-white"
       >
         <div className="grid justify-items-center gap-y-10 pb-[5%] pt-[7%]">
           <ChoicePane1
@@ -93,7 +93,7 @@ export default function Page() {
       </motion.div>
 
       {canNext && isMedStudent === "medStudent" && (
-        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-4">
+        <Link className="absolute bottom-8 left-[36%] z-50" href="/2-4">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
             onClick={submit}
@@ -103,7 +103,7 @@ export default function Page() {
         </Link>
       )}
       {canNext && isMedStudent !== "medStudent" && (
-        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-16">
+        <Link className="absolute bottom-8 left-[36%] z-50" href="/2-16">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
             onClick={submit}
