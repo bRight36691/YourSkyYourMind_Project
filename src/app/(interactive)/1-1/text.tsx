@@ -129,13 +129,13 @@ export default function Text({ state, setState }: prop) {
                  animate={{ opacity: 1 }}
                  transition={{
                    duration: 1,
-                   delay: 2,
+                   delay: 1,
                  }}
                  exit={{ opacity: 0, transition: { duration: 2 } }}
               >
                 <img 
                   src="/img/hideToolbar1.webp"
-                  className="absolute top-[10%] left-[3%]"
+                  className="absolute top-[7%] left-[3%]"
                 />
               </motion.div>
               <motion.div
@@ -143,17 +143,17 @@ export default function Text({ state, setState }: prop) {
                  animate={{ opacity: 1 }}
                  transition={{
                    duration: 1,
-                   delay: 4,
+                   delay: 3,
                  }}
                  exit={{ opacity: 0, transition: { duration: 2 } }}
               >
                 <img 
                   src="/img/arrow.webp"
-                  className="absolute top-[30%] right-[28%]"
+                  className="absolute top-[27%] right-[28%]"
                 />
                 <img 
                   src="/img/hideToolbar2.webp"
-                  className="absolute top-[40%] right-[1%]"
+                  className="absolute top-[35%] right-[1%]"
                 />
               </motion.div>
             </div>
