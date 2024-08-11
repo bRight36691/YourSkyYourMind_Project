@@ -50,8 +50,8 @@ export default function Page() {
           </div>
         </div>
 
-        <Link href="/1-11">
-          <div className="absolute bottom-[10%] flex w-full justify-center">
+        <Link href="/1-10">
+          <div className="absolute bottom-[15%] flex w-screen justify-center">
             <NextButton />
           </div>
         </Link>

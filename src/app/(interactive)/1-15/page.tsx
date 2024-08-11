@@ -1,9 +1,9 @@
 'use client';
 
 import { motion , AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 import { useState } from 'react';
 import  Next   from './next';
+import Image from 'next/image';
 
 export default function Page() {
     const [ selectedPlace , setSelectedPlace ] = useState<string>('');
@@ -19,7 +19,7 @@ export default function Page() {
                 animate={{ opacity: 1 }}
                 exit={{opacity:0}}
                 transition={{duration:2}}
-                className='grid justify-items-center pt-[50%] text-[16px]'
+                className='grid justify-items-center pt-[65%] text-[16px]'
                 
             >
                 <h1 className='text-black '>ถ้าไม่ต้องมองโต๊ะทำงาน</h1>
@@ -37,6 +37,15 @@ export default function Page() {
                     <option value="ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น">ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น</option>
                     <option value="ในเมืองใหญ่ กับผู้คนที่รู้จัก">ในเมืองใหญ่ กับผู้คนที่รู้จัก</option>
                 </select>
+
+                <Image 
+                    src='/img/useLaptop_white.GIF'
+                    alt='White Laptop'
+                    width={1000}
+                    height={1000}
+                    className='absolute top-[10%] -z-[50]' 
+
+                />
                 
 
                 <Next selectedPlace={selectedPlace} handleSelected={handleSelected}></Next>

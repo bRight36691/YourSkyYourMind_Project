@@ -6,9 +6,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative min-h-screen overscroll-none overflow-hidden">
-      <InteractiveBackground />
-      {children}
-    </div>
+    // <div className="relative min-h-screen max-h-[200px] overscroll-none overflow-hidden">
+    //   <InteractiveBackground />
+    //   {children}
+    // </div>
+  <div className="overflow-hidden">
+    <InteractiveBackground />
+    {children}
+  </div>
   );
 }
