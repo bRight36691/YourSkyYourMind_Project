@@ -53,7 +53,7 @@ export default function Page() {
         </motion.div>
         
         {canNext && (
-            <Link className="fixed z-50 bottom-3 left-[36%]" href='/2-15'>
+            <Link className="fixed z-50 bottom-8 left-[36%]" href='/2-15'>
                 <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
             </Link>
         )
