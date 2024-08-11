@@ -35,10 +35,10 @@ export default function Text({ state, setState }: prop) {
             alt="yourskyyourmind logo"
             width={1080}
             height={1920}
-            className="h-auto w-screen overflow-hidden pointer-events-none"
+            className="pointer-events-none h-auto w-full overflow-hidden"
           />
         </div>
-        <div className="z-20 fixed bottom-[18%] flex w-screen justify-center">
+        <div className="absolute bottom-[15%] z-20 flex w-full justify-center">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
             onClick={() => setState(2)}
@@ -72,7 +72,7 @@ export default function Text({ state, setState }: prop) {
         exit={{ opacity: 0, transition: { duration: 2 } }}
         className="flex min-h-screen flex-col"
       >
-        <div className="fixed top-40 z-10 flex w-screen flex-col items-center gap-6 text-center text-black">
+        <div className="absolute top-40 z-10 flex w-full flex-col items-center gap-6 text-center text-black">
           <p className="font-bold">คำเตือน</p>
           <div>
             <p>เว็บนี้มีเนื้อหาเกี่ยวกับความรู้สึก</p>
@@ -94,7 +94,7 @@ export default function Text({ state, setState }: prop) {
           </div>
         </div>
 
-        <div className="fixed bottom-[15%] flex w-screen justify-center">
+        <div className="absolute bottom-[15%] flex w-full justify-center">
           <button
             className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
             onClick={() => setState(3)}
@@ -180,7 +180,7 @@ export default function Text({ state, setState }: prop) {
         exit={{ opacity: 0, transition: { duration: 2 } }}
         className="flex min-h-screen flex-col"
       >
-        <div className="fixed top-60 z-10 flex w-screen justify-center">
+        <div className="absolute top-60 z-10 flex w-full justify-center">
           <div className="flex w-[90%] flex-col items-center gap-2 rounded-xl bg-white p-4 text-center text-black">
             <div>
               <p>คุณเป็นนิสิตนักศึกษาแพทย์</p>
@@ -207,7 +207,7 @@ export default function Text({ state, setState }: prop) {
 
         {isMedStudent === "medStudent" && (
           <Link href="/1-4_1">
-            <div className="fixed bottom-[15%] flex w-screen justify-center">
+            <div className="absolute bottom-[15%] flex w-full justify-center">
               <NextButton />
             </div>
           </Link>
@@ -215,7 +215,7 @@ export default function Text({ state, setState }: prop) {
 
         {isMedStudent === "nonMedStudent" && (
           <Link href="/1-4_2">
-            <div className="fixed bottom-[15%] flex w-screen justify-center">
+            <div className="absolute bottom-[15%] flex w-full justify-center">
               <NextButton />
             </div>
           </Link>

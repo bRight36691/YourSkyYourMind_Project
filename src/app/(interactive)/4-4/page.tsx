@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Text from "./text";
 
@@ -12,15 +11,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full bg-scene2">
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        transition={{ duration: 2 }}
-        className="grid h-screen w-screen justify-items-center"
-      >
-        <div className="fixed z-20 h-screen w-full bg-white" />
-      </motion.div>
+    <div className="absolute min-h-screen w-full bg-white">
       <Text state={state} setState={setState} name={name}></Text>
     </div>
   );

@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ResultIGTemplate } from "~/component/ResultIGTemplate";
+import { ResultIGTemplate2 } from "~/component/ResultIGTemplate2";
 
 export default function Page() {
   const [depressionScore, setDepressionScore] = useState<number>(0);
@@ -84,7 +84,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="bg-result overflow-y-scroll bg-cover bg-top bg-no-repeat object-none">
+    <div className="overflow-y-scroll bg-result bg-cover bg-top bg-no-repeat object-none">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -100,13 +100,13 @@ export default function Page() {
             <p>โดยอ้างอิงจากแบบทดสอบ DASS-21</p>
           </div>
           <div className="mt-4 flex w-full flex-col items-center gap-2">
-            <div className="bg-blueDass21 flex h-12 w-1/3 items-center justify-center rounded-[10px] text-center font-medium">
+            <div className="flex h-12 w-1/3 items-center justify-center rounded-[10px] bg-blueDass21 text-center font-medium">
               <p>อาการซึมเศร้า</p>
             </div>
             {depressionScore === 0 && (
               <p className="text-sm">
                 คุณ
-                <span className="text-noBurnout font-semibold">
+                <span className="font-semibold text-noBurnout">
                   ไม่มีภาวะที่เสี่ยงต่ออาการซึมเศร้า
                 </span>
               </p>
@@ -123,13 +123,13 @@ export default function Page() {
             )}
           </div>
           <div className="mt-4 flex w-full flex-col items-center gap-2">
-            <div className="bg-blueDass21 flex h-12 w-1/3 items-center justify-center rounded-[10px] text-center font-medium">
+            <div className="flex h-12 w-1/3 items-center justify-center rounded-[10px] bg-blueDass21 text-center font-medium">
               <p>อาการวิตกกังวล</p>
             </div>
             {anxietyScore === 0 && (
               <p className="text-sm">
                 คุณ
-                <span className="text-noBurnout font-semibold">
+                <span className="font-semibold text-noBurnout">
                   ไม่มีภาวะที่เสี่ยงต่ออาการวิตกกังวล
                 </span>
               </p>
@@ -144,13 +144,13 @@ export default function Page() {
             )}
           </div>
           <div className="mt-4 flex w-full flex-col items-center gap-2">
-            <div className="bg-blueDass21 flex h-12 w-1/3 items-center justify-center rounded-[10px] text-center font-medium">
+            <div className="flex h-12 w-1/3 items-center justify-center rounded-[10px] bg-blueDass21 text-center font-medium">
               <p>อาการเครียด</p>
             </div>
             {stressScore === 0 && (
               <p className="text-sm">
                 คุณ
-                <span className="text-noBurnout font-semibold">
+                <span className="font-semibold text-noBurnout">
                   ไม่มีภาวะที่เสี่ยงต่ออาการเครียด
                 </span>
               </p>
@@ -165,9 +165,9 @@ export default function Page() {
             )}
           </div>
           <p className="mt-6 text-xl">ติดต่อ ig : @yourskyyourmind</p>
-          <ResultIGTemplate />
+          <ResultIGTemplate2 />
         </div>
-        <div className="fixed bottom-[5%] z-20 flex w-screen justify-center">
+        <div className="absolute bottom-[5%] z-20 flex w-full justify-center">
           <Link href="/4-23">
             <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
               ถัดไป

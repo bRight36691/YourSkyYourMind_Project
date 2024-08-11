@@ -13,7 +13,7 @@ export const MovingSky = () => {
           ease: "linear",
         },
       }}
-      className="fixed h-screen w-[300%]"
+      className="absolute h-screen w-[300%]"
     >
       <Image
         src="/img/scene1_sky.webp"
