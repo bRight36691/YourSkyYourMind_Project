@@ -38,9 +38,9 @@ export default function Page() {
         </div>
       </div>
 
-      <img src="/img/3-26.webp" className="absolute bottom-[15%] -z-[50]"></img>
+      <img src="/img/3-26.webp" className="absolute bottom-[5%] -z-[50]"></img>
       {answer1 && (
-        <Link className="fixed bottom-7 left-[36%] z-50" href="/4-1">
+        <Link className="fixed bottom-5 left-[36%] z-50" href="/4-1">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
             onClick={submitMedForm}

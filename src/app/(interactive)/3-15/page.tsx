@@ -13,9 +13,9 @@ export default function Page() {
           duration: 1,
           delay: 0.5,
         }}
-        className="fixed z-20 flex min-h-screen flex-col"
+        className="absolute z-20 flex min-h-screen w-full flex-col"
       >
-        <div className="fixed flex w-full flex-col justify-center text-center text-[20px] text-black">
+        <div className="absolute flex w-full flex-col justify-center text-center text-[20px] text-black">
           <p className="mt-[221px]">พอมาคิดทบทวน...</p>
           <p className="mt-1">ตัวฉันตอนเด็ก ๆ</p>
           <p className="mt-1">คงจะตอบง่าย ๆ</p>
@@ -23,7 +23,7 @@ export default function Page() {
         </div>
 
         <Link href="/3-16">
-          <div className="fixed bottom-24 flex w-screen justify-center">
+          <div className="fixed bottom-8 flex w-full justify-center">
             <NextButton />
           </div>
         </Link>

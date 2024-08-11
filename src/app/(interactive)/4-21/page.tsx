@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ResultIGTemplate } from "~/component/ResultIGTemplate";
+import { ResultIGTemplate2 } from "~/component/ResultIGTemplate2";
 import { FormServices } from "~/service/FormServices";
 
 export default function Page() {
@@ -51,7 +52,7 @@ export default function Page() {
   }, []);
 
   return (
-    <div className="bg-result overflow-y-scroll bg-cover bg-top bg-no-repeat object-none">
+    <div className="overflow-y-scroll bg-result bg-cover bg-top bg-no-repeat object-none">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -78,7 +79,7 @@ export default function Page() {
               <p className="mt-4">{burnoutRecommends[4]}</p>
             )}
           </div>
-          <div className="bg-resultLine my-2 h-[1px] w-full" />
+          <div className="my-2 h-[1px] w-full bg-resultLine" />
           <div className="text-xs font-medium leading-relaxed">
             {avgBurnoutScore !== "0" && (
               <p className="text-pinkResult">
@@ -91,20 +92,14 @@ export default function Page() {
             <p>ติดต่อ ig : @yourskyyourmind</p>
             <p>หรือ สายด่วนสุขภาพจิต 1323</p>
           </div>
-          <ResultIGTemplate />
+          {isMedStudent === "medStudent" && <ResultIGTemplate />}
+          {isMedStudent !== "medStudent" && <ResultIGTemplate2 />}
         </div>
-        <div className="fixed bottom-[5%] z-20 flex w-screen justify-center">
+        <div className="absolute bottom-[5%] z-20 flex w-full justify-center">
           {isMedStudent === "medStudent" && (
             <Link href="/4-22">
               <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
                 ถัดไป
-              </button>
-            </Link>
-          )}
-          {isMedStudent !== "medStudent" && (
-            <Link href="/1-1">
-              <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
-                เสร็จสิ้น
               </button>
             </Link>
           )}

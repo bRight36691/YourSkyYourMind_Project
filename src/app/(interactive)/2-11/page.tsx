@@ -44,7 +44,7 @@ export default function Page() {
       </motion.div>
 
       {canNext && (
-        <Link className="fixed bottom-2 left-[36%] z-50" href="/2-12">
+        <Link className="fixed bottom-3 left-[36%] z-50" href="/2-12">
           <button className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl">
             ถัดไป
           </button>

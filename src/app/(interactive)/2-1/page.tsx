@@ -47,7 +47,7 @@ export default function Page() {
           alt="selected background"
           width={1080}
           height={1920}
-          className="fixed min-h-screen object-cover"
+          className="absolute min-h-screen object-cover"
         />
       </motion.div>
     </div>

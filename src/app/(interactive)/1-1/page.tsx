@@ -7,7 +7,7 @@ export default function Page() {
   const [state, setState] = useState<number>(1);
 
   return (
-    <div className="overflow-hidden object-none">
+    <div className="overflow-hidden object-none overscroll-none max-h-dvh">
       <MovingSky />
       <Text state={state} setState={setState}></Text>
     </div>

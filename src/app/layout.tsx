@@ -4,6 +4,7 @@ import { IBM_Plex_Sans_Thai_Looped, Caveat_Brush } from "next/font/google";
 import Sounds from "~/component/sounds";
 import SoundToggle from "~/component/sound-toggle";
 import "../styles/globals.css";
+import { Container } from "postcss";
 
 const ibmPlexSansThaiLooped = IBM_Plex_Sans_Thai_Looped({
   weight: ["400", "500", "600", "700"],
@@ -32,7 +33,7 @@ export default function RootLayout({
     <html lang="th" data-theme="light">
       <body
         className={cn(
-          "relative mx-auto min-h-screen w-full max-w-md overscroll-none font-ibmPlex",
+          "relative mx-auto min-h-screen w-full max-w-md overscroll-none overflow-hidden font-ibmPlex",
           ibmPlexSansThaiLooped.variable,
           caveatBrush.variable,
         )}

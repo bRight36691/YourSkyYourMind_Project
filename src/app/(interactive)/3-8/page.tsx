@@ -22,20 +22,20 @@ export default function Page() {
           duration: 1,
           delay: 0.5,
         }}
-        className="fixed z-20 flex min-h-screen flex-col"
+        className="absolute z-20 flex min-h-screen w-full flex-col"
       >
-        <div className="fixed flex w-full flex-col justify-center text-center text-[20px] text-black">
+        <div className="absolute flex w-full flex-col justify-center text-center text-[20px] text-black">
           <p className="mt-[166px]">ฉันภูมิใจที่ตนเองสามารถผ่าน</p>
           <p className="mt-1">เรื่องร้าย ๆ ในชีวิตมาได้</p>
         </div>
 
-        <div className="fixed top-[272px] w-full items-center justify-center">
+        <div className="absolute top-[272px] w-full items-center justify-center">
           <RI9Choices choiceSelection={onRi9Q3Change} />
         </div>
 
         {ri9Q3 && (
           <Link href="/3-9">
-            <div className="fixed bottom-[10%] flex w-screen justify-center">
+            <div className="fixed bottom-8 flex w-full justify-center">
               <NextButton />
             </div>
           </Link>

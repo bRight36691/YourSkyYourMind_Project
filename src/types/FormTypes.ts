@@ -4,11 +4,17 @@ export interface FormSchema {
   age?: number;
   sex?: number;
   mentalDisorder?: number;
+  moreMentalDisorder?: string;
   occupation?: string;
   gpax?: number;
   gpaxSatisfaction?: number;
   university?: number;
   year?: number;
+  financialStatus?: number;
+  sleepHour?: number;
+  exerciseDay?: number;
+  cigarette?: number;
+  alcoholicDrink?: number;
   cbissQ1?: number;
   cbissQ2?: number;
   cbissQ3?: number;

@@ -16,6 +16,8 @@ export const FormMappers = {
       mentalDisorder: localStorage.getItem("mentalDisorder")
         ? Number(localStorage.getItem("mentalDisorder"))
         : undefined,
+      moreMentalDisorder:
+        localStorage.getItem("moreMentalDisorder") ?? undefined,
       gpax: localStorage.getItem("gpax")
         ? Number(localStorage.getItem("gpax"))
         : undefined,
@@ -29,6 +31,21 @@ export const FormMappers = {
         ? Number(localStorage.getItem("year"))
         : undefined,
       occupation: localStorage.getItem("occupation") ?? undefined,
+      financialStatus: localStorage.getItem("financialStatus")
+        ? Number(localStorage.getItem("financialStatus"))
+        : undefined,
+      sleepHour: localStorage.getItem("sleepHour")
+        ? Number(localStorage.getItem("sleepHour"))
+        : undefined,
+      exerciseDay: localStorage.getItem("exerciseDay")
+        ? Number(localStorage.getItem("exerciseDay"))
+        : undefined,
+      cigarette: localStorage.getItem("cigarette")
+        ? Number(localStorage.getItem("cigarette"))
+        : undefined,
+      alcoholicDrink: localStorage.getItem("alcoholicDrink")
+        ? Number(localStorage.getItem("alcoholicDrink"))
+        : undefined,
       cbissQ1: localStorage.getItem("cbissQ1")
         ? Number(localStorage.getItem("cbissQ1"))
         : undefined,

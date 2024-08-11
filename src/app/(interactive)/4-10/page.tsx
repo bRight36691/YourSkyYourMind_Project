@@ -31,19 +31,20 @@ export default function Page() {
             </div>
 
             <h1 className="pt-[30%] text-white">คุณจะบอกว่า...</h1>
-            
-            <textarea 
-                className="mt-[10%] p-[5%] h-[150px] w-[350px] rounded-xl opacity-[50%]" 
-                placeholder="โปรดพิมพ์คำตอบของคุณ"
-                maxLength={140}
-                onChange={(e)=>{
-                    setEncouragement(e.target.value);
-                }}
-            >
-                
+            <div className="grid gap-y-3">
+                <textarea 
+                    className="mt-[10%] p-[5%] h-[150px] w-[350px] rounded-xl opacity-[50%]" 
+                    placeholder="โปรดพิมพ์คำตอบของคุณ"
+                    maxLength={140}
+                    onChange={(e)=>{
+                        setEncouragement(e.target.value);
+                    }}
+                >
+                    
 
-            </textarea>
-            <h1 className="absolute text-white bottom-[26%] right-[12%]">{encouragement.length}/140</h1>
+                </textarea>
+                <h1 className="place-self-end mr-[2%] text-white bottom-[18%] right-[12%]">{encouragement.length}/140</h1>
+            </div>
             {encouragement && 
                 <Link className="fixed z-50 bottom-7 left-[36%]" href='/4-11'>
                     <button className=" bg-white text-lg h-8 w-28 rounded-2xl shadow-xl" >ถัดไป</button>
