@@ -35,7 +35,7 @@ export default function Page() {
 
         {ri9Q8 && (
           <Link href="/3-14">
-            <div className="absolute bottom-[10%] flex w-full justify-center">
+            <div className="fixed bottom-8 flex w-full justify-center">
               <NextButton />
             </div>
           </Link>

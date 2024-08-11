@@ -16,7 +16,7 @@ export default function Page() {
         <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 , transition:{duration:2}}}
-            className='grid justify-items-center pt-[65%] text-[16px]'
+            className='grid justify-items-center pt-[55%] text-[16px]'
             
         >
             <h1 className='text-black '>อยากให้เราเรียกคุณว่าอะไร</h1>

@@ -11,7 +11,7 @@ export default function Page() {
         transition={{ duration: 2 }}
         className="grid h-screen w-screen justify-items-center"
       >
-        <div className="absolute ml-[5%] mt-[40%] h-[45%] w-[75%] rounded-full bg-white opacity-100 blur-2xl"></div>
+        <div className="absolute ml-[10%] mt-[40%] h-[45%] w-[75%] rounded-full bg-white opacity-100 blur-2xl"></div>
         <div className="z-10 pt-[63%] text-center text-[20px]">
           <h1>ผ่านอะไรมาเยอะเลยเนอะ</h1>
           <h1 className="pt-[15%]">มีทั้งเรื่องที่ยินดี</h1>

@@ -10,7 +10,7 @@ export default function RootLayout({
     //   <InteractiveBackground />
     //   {children}
     // </div>
-  <div className="overflow-hidden">
+  <div className="overflow-hidden overscroll-none">
     <InteractiveBackground />
     {children}
   </div>

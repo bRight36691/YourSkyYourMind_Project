@@ -69,7 +69,7 @@ export default function Page() {
       </motion.div>
 
       {canNext && (
-        <Link className="absolute bottom-8 left-[36%] z-50" href="/2-5">
+        <Link className="fixed bottom-8 left-[36%] z-50" href="/2-5">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
             onClick={submit}

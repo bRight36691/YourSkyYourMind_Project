@@ -51,7 +51,7 @@ export default function Page() {
         </div>
       </div>
       {answer1 && answer2 && answer3 && answer4 && (
-        <Link className="fixed bottom-7 left-[36%] z-50" href="/3-22">
+        <Link className="fixed bottom-5 left-[36%] z-50" href="/3-22">
           <button className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl">
             ถัดไป
           </button>

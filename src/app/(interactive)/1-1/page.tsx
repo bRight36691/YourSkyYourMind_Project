@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { MovingSky } from "~/component/bg/MovingSky";
 import Text from "./text";
-import Image from "next/image";
 
 export default function Page() {
   const [state, setState] = useState<number>(1);

@@ -11,7 +11,7 @@ export default function ChoicePane({question,setAnswer}:prop) {
     return(
         <div className="grid justify-items-center w-[95%] h-[80%]">
             <h1 className="text-[17px] text-wrap text-center font-light">{question}</h1>
-            <div className="grid grid-cols-5 text-center text-[9px] gap-x-6 pt-[3%]">
+            <div className="grid grid-cols-5 text-center text-[9px] gap-x-5 pt-[3%]">
                 <label className="grid grid-cols-1 justify-items-center gap-y-2">
                     <input type="radio" name={question} className="radio checked:bg-blue-800 h-6 w-6 border-2" 
                         value="0" onChange={handleClick}/>

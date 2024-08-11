@@ -240,7 +240,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-[10%] z-20 flex w-full justify-center gap-2">
+        <div className="fixed bottom-[10%] z-20 flex w-full justify-center gap-2">
           <div onClick={downloadImage}>
             <DownloadIcon />
           </div>
@@ -248,7 +248,7 @@ export default function Page() {
             <ShareIcon />
           </div>
         </div>
-        <div className="absolute bottom-[3%] z-20 flex w-full justify-center">
+        <div className="fixed bottom-[3%] z-20 flex w-full justify-center">
           <Link href="/4-21">
             <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
               ถัดไป

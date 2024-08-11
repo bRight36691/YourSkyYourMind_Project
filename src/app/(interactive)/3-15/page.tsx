@@ -23,7 +23,7 @@ export default function Page() {
         </div>
 
         <Link href="/3-16">
-          <div className="absolute bottom-24 flex w-full justify-center">
+          <div className="fixed bottom-8 flex w-full justify-center">
             <NextButton />
           </div>
         </Link>

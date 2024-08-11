@@ -28,7 +28,7 @@ export default function Page() {
             <p>ให้เวลากับหัวใจของคุณ..</p>
           </div>
         </div>
-        <div className="absolute bottom-[10%] z-20 flex w-full justify-center">
+        <div className="fixed bottom-8 z-20 flex w-full justify-center">
           <Link href="/4-19">
             <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
               ถัดไป
