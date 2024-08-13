@@ -23,7 +23,7 @@ export default function Page() {
         className="absolute z-20 flex min-h-screen w-full flex-col"
       >
         <div className="absolute flex w-full flex-col justify-center text-center text-[20px] text-black">
-          <p className="mt-[143px]">เผลอแปปเดียว ก็ {age} ปีแล้ว</p>
+          <p className="mt-[143px]">เผลอแป๊บเดียว ก็ {age} ปีแล้ว</p>
           <p className="mt-1">ตัวฉันเอง ก็เติบโตขึ้นในทุกวัน</p>
           <p className="mt-12">เวลาผ่านไปไว แต่กลับไม่ค่อยมีเวลา</p>
           <p className="mt-1">สำรวจภายในหัวใจของเราเลย</p>

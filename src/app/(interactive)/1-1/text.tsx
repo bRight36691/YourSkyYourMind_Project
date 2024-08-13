@@ -184,7 +184,7 @@ export default function Text({ state, setState }: prop) {
           <div className="flex w-[90%] flex-col items-center gap-2 rounded-xl bg-white p-4 text-center text-black">
             <div>
               <p>คุณเป็นนิสิตนักศึกษาแพทย์</p>
-              <p>และนักเรียนแพทย์ทหาร ใช่หรือไม่ ?</p>
+              <p>หรือนักเรียนแพทย์ทหาร ใช่หรือไม่ ?</p>
             </div>
             <div className="flex w-[76px] items-start justify-start gap-2">
               <RadioButton
