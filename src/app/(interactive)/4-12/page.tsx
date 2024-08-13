@@ -14,7 +14,7 @@ export default function Page() {
             animate={{opacity:1}}
             transition={{duration:2}}
             className="grid justify-items-center  text-black min-h-screen min-w-full bg-[#fbfbfb] ">
-            <div className="grid justify-items-center h-[10%] mt-[35%] ">
+            <div className="grid justify-items-center h-[10%] mt-[20%] ">
                 <h1>คุณลืมตาขึ้นอีกครั้ง</h1>
                 <h1 className="mt-[10%]">พบเจอกับโทรศัพท์เครื่องเดิม</h1>
                 <h1 className="mt-[25%]">...</h1>

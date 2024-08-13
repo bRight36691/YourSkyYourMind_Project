@@ -41,7 +41,7 @@ export default function Page() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2, delay: 0.5 }}
-        className="mb-[10%] mt-[6%] h-max min-h-[80%] w-[95%] gap-y-5 rounded-3xl bg-white"
+        className="mb-[10%] mt-[6%] h-max min-h-[90%] w-[95%] gap-y-5 rounded-3xl bg-white"
       >
         <div className="grid justify-items-center gap-y-7 pb-[5%] pt-[7%]">
           <ChoicePane2

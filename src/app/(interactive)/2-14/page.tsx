@@ -42,7 +42,7 @@ export default function Page() {
             initial={{opacity:0}}
             animate={{opacity:1}}
             transition={{duration:2,delay:0.5}}
-            className="bg-white gap-y-5 h-[80%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
+            className="bg-white gap-y-5 min-h-[90%] w-[95%] mt-[6%] mb-[10%]  rounded-3xl ">
             <div className="grid justify-items-center gap-y-5 pt-[7%] pb-[5%]">
             <ChoicePane2 question="ฉันรู้สึกว่าฉันได้รับการเตรียมตัวอย่างดีสำหรับวิชาชีพแพทย์" setAnswer={setAnswer1}></ChoicePane2>
             <ChoicePane2 question="ทักษะการแก้ไขปัญหาของฉันได้รับการพัฒนาอย่างมาก" setAnswer={setAnswer2}></ChoicePane2>
