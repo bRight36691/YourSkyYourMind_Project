@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import { FormMappers } from "~/service/FormMappers";
-// import { FormServices } from "~/service/FormServices";
+import { FormMappers } from "~/service/FormMappers";
+import { FormServices } from "~/service/FormServices";
 
 export default function Page() {
   const [isMedStudent, setIsMedStudent] = useState<string>();
@@ -12,9 +12,9 @@ export default function Page() {
     setIsMedStudent(localStorage.getItem("isMedStudent") ?? "");
   }, []);
 
-  // const submitNonMedForm = async () => {
-  //   void FormServices.createForm(await FormMappers.mapForm());
-  // };
+  const submitNonMedForm = async () => {
+    void FormServices.createForm(await FormMappers.mapNonMedForm());
+  };
 
   return (
     <motion.div
@@ -40,7 +40,7 @@ export default function Page() {
         <Link className="fixed bottom-10 left-[36%] z-50" href="/4-1">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
-            // onClick={submitNonMedForm}
+            onClick={submitNonMedForm}
           >
             ถัดไป
           </button>

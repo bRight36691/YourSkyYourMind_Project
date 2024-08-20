@@ -251,4 +251,14 @@ export const FormMappers = {
     };
     return form;
   },
+
+  mapNonMedForm: async (): Promise<FormSchema> => {
+    const form: FormSchema = {
+      isMedStudent: localStorage.getItem("isMedStudent") === "medStudent",
+      burnoutScore: localStorage.getItem("burnoutScore")
+        ? Number(localStorage.getItem("burnoutScore"))
+        : undefined,
+    };
+    return form;
+  },
 };
