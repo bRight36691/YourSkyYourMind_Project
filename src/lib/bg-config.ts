@@ -279,7 +279,7 @@ export const backgroundMapConfig = {
     imagePreload: [],
   },
   "4-10" : {
-    image : "/img/4-6_10.GIF",
+    image : "/img/night.GIF",
     imagePreload: [],
   },
   "4-12" : {
