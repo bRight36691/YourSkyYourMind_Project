@@ -143,6 +143,7 @@ export const backgroundMapConfig = {
       "/img/1-12-3.webp",
       "/img/1-12-2.webp",
       "/img/1-12-1.webp",
+      "/img/3-3.gif",
     ],
   },
   "3-1": {
