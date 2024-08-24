@@ -11,15 +11,15 @@ export default function Page() {
   useEffect(() => {
     const userChoice = localStorage.getItem("selectedPlace");
     if (userChoice === "ใต้ร่มไม้ ที่คุ้นเคย") {
-      setBackgroundName("/img/ใต้ร่มไม้ ที่คุ้นเคย.GIF");
+      setBackgroundName("/img/ใต้ร่มไม้ ที่คุ้นเคย.gif");
     } else if (userChoice === "พระจันทร์และดาว ยามค่ำคืน") {
-      setBackgroundName("/img/พระจันทร์และดาว ยามค่ำคืน.GIF");
+      setBackgroundName("/img/พระจันทร์และดาว ยามค่ำคืน.gif");
     } else if (userChoice === "วิวภูเขา กว้างขวางท้าทาย") {
-      setBackgroundName("/img/วิวภูเขา กว้างขวางท้าทาย.GIF");
+      setBackgroundName("/img/วิวภูเขา กว้างขวางท้าทาย.gif");
     } else if (userChoice === "ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น") {
-      setBackgroundName("/img/ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น.GIF");
+      setBackgroundName("/img/ซอยบ้านเกิด ที่แต่ก่อนเคยวิ่งเล่น.gif");
     } else if (userChoice === "ในเมืองใหญ่ กับผู้คนที่รู้จัก") {
-      setBackgroundName("/img/ในเมืองใหญ่ กับผู้คนที่รู้จัก.GIF");
+      setBackgroundName("/img/ในเมืองใหญ่ กับผู้คนที่รู้จัก.gif");
     }
   }, []);
 

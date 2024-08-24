@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <div className="h-screen w-full overflow-hidden bg-white object-none">
       <Image
-        src="/img/eyeOpen.GIF"
+        src="/img/eyeOpen.gif"
         width={200}
         height={200}
         alt="eye open"

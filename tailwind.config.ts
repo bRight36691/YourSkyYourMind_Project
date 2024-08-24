@@ -31,8 +31,8 @@ export default {
         blueDass21: "#E7F5FF",
       },
       backgroundImage: {
-        result: "url('/img/resultBg.webp')",
-        night: "url('/img/night.GIF')",
+        result: "url('/result/resultBg.webp')",
+        night: "url('/img/night.gif')",
       },
     },
   },

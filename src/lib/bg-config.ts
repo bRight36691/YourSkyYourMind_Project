@@ -38,10 +38,10 @@ export const backgroundMapConfig = {
   },
   "1-9": {
     image: "",
-    imagePreload: ["/img/1-10.GIF"],
+    imagePreload: ["/img/1-10.gif"],
   },
   "1-10": {
-    image: "/img/1-10.GIF",
+    image: "/img/1-10.gif",
     imagePreload: [],
   },
   "1-11": {
@@ -103,11 +103,11 @@ export const backgroundMapConfig = {
   },
   "2-5": {
     image: "",
-    imagePreload: ["/img/friends.gif"],
+    imagePreload: ["/img/friends.GIF"],
   },
   "2-8": {
     image: "",
-    imagePreload: ["/img/teacher.gif"],
+    imagePreload: ["/img/teacher.GIF"],
   },
   "2-10": {
     image: "",
@@ -156,155 +156,155 @@ export const backgroundMapConfig = {
       "/img/1-12-1.webp",
     ],
     stopMotionDuration: 800,
-    imagePreload: ["/img/3-3.GIF"],
+    imagePreload: ["/img/3-3.gif"],
   },
   "3-3": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-4": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-5": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-6": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-7": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-8": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-9": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-10": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-11": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-12": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-13": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-14": {
-    image: "/img/3-3.GIF",
+    image: "/img/3-3.gif",
     imagePreload: [],
   },
   "3-15": {
-    image: "/img/3-3.GIF",
-    imagePreload: ["/img/วิวเย็น.GIF"],
+    image: "/img/3-3.gif",
+    imagePreload: ["/img/วิวเย็น.gif"],
   },
   "3-16": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-17": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-18": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-19": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-20": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-21": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-22": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-23": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-24": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "3-25": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: ["/img/3-26.webp"],
   },
   "3-26": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "4-1": {
-    image: "/img/วิวเย็น.GIF",
+    image: "/img/วิวเย็น.gif",
     imagePreload: [],
   },
   "4-4": {
     image: "",
-    imagePreload: ["/img/night.GIF"],
+    imagePreload: ["/img/night.gif"],
   },
   "4-6": {
-    image: "/img/night.GIF",
+    image: "/img/night.gif",
     imagePreload: [],
   },
   "4-7": {
-    image: "/img/night.GIF",
+    image: "/img/night.gif",
     imagePreload: [],
   },
   "4-9": {
-    image: "/img/night.GIF",
+    image: "/img/night.gif",
     imagePreload: [],
   },
   "4-8": {
-    image: "/img/night.GIF",
+    image: "/img/night.gif",
     imagePreload: [],
   },
-  "4-10" : {
-    image : "/img/night.GIF",
+  "4-10": {
+    image: "/img/night.gif",
     imagePreload: [],
   },
-  "4-12" : {
-    image : "",
+  "4-12": {
+    image: "",
     imagePreload: ["/img/phone.webp"],
   },
-  "4-13" : {
-    image : "",
+  "4-13": {
+    image: "",
     imagePreload: ["/img/phoneRing.GIF"],
   },
-  "4-14" : {
-    image : "",
-    imagePreload: ["/img/phone.webp","/img/4-16.webp"],
+  "4-14": {
+    image: "",
+    imagePreload: ["/img/phone.webp", "/img/4-16.webp"],
   },
-  "4-15" : {
-    image : "",
-    imagePreload: ["/img/phone.webp","/img/4-16.webp"],
+  "4-15": {
+    image: "",
+    imagePreload: ["/img/phone.webp", "/img/4-16.webp"],
   },
-  "4-16" : {
-    image : "/img/4-16.webp",
+  "4-16": {
+    image: "/img/4-16.webp",
     imagePreload: [],
   },
-  "4-17" : {
-    image : "",
-    imagePreload: ["/img/4-18.webp","/img/phone.webp"],
+  "4-17": {
+    image: "",
+    imagePreload: ["/img/4-18.webp", "/img/phone.webp"],
   },
   "4-18": {
     image: "",
@@ -318,5 +318,4 @@ export const backgroundMapConfig = {
     image: "",
     imagePreload: ["/img/scene1_sky.webp"],
   },
-
 } as const;

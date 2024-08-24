@@ -87,26 +87,26 @@ export default function Page() {
   ];
 
   const skyPics = [
-    "/img/tree1.webp",
-    "/img/tree2.webp",
-    "/img/tree3.webp",
-    "/img/tree4.webp",
-    "/img/moon1.webp",
-    "/img/moon2.webp",
-    "/img/moon3.webp",
-    "/img/moon4.webp",
-    "/img/mountain1.webp",
-    "/img/mountain2.webp",
-    "/img/mountain3.webp",
-    "/img/mountain4.webp",
-    "/img/house1.webp",
-    "/img/house2.webp",
-    "/img/house3.webp",
-    "/img/house4.webp",
-    "/img/town1.webp",
-    "/img/town2.webp",
-    "/img/town3.webp",
-    "/img/town4.webp",
+    "/result/tree1.webp",
+    "/result/tree2.webp",
+    "/result/tree3.webp",
+    "/result/tree4.webp",
+    "/result/moon1.webp",
+    "/result/moon2.webp",
+    "/result/moon3.webp",
+    "/result/moon4.webp",
+    "/result/mountain1.webp",
+    "/result/mountain2.webp",
+    "/result/mountain3.webp",
+    "/result/mountain4.webp",
+    "/result/house1.webp",
+    "/result/house2.webp",
+    "/result/house3.webp",
+    "/result/house4.webp",
+    "/result/town1.webp",
+    "/result/town2.webp",
+    "/result/town3.webp",
+    "/result/town4.webp",
   ];
 
   useEffect(() => {
@@ -210,7 +210,7 @@ export default function Page() {
             <p className="w-[85%] text-xs leading-relaxed">{desc[idx]}</p>
             <div className="relative flex h-[319px] w-[354px] items-center justify-center overflow-hidden rounded-[20px] object-cover font-caveatBrush text-white drop-shadow-sm">
               <Image
-                src={skyPics[idx] ?? "/img/tree1.webp"}
+                src={skyPics[idx] ?? "/result/tree1.webp"}
                 alt="YourSky"
                 width={3000}
                 height={2000}

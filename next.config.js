@@ -18,6 +18,28 @@ const config = {
     defaultLocale: "en",
   },
   transpilePackages: ["geist"],
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        hostname: "d2sgmru1qxbmfj.cloudfront.net",
+      },
+    ],
+  },
+  redirects: async () => {
+    return [
+      {
+        source: "/img/:path*",
+        destination: "https://d2sgmru1qxbmfj.cloudfront.net/img/:path*",
+        permanent: true,
+      },
+      {
+        source: "/sound/:path*",
+        destination: "https://d2sgmru1qxbmfj.cloudfront.net/sound/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default config;

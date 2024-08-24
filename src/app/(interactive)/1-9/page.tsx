@@ -18,7 +18,7 @@ export default function Page() {
           className="flex min-h-screen flex-col justify-center"
         >
           <Image
-            src="/img/useLaptop.GIF"
+            src="/img/useLaptop.gif"
             width={200}
             height={200}
             alt="gif of laptop using"
