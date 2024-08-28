@@ -13,7 +13,7 @@ export default function Page() {
   }, []);
 
   const submitNonMedForm = async () => {
-    void FormServices.createForm(await FormMappers.mapNonMedForm());
+    void FormServices.createForm(await FormMappers.mapForm());
   };
 
   return (
