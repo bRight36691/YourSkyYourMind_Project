@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import ChoicePane3 from "~/component/choicePane3";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { FormMappers } from "~/service/FormMappers";
-import { FormServices } from "~/service/FormServices";
 
 export default function Page() {
   const [answer1, setAnswer1] = useState<string>("");
@@ -12,10 +10,6 @@ export default function Page() {
   useEffect(() => {
     localStorage.setItem("dass21Q21", answer1);
   }, [answer1]);
-
-  const submitMedForm = async () => {
-    void FormServices.createForm(await FormMappers.mapForm());
-  };
 
   return (
     <motion.div
@@ -43,7 +37,6 @@ export default function Page() {
         <Link className="fixed bottom-5 left-[36%] z-50" href="/4-1">
           <button
             className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl"
-            onClick={submitMedForm}
           >
             ถัดไป
           </button>
