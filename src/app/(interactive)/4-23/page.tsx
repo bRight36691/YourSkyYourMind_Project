@@ -4,7 +4,6 @@ import { useState } from "react";
 import { DropDown } from "~/component/inputs/DropDown";
 import { MovingSky } from "~/component/bg/MovingSky";
 import { motion } from "framer-motion";
-import { BankAccountServices } from "~/service/BankAccountServices";
 
 export default function PaccountNo() {
   const [accountNo, setAccountNo] = useState<string>("");
