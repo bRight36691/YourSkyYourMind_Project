@@ -167,13 +167,6 @@ export default function Page() {
           <p className="mt-6 text-xl">ติดต่อ ig : @yourskyyourmind</p>
           <ResultIGTemplate2 />
         </div>
-        <div className="absolute bottom-[5%] z-20 flex w-full justify-center">
-          <Link href="/4-23">
-            <button className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm">
-              ถัดไป
-            </button>
-          </Link>
-        </div>
       </motion.div>
     </div>
   );
