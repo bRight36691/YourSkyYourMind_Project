@@ -13,7 +13,7 @@ export default function Page() {
       <div className="pt-[60%] text-center text-[20px]">
         <h1>แล้วเรื่องเพื่อน ๆ ล่ะ ?</h1>
       </div>
-      <img src="/img/friends.GIF" className="absolute"></img>
+      <img src="/img/friends.gif" className="absolute"></img>
       <Link className="fixed bottom-8 left-[36%] z-50" href="/2-7">
         <button className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl">
           ถัดไป

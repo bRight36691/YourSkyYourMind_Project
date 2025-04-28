@@ -91,11 +91,11 @@ export const backgroundMapConfig = {
   },
   "1-18": {
     image: "",
-    imagePreload: ["/img/1-18.GIF"],
+    imagePreload: ["/img/1-18.gif"],
   },
   "1-19": {
     image: "",
-    imagePreload: ["/img/1-19.GIF"],
+    imagePreload: ["/img/1-19.gif"],
   },
   "1-20": {
     image: "",
@@ -103,11 +103,11 @@ export const backgroundMapConfig = {
   },
   "2-5": {
     image: "",
-    imagePreload: ["/img/friends.GIF"],
+    imagePreload: ["/img/friends.gif"],
   },
   "2-8": {
     image: "",
-    imagePreload: ["/img/teacher.GIF"],
+    imagePreload: ["/img/teacher.gif"],
   },
   "2-10": {
     image: "",
@@ -115,7 +115,7 @@ export const backgroundMapConfig = {
   },
   "2-11": {
     image: "",
-    imagePreload: ["/img/2-12.GIF"],
+    imagePreload: ["/img/2-12.gif"],
   },
   "2-12": {
     image: "",
@@ -289,7 +289,7 @@ export const backgroundMapConfig = {
   },
   "4-13": {
     image: "",
-    imagePreload: ["/img/phoneRing.GIF"],
+    imagePreload: ["/img/phoneRing.gif"],
   },
   "4-14": {
     image: "",

@@ -14,7 +14,7 @@ export default function Page() {
         <h1>อาจารย์ ผู้ที่สอนฉัน</h1>
         <h1 className="pt-[15%]">เขาโอเคกับเราไหมนะ...?</h1>
       </div>
-      <img src="/img/teacher.GIF" className="absolute"></img>
+      <img src="/img/teacher.gif" className="absolute"></img>
       <Link className="fixed bottom-8 left-[36%] z-50" href="/2-10">
         <button className="h-8 w-28 rounded-2xl bg-white text-lg shadow-xl">
           ถัดไป
