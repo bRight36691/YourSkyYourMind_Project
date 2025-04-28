@@ -48,10 +48,6 @@ export default function PaccountNo() {
     setBank(bank);
   };
 
-  const onFinishButtonClick = () => {
-    void BankAccountServices.createBankAccount(accountNo, bank);
-  };
-
   return (
     <div className="overflow-y-scroll">
       <MovingSky />
@@ -120,7 +116,6 @@ export default function PaccountNo() {
             <div className="absolute bottom-[10%] flex w-full justify-center">
               <button
                 className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
-                onClick={onFinishButtonClick}
               >
                 เสร็จสิ้น
               </button>
