@@ -3,19 +3,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import { NextButton } from "~/component/NextButton";
-import { RadioButton } from "~/component/inputs/RadioButton";
 
 type prop = { state: number; setState: (number: number) => void };
 
 export default function Text({ state, setState }: prop) {
-  const [isMedStudent, setIsMedStudent] = useState<string>("");
-
-  const onIsMedStudentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setIsMedStudent(e.target.value);
-    localStorage.setItem("isMedStudent", e.target.value);
-  };
 
   if (state === 1) {
     return (
@@ -50,12 +41,12 @@ export default function Text({ state, setState }: prop) {
 
         <div className="absolute grid bottom-0 h-[12%] w-full bg-[#6E6E6E] place-content-center ">
           <img
-              src='/img/sponsor.webp'
-              alt="sponsor"
-              width={250}
-              height={500}
-              className=""
-            />
+            src='/img/sponsor.webp'
+            alt="sponsor"
+            width={250}
+            height={500}
+            className=""
+          />
 
         </div>
       </motion.div>
@@ -104,71 +95,7 @@ export default function Text({ state, setState }: prop) {
         </div>
       </motion.div>
     );
-  } else if (state === 3){
-    return(
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-        }}
-        exit={{ opacity: 0, transition: { duration: 2 } }}
-        className="flex min-h-screen flex-col"
-      >
-         <div className="fixed top-40 z-10 flex w-screen flex-col items-center gap-6 text-center text-black">
-          <p className="font-bold">สำหรับผู้ใช้งาน iOS</p>
-            <div>
-              <p>เพื่อสัมผัสประสบการณ์ได้อย่างเต็มที่</p>
-              <p>ขอแนะนำให้<span className="text-[#00117D] font-bold">ใช้งานบนมือถือ</span></p>
-              <p>เปิดผ่าน safari และซ่อนแถบเครื่องมือ</p>
-            </div>
-            <div className="h-[380px] w-full">
-              <motion.div
-                 initial={{ opacity: 0 }}
-                 animate={{ opacity: 1 }}
-                 transition={{
-                   duration: 1,
-                   delay: 1,
-                 }}
-                 exit={{ opacity: 0, transition: { duration: 2 } }}
-              >
-                <img 
-                  src="/img/hideToolbar1.webp"
-                  className="absolute top-[7%] left-[3%]"
-                />
-              </motion.div>
-              <motion.div
-                 initial={{ opacity: 0 }}
-                 animate={{ opacity: 1 }}
-                 transition={{
-                   duration: 1,
-                   delay: 3,
-                 }}
-                 exit={{ opacity: 0, transition: { duration: 2 } }}
-              >
-                <img 
-                  src="/img/arrow.webp"
-                  className="absolute top-[27%] right-[28%]"
-                />
-                <img 
-                  src="/img/hideToolbar2.webp"
-                  className="absolute top-[35%] right-[1%]"
-                />
-              </motion.div>
-            </div>
-         </div>
-        <div className="z-20 fixed bottom-[15%] flex w-screen justify-center">
-          <button
-            className="h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
-            onClick={() => setState(4)}
-          >
-            ถัดไป
-          </button>
-        </div>
-      </motion.div>
-    );
-  } else if (state === 4) {
+  } else if (state === 3) {
     return (
       <motion.div
         initial={{ opacity: 0 }}
@@ -180,46 +107,57 @@ export default function Text({ state, setState }: prop) {
         exit={{ opacity: 0, transition: { duration: 2 } }}
         className="flex min-h-screen flex-col"
       >
-        <div className="absolute top-60 z-10 flex w-full justify-center">
-          <div className="flex w-[90%] flex-col items-center gap-2 rounded-xl bg-white p-4 text-center text-black">
-            <div>
-              <p>คุณเป็นนิสิตนักศึกษาแพทย์</p>
-              <p>หรือนักเรียนแพทย์ทหาร ใช่หรือไม่ ?</p>
-            </div>
-            <div className="flex w-[76px] items-start justify-start gap-2">
-              <RadioButton
-                name="isMedStudent"
-                value="medStudent"
-                onChange={onIsMedStudentChange}
+        <div className="fixed top-40 z-10 flex w-screen flex-col items-center gap-6 text-center text-black">
+          <p className="font-bold">สำหรับผู้ใช้งาน iOS</p>
+          <div>
+            <p>เพื่อสัมผัสประสบการณ์ได้อย่างเต็มที่</p>
+            <p>ขอแนะนำให้<span className="text-[#00117D] font-bold">ใช้งานบนมือถือ</span></p>
+            <p>เปิดผ่าน safari และซ่อนแถบเครื่องมือ</p>
+          </div>
+          <div className="h-[380px] w-full">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 1,
+                delay: 1,
+              }}
+              exit={{ opacity: 0, transition: { duration: 2 } }}
+            >
+              <img
+                src="/img/hideToolbar1.webp"
+                className="absolute top-[7%] left-[3%]"
               />
-              <label htmlFor="medStudent">ใช่</label>
-            </div>
-            <div className="flex w-[76px] items-start justify-start gap-2">
-              <RadioButton
-                name="isMedStudent"
-                value="nonMedStudent"
-                onChange={onIsMedStudentChange}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 1,
+                delay: 3,
+              }}
+              exit={{ opacity: 0, transition: { duration: 2 } }}
+            >
+              <img
+                src="/img/arrow.webp"
+                className="absolute top-[27%] right-[28%]"
               />
-              <label htmlFor="nonMedStudent">ไม่ใช่</label>
-            </div>
+              <img
+                src="/img/hideToolbar2.webp"
+                className="absolute top-[35%] right-[1%]"
+              />
+            </motion.div>
           </div>
         </div>
-
-        {isMedStudent === "medStudent" && (
-          <Link href="/1-4_1">
-            <div className="absolute bottom-[15%] flex w-full justify-center">
-              <NextButton />
-            </div>
-          </Link>
-        )}
-
-        {isMedStudent === "nonMedStudent" && (
+        <div className="z-20 fixed bottom-[15%] flex w-screen justify-center">
           <Link href="/1-4_2">
-            <div className="absolute bottom-[15%] flex w-full justify-center">
-              <NextButton />
-            </div>
+            <button
+              className="h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
+            >
+              ถัดไป
+            </button>
           </Link>
-        )}
+        </div>
       </motion.div>
     );
   }

@@ -4,7 +4,6 @@ import { useState } from "react";
 import { DropDown } from "~/component/inputs/DropDown";
 import { MovingSky } from "~/component/bg/MovingSky";
 import { motion } from "framer-motion";
-import { BankAccountServices } from "~/service/BankAccountServices";
 
 export default function PaccountNo() {
   const [accountNo, setAccountNo] = useState<string>("");
@@ -46,10 +45,6 @@ export default function PaccountNo() {
 
   const onBankChange = (bank: string): void => {
     setBank(bank);
-  };
-
-  const onFinishButtonClick = () => {
-    void BankAccountServices.createBankAccount(accountNo, bank);
   };
 
   return (
@@ -120,7 +115,6 @@ export default function PaccountNo() {
             <div className="absolute bottom-[10%] flex w-full justify-center">
               <button
                 className="z-20 h-8 w-28 rounded-2xl bg-white text-lg text-black shadow-sm"
-                onClick={onFinishButtonClick}
               >
                 เสร็จสิ้น
               </button>

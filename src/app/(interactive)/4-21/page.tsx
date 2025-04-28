@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { ResultIGTemplate } from "~/component/ResultIGTemplate";
 import { ResultIGTemplate2 } from "~/component/ResultIGTemplate2";
-import { FormServices } from "~/service/FormServices";
 
 export default function Page() {
   const [isMedStudent, setIsMedStudent] = useState<string>();
@@ -13,7 +12,6 @@ export default function Page() {
     Math.max(Math.floor(Number(burnoutScore) / 25) - 1, 0),
     3,
   );
-  const [avgBurnoutScore, setAvgBurnoutScore] = useState<string>();
 
   const burnoutStates = [
     "ไม่มีภาวะหมดไฟ",
@@ -42,11 +40,6 @@ export default function Page() {
   ];
 
   useEffect(() => {
-    const fetchAvgBurnoutScore = async () => {
-      const response = (await FormServices.getAvgBurnoutScore()) ?? "0";
-      setAvgBurnoutScore(Math.round(Number(response)).toFixed(0));
-    };
-    void fetchAvgBurnoutScore();
     setIsMedStudent(localStorage.getItem("isMedStudent") ?? "");
     setBurnoutScore(localStorage.getItem("burnoutScore") ?? "0");
   }, []);
@@ -81,11 +74,6 @@ export default function Page() {
           </div>
           <div className="my-2 h-[1px] w-full bg-resultLine" />
           <div className="text-xs font-medium leading-relaxed">
-            {avgBurnoutScore !== "0" && (
-              <p className="text-pinkResult">
-                ค่าเฉลี่ยของผู้เล่นทั้งหมด : {avgBurnoutScore}
-              </p>
-            )}
             <p className="text-blueResult">
               คะแนน Burnout ของคุณ : {burnoutScore}
             </p>
